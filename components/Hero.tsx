@@ -19,7 +19,7 @@ export default function Hero() {
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             videoLoaded ? 'opacity-100' : 'opacity-0'
           }`}
-          poster="/images/hero-building.jpg"
+          poster="/images/application-office.jpg"
         >
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
@@ -27,7 +27,7 @@ export default function Hero() {
         {!videoLoaded && (
           <div
             className="absolute inset-0 bg-cover bg-center ken-burns"
-            style={{ backgroundImage: "url('/images/hero-building.jpg')" }}
+            style={{ backgroundImage: "url('/images/application-office.jpg')" }}
           />
         )}
       </div>
