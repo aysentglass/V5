@@ -1,54 +1,126 @@
+'use client';
+
+import { ChevronDown, Play } from 'lucide-react';
+import { useState } from 'react';
+
 export default function Hero() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   return (
-    <section className="relative bg-gradient-to-br from-primary via-primary-light to-primary text-white overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl" />
+    <section id="home" className="relative h-screen min-h-[700px] w-full overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 bg-primary">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          onLoadedData={() => setVideoLoaded(true)}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            videoLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          poster="/images/hero-building.jpg"
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+        {/* Fallback image with Ken Burns */}
+        {!videoLoaded && (
+          <div
+            className="absolute inset-0 bg-cover bg-center ken-burns"
+            style={{ backgroundImage: "url('/images/hero-building.jpg')" }}
+          />
+        )}
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-        <div className="max-w-3xl">
-          <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-6">
-            Trusted by 500+ Global Projects
-          </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Smart Film Manufacturer for
-            <span className="text-accent-light"> Intelligent Privacy</span> Glass Solutions
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
-            Professional PDLC smart glass film, switchable privacy film and OEM/ODM solutions.
-            Transform ordinary glass into intelligent privacy glass with instant switching.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#products"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-primary font-semibold rounded-md hover:bg-gray-100 transition-colors"
-            >
-              View Products
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/30 text-white font-semibold rounded-md hover:bg-white/10 transition-colors"
-            >
-              Get Factory Quote
-            </a>
-          </div>
+      {/* Gradient Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-transparent to-transparent" />
 
-          <div className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
-            <div>
-              <div className="text-3xl font-bold">10+</div>
-              <div className="text-sm text-gray-400">Years Experience</div>
+      {/* Content */}
+      <div className="relative z-10 h-full flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-4xl">
+            {/* Badge */}
+            <div
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fade-in-up"
+              style={{ animationDelay: '0.2s', opacity: 0 }}
+            >
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              <span className="text-white/90 text-sm font-medium">
+                Trusted by 500+ Global Projects
+              </span>
             </div>
-            <div>
-              <div className="text-3xl font-bold">50+</div>
-              <div className="text-sm text-gray-400">Countries Served</div>
+
+            {/* Main Title */}
+            <h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 animate-fade-in-up"
+              style={{ animationDelay: '0.4s', opacity: 0 }}
+            >
+              Transform Glass Into
+              <br />
+              <span className="gradient-text">Intelligent Privacy</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p
+              className="text-lg sm:text-xl text-white/70 max-w-2xl mb-10 leading-relaxed animate-fade-in-up"
+              style={{ animationDelay: '0.6s', opacity: 0 }}
+            >
+              Premium PDLC smart film manufacturer. Switch from transparent to frosted
+              in milliseconds. Engineered for architects, designers and global enterprises.
+            </p>
+
+            {/* CTA Buttons */}
+            <div
+              className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in-up"
+              style={{ animationDelay: '0.8s', opacity: 0 }}
+            >
+              <a
+                href="#products"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5"
+              >
+                Explore Products
+                <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
+              </a>
+              <a
+                href="#contact"
+                className="group inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+              >
+                <Play className="mr-2 w-5 h-5" />
+                Request Factory Quote
+              </a>
             </div>
-            <div>
-              <div className="text-3xl font-bold">1M+</div>
-              <div className="text-sm text-gray-400">Sqm Produced</div>
+
+            {/* Stats */}
+            <div
+              className="grid grid-cols-3 gap-8 max-w-lg animate-fade-in-up"
+              style={{ animationDelay: '1s', opacity: 0 }}
+            >
+              {[
+                { value: '10+', label: 'Years Experience' },
+                { value: '50+', label: 'Countries Served' },
+                { value: '1M+', label: 'Sqm Produced' },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <div className="text-3xl sm:text-4xl font-bold text-white mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-white/50">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-float">
+        <a href="#about" className="flex flex-col items-center text-white/50 hover:text-white/80 transition-colors">
+          <span className="text-xs mb-2 tracking-widest uppercase">Scroll</span>
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+            <div className="w-1 h-2 bg-white/50 rounded-full animate-bounce" />
+          </div>
+        </a>
       </div>
     </section>
   );
