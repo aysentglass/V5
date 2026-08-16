@@ -146,6 +146,30 @@ export default function AdminPage() {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Formspree Notice */}
+        <div className="mb-6 p-5 bg-blue-50 border border-blue-200 rounded-xl flex items-start gap-4">
+          <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div className="flex-1">
+            <h4 className="font-semibold text-primary mb-1">Inquiry Data Stored in Formspree</h4>
+            <p className="text-sm text-gray-600 mb-2">
+              All form submissions are securely stored in Formspree and emailed to aaronliu@aysentglass.com.
+              View all inquiries, export CSV, and manage submissions in your Formspree dashboard.
+            </p>
+            <a
+              href="https://formspree.io/forms/mnpazezo/submissions"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm font-semibold text-accent hover:text-accent-light"
+            >
+              Open Formspree Dashboard →
+            </a>
+          </div>
+        </div>
+
         <div className="mb-6">
           <div className="relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />

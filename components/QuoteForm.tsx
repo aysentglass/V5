@@ -29,18 +29,31 @@ export default function QuoteForm() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://formspree.io/f/mnpazezo', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          country: formData.country,
+          whatsapp: formData.whatsapp,
+          product: formData.product,
+          message: formData.message,
+          _subject: `New Inquiry: ${formData.name} - ${formData.product}`,
+        }),
       });
       if (res.ok) {
         setSubmitted(true);
       } else {
-        alert('Submission failed. Please try again or email us directly.');
+        const data = await res.json().catch(() => ({}));
+        alert(`Submission failed: ${data.error || 'Please try again or email aaronliu@aysentglass.com directly.'}`);
       }
-    } catch {
-      setSubmitted(true);
+    } catch (err) {
+      alert('Network error. Please email aaronliu@aysentglass.com directly.');
     } finally {
       setLoading(false);
     }
