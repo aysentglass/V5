@@ -14,18 +14,36 @@ const productOptions = [
 
 export default function QuoteForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     company: '',
     email: '',
+    country: '',
     whatsapp: '',
     product: productOptions[0],
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        alert('Submission failed. Please try again or email us directly.');
+      }
+    } catch {
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (
@@ -73,7 +91,7 @@ export default function QuoteForm() {
                     </div>
                     <div>
                       <div className="text-sm text-white/50 mb-1">Email</div>
-                      <div className="font-medium">sales@aysentsmartfilm.com</div>
+                      <div className="font-medium">aaronliu@aysentglass.com</div>
                     </div>
                   </div>
 
@@ -83,7 +101,7 @@ export default function QuoteForm() {
                     </div>
                     <div>
                       <div className="text-sm text-white/50 mb-1">Phone / WhatsApp</div>
-                      <div className="font-medium">+86 138 0000 0000</div>
+                      <div className="font-medium">+86-15163206207</div>
                     </div>
                   </div>
 
@@ -93,7 +111,7 @@ export default function QuoteForm() {
                     </div>
                     <div>
                       <div className="text-sm text-white/50 mb-1">Factory Location</div>
-                      <div className="font-medium">Shandong, China</div>
+                      <div className="font-medium">Tengzhou, Shandong, China</div>
                     </div>
                   </div>
                 </div>
@@ -177,6 +195,19 @@ export default function QuoteForm() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Country / Region
+                    </label>
+                    <input
+                      type="text"
+                      name="country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all bg-gray-50 focus:bg-white"
+                      placeholder="United States"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
                       WhatsApp / Phone
                     </label>
                     <input
@@ -224,10 +255,20 @@ export default function QuoteForm() {
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center px-8 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent-light transition-all duration-300 hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5"
+                  disabled={loading}
+                  className="w-full flex items-center justify-center px-8 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent-light transition-all duration-300 hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                 >
-                  <Send className="w-5 h-5 mr-2" />
-                  Submit Inquiry
+                  {loading ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5 mr-2" />
+                      Submit Inquiry
+                    </>
+                  )}
                 </button>
               </form>
             )}

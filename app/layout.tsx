@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
+import FloatingContact from '@/components/FloatingContact';
 import './globals.css';
 
 const inter = Inter({
@@ -10,29 +11,51 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'AYSENT SMART FILM | PDLC Smart Film Manufacturer',
+  title: {
+    default: 'AYSENT | PDLC Smart Film Manufacturer & Switchable Glass Supplier',
+    template: '%s | AYSENT Smart Film',
+  },
   description:
-    'AYSENT SMART FILM is a professional manufacturer of PDLC smart glass film, switchable privacy film and customized smart glass solutions for global projects.',
+    'AYSENT is a leading PDLC smart film manufacturer and switchable glass supplier in China. Factory-direct pricing, custom sizing, FCC certified. Serving 50+ countries with smart glass solutions for offices, hotels, retail and residential projects.',
   keywords: [
-    'smart film manufacturer',
-    'PDLC smart glass film',
-    'switchable privacy film',
-    'smart film supplier',
-    'switchable glass',
+    'PDLC smart film manufacturer',
+    'switchable glass supplier',
+    'smart film factory',
+    'PDLC film wholesale',
     'smart glass',
+    'custom smart film',
+    'AYSENT glass',
+    'self adhesive smart film',
+    'switchable privacy glass',
+    'PDLC smart glass China',
   ],
+  metadataBase: new URL('https://www.aysentsmartfilm.com'),
   openGraph: {
-    title: 'AYSENT SMART FILM | Intelligent Privacy Glass Solutions',
+    title: 'AYSENT | PDLC Smart Film Manufacturer & Switchable Glass Supplier',
     description:
-      'Premium PDLC smart film manufacturer. Transform glass into intelligent privacy. Trusted by 500+ global projects.',
+      'Premium PDLC smart film factory in China. Custom sizes, FCC certified, global shipping. Get free samples within 3-5 days.',
     type: 'website',
+    locale: 'en_US',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <FloatingContact />
+      </body>
     </html>
   );
 }

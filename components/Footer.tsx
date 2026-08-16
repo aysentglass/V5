@@ -87,15 +87,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Mail className="w-5 h-5 text-accent-light mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-white/50 text-sm">sales@aysentsmartfilm.com</span>
+                <span className="text-white/50 text-sm">aaronliu@aysentglass.com</span>
               </li>
               <li className="flex items-start">
                 <Phone className="w-5 h-5 text-accent-light mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-white/50 text-sm">+86 138 0000 0000</span>
+                <span className="text-white/50 text-sm">+86-15163206207</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-accent-light mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-white/50 text-sm">Shandong Province, China</span>
+                <span className="text-white/50 text-sm">Huantou Center HQ, No.1728 Shanguo South Rd, Jinghe Sub-district, Tengzhou, Zaozhuang, Shandong, China</span>
               </li>
             </ul>
           </div>

@@ -4,8 +4,8 @@ import { Shield, Award, Zap, Globe, Settings, Headphones } from 'lucide-react';
 const features = [
   {
     icon: Shield,
-    title: 'ISO9001 Certified',
-    desc: 'Quality management system certified, CE & RoHS compliant products for global markets.',
+    title: 'FCC Certified',
+    desc: 'FCC certified products with strict quality control. CE & RoHS compliant for global market access.',
   },
   {
     icon: Award,
