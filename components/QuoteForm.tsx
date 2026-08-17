@@ -29,22 +29,12 @@ export default function QuoteForm() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('https://formspree.io/f/mnpazezo', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
         },
-        body: JSON.stringify({
-          name: formData.name,
-          company: formData.company,
-          email: formData.email,
-          country: formData.country,
-          whatsapp: formData.whatsapp,
-          product: formData.product,
-          message: formData.message,
-          _subject: `New Inquiry: ${formData.name} - ${formData.product}`,
-        }),
+        body: JSON.stringify(formData),
       });
       if (res.ok) {
         setSubmitted(true);
