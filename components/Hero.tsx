@@ -16,14 +16,19 @@ export default function Hero() {
           loop
           playsInline
           preload="auto"
+          disablePictureInPicture
+          controlsList="nodownload noremoteplayback noplaybackrate nofullscreen"
           onLoadedData={() => setVideoLoaded(true)}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          onContextMenu={(e) => e.preventDefault()}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 pointer-events-none ${
             videoLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           poster="/images/application-office.jpg"
         >
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
+        {/* Transparent overlay to block browser video toolbar */}
+        <div className="absolute inset-0 z-10" onContextMenu={(e) => e.preventDefault()} />
         {/* Fallback image with Ken Burns */}
         {!videoLoaded && (
           <div
