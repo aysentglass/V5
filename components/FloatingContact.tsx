@@ -17,7 +17,7 @@ export default function FloatingContact() {
         href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hello%20AYSENT%2C%20I%27m%20interested%20in%20PDLC%20smart%20film`}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed right-5 bottom-24 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300 group"
+        className="fixed right-3 sm:right-5 bottom-20 sm:bottom-24 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300 group"
         aria-label="Chat on WhatsApp"
       >
         <svg viewBox="0 0 32 32" className="w-7 h-7 fill-white">
@@ -29,7 +29,7 @@ export default function FloatingContact() {
       {/* WeChat Floating Button */}
       <button
         onClick={() => setWechatOpen(!wechatOpen)}
-        className="fixed right-5 bottom-40 z-50 w-14 h-14 bg-[#07C160] rounded-full flex items-center justify-center shadow-lg hover:bg-[#06ad56] hover:scale-110 transition-all duration-300"
+        className="fixed right-3 sm:right-5 bottom-36 sm:bottom-40 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-[#07C160] rounded-full flex items-center justify-center shadow-lg hover:bg-[#06ad56] hover:scale-110 transition-all duration-300"
         aria-label="WeChat"
       >
         <svg viewBox="0 0 24 24" className="w-7 h-7 fill-white">
@@ -39,7 +39,7 @@ export default function FloatingContact() {
 
       {/* WeChat Popup */}
       {wechatOpen && (
-        <div className="fixed right-24 bottom-40 z-50 bg-white rounded-2xl shadow-2xl p-5 w-64 animate-fade-in-up border border-gray-100">
+        <div className="fixed right-20 sm:right-24 bottom-36 sm:bottom-40 z-50 bg-white rounded-2xl shadow-2xl p-5 w-56 sm:w-64 animate-fade-in-up border border-gray-100">
           <button
             onClick={() => setWechatOpen(false)}
             className="absolute top-3 right-3 text-gray-400 hover:text-gray-600"

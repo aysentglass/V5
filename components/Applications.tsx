@@ -26,7 +26,7 @@ const applications = [
 
 export default function Applications() {
   return (
-    <section id="applications" className="py-24 lg:py-32 bg-gray-50 relative">
+    <section id="applications" className="py-24 lg:py-32 bg-gray-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16">

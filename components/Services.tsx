@@ -36,7 +36,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 lg:py-32 bg-gray-50 relative">
+    <section id="services" className="py-24 lg:py-32 bg-gray-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="text-center max-w-3xl mx-auto mb-16">

@@ -7,7 +7,7 @@ export default function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
-    <section id="home" className="relative h-screen min-h-[700px] w-full overflow-hidden">
+    <section id="home" className="relative h-[100dvh] min-h-[600px] sm:min-h-[700px] w-full overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 bg-primary">
         <video
@@ -15,6 +15,7 @@ export default function Hero() {
           muted
           loop
           playsInline
+          preload="auto"
           onLoadedData={() => setVideoLoaded(true)}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             videoLoaded ? 'opacity-100' : 'opacity-0'
@@ -37,9 +38,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-transparent to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center">
+      <div className="relative z-10 h-full flex items-center pt-16 lg:pt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-4xl">
+          <div className="max-w-4xl pt-10 lg:pt-0">
             {/* Badge */}
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fade-in-up"
@@ -53,7 +54,7 @@ export default function Hero() {
 
             {/* Main Title */}
             <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 animate-fade-in-up"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 animate-fade-in-up break-words"
               style={{ animationDelay: '0.4s', opacity: 0 }}
             >
               Transform Glass Into
