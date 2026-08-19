@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-08-01',
     category: 'Technology',
     readTime: '8 min read',
-    image: '/images/product-pdlc.jpg',
+    image: '/images/blog-what-is-pdlc.jpg',
     content: `## Understanding PDLC Smart Film
 
 PDLC (Polymer Dispersed Liquid Crystal) smart film is a revolutionary thin-film technology that can instantly switch glass from transparent to frosted opaque. As a leading PDLC smart film manufacturer, AYSENT produces high-quality films used in commercial and residential projects worldwide.
@@ -58,7 +58,7 @@ PDLC smart film represents the future of architectural glass. Whether you are a 
     date: '2026-07-28',
     category: 'Buying Guide',
     readTime: '6 min read',
-    image: '/images/application-office.jpg',
+    image: '/images/blog-film-vs-glass.jpg',
     content: `## PDLC Film vs Smart Glass: Making the Right Choice
 
 When planning a switchable glass project, one of the first decisions is whether to use PDLC smart film or pre-laminated smart glass. Both solutions offer the same privacy-switching functionality, but they differ significantly in installation, cost, and use cases.
@@ -122,7 +122,7 @@ Both options deliver the same intelligent privacy experience. Contact our team f
     date: '2026-07-20',
     category: 'Installation',
     readTime: '10 min read',
-    image: '/images/product-self-adhesive.jpg',
+    image: '/images/blog-installation.jpg',
     content: `## DIY & Professional Installation Guide
 
 Self-adhesive smart film is the most cost-effective way to add switchable privacy to existing glass. This guide walks you through the complete installation process.
@@ -190,7 +190,7 @@ AYSENT provides detailed installation videos and remote technical support for al
     date: '2026-07-15',
     category: 'Applications',
     readTime: '7 min read',
-    image: '/images/application-hotel.jpg',
+    image: '/images/blog-applications.jpg',
     content: `## Transformative Uses of Switchable Glass
 
 Switchable glass powered by PDLC technology is reshaping how architects approach commercial design. Here are the top 10 applications driving adoption worldwide.
@@ -248,7 +248,7 @@ Contact us to discuss how switchable glass can enhance your next commercial proj
     date: '2026-07-10',
     category: 'Buying Guide',
     readTime: '9 min read',
-    image: '/images/factory-production.jpg',
+    image: '/images/blog-manufacturer.jpg',
     content: `## Selecting Your PDLC Film Supplier
 
 For distributors, glass processors, and contractors, choosing the right PDLC smart film manufacturer is critical to project success. Here are 7 factors to evaluate.
@@ -308,7 +308,7 @@ AYSENT is a genuine PDLC smart film manufacturer based in Shandong, China. We we
     date: '2026-07-05',
     category: 'Applications',
     readTime: '7 min read',
-    image: '/images/application-office.jpg',
+    image: '/images/blog-office.jpg',
     content: `## Smart Film in the Modern Office
 
 Office privacy is a growing concern as open-plan layouts dominate corporate design. PDLC smart film offers an elegant solution that combines aesthetics with functionality.
@@ -373,7 +373,7 @@ Smart film is a sound investment for modern offices, delivering both immediate a
     date: '2026-06-28',
     category: 'Products',
     readTime: '6 min read',
-    image: '/images/product-pdlc.jpg',
+    image: '/images/blog-custom.jpg',
     content: `## Tailored PDLC Solutions for Every Project
 
 One of the greatest advantages of PDLC smart film is its customizability. AYSENT offers comprehensive customization to meet the unique requirements of any project.
@@ -454,7 +454,7 @@ AYSENT's custom smart film solutions ensure your project gets exactly the right 
     date: '2026-06-20',
     category: 'Company',
     readTime: '8 min read',
-    image: '/images/factory-production.jpg',
+    image: '/images/blog-factory-cert.jpg',
     content: `## The AYSENT Smart Film Factory
 
 Located in Tengzhou, Shandong Province, China, AYSENT operates a 50,000㎡ modern manufacturing facility dedicated to PDLC smart film production. This article takes you inside our operations.

@@ -49,9 +49,9 @@ export default function FloatingContact() {
           <h4 className="font-bold text-primary mb-3 text-center">Add WeChat</h4>
           <div className="flex justify-center mb-3">
             <img
-              src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=wechat://contacts/add?user=${encodeURIComponent(WECHAT_ID)}`}
+              src="/images/wechat-qr.png"
               alt="WeChat QR Code"
-              className="w-40 h-40 rounded-lg border border-gray-200"
+              className="w-40 h-40 rounded-lg border border-gray-200 object-contain"
             />
           </div>
           <div className="text-center">
