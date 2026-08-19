@@ -1,6 +1,7 @@
 import { blogPosts, type BlogPost } from '@/data/blog-posts';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 
 function renderMarkdown(content: string): string {
@@ -68,7 +69,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       {/* Hero */}
       <section className="bg-primary text-white py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <img src={post.image} alt="" className="w-full h-full object-cover" />
+          <Image src={post.image} alt="" fill sizes="100vw" className="object-cover" priority />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/60" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">

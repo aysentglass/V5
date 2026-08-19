@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Reveal from './Reveal';
 import { Award, Target, Users } from 'lucide-react';
 
@@ -49,11 +50,14 @@ export default function BrandStory() {
 
           <Reveal direction="right">
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl img-zoom-container">
-                <img
+              <div className="rounded-2xl overflow-hidden shadow-2xl img-zoom-container relative h-[500px]">
+                <Image
                   src="/images/factory-production.jpg"
                   alt="AYSENT manufacturing facility"
-                  className="w-full h-[500px] object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white text-primary p-6 rounded-2xl shadow-xl animate-float">

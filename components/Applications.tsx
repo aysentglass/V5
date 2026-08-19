@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Reveal from './Reveal';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -55,10 +56,13 @@ export default function Applications() {
               delay={(index % 2) * 150}
             >
               <div className="group relative rounded-2xl overflow-hidden bg-primary h-80 lg:h-96 cursor-pointer img-zoom-container">
-                <img
+                <Image
                   src={app.image}
                   alt={app.title}
-                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover opacity-70 group-hover:opacity-50 transition-opacity duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
 

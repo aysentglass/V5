@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Reveal from './Reveal';
 import { ArrowRight } from 'lucide-react';
 
@@ -60,10 +61,13 @@ export default function ProductGrid() {
             <Reveal key={product.slug} direction="scale" delay={(index % 2) * 150}>
               <div className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/20 transition-all duration-500 hover:-translate-y-2">
                 <div className="relative h-64 overflow-hidden img-zoom-container bg-gray-100">
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute top-4 right-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-primary opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">

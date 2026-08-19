@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Reveal from './Reveal';
 import { Factory as FactoryIcon, FlaskConical, Ruler, Truck } from 'lucide-react';
 
@@ -29,10 +30,13 @@ export default function Factory() {
     <section id="factory" className="py-24 lg:py-32 bg-primary text-white relative overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 opacity-20">
-        <img
+        <Image
           src="/images/factory-production.jpg"
           alt="Factory"
-          className="w-full h-full object-cover"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          loading="lazy"
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />
@@ -42,11 +46,14 @@ export default function Factory() {
           {/* Left: Image */}
           <Reveal direction="left">
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl img-zoom-container">
-                <img
+              <div className="rounded-2xl overflow-hidden shadow-2xl img-zoom-container relative h-[500px]">
+                <Image
                   src="/images/factory-production.jpg"
                   alt="AYSENT manufacturing facility"
-                  className="w-full h-[500px] object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                  loading="lazy"
                 />
               </div>
               {/* Floating badge */}
