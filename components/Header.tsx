@@ -8,6 +8,7 @@ const menus = [
   { name: 'Products', href: '#products' },
   { name: 'Applications', href: '#applications' },
   { name: 'Factory', href: '#factory' },
+  { name: 'Blog', href: '/blog' },
   { name: 'About', href: '#about' },
   { name: 'Contact', href: '#contact' },
 ];

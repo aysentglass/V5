@@ -7,6 +7,7 @@ import Applications from '@/components/Applications';
 import Services from '@/components/Services';
 import GlobalReach from '@/components/GlobalReach';
 import Factory from '@/components/Factory';
+import BlogSection from '@/components/BlogSection';
 import QuoteForm from '@/components/QuoteForm';
 import Footer from '@/components/Footer';
 
@@ -23,6 +24,7 @@ export default function Home() {
         <Services />
         <GlobalReach />
         <Factory />
+        <BlogSection />
         <QuoteForm />
       </main>
       <Footer />
