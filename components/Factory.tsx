@@ -58,8 +58,8 @@ export default function Factory() {
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-6 bg-white text-primary p-6 rounded-2xl shadow-xl animate-float">
-                <div className="text-4xl font-bold">ISO</div>
-                <div className="text-sm text-gray-500">9001 Certified</div>
+                <div className="text-4xl font-bold">CE</div>
+                <div className="text-sm text-gray-500">EU Certified</div>
               </div>
             </div>
           </Reveal>
