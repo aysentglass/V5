@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const menus = [
-  { name: 'Home', href: '#home' },
-  { name: 'Products', href: '#products' },
-  { name: 'Applications', href: '#applications' },
-  { name: 'Factory', href: '#factory' },
+  { name: 'Home', href: '/#home' },
+  { name: 'Products', href: '/#products' },
+  { name: 'Applications', href: '/#applications' },
+  { name: 'Factory', href: '/#factory' },
   { name: 'Blog', href: '/blog' },
-  { name: 'About', href: '#about' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'About', href: '/#about' },
+  { name: 'Contact', href: '/#contact' },
 ];
 
 export default function Header() {
@@ -35,7 +35,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <a href="#home" className="flex items-center group">
+          <a href="/#home" className="flex items-center group">
             <span
               className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
                 scrolled ? 'text-primary' : 'text-white'
@@ -68,7 +68,7 @@ export default function Header() {
           </nav>
 
           <a
-            href="#contact"
+            href="/#contact"
             className="hidden lg:inline-flex items-center px-6 py-2.5 bg-accent text-white text-sm font-semibold rounded-full hover:bg-accent-light transition-all duration-300 hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5"
           >
             Get Free Quote
@@ -102,7 +102,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               className="block px-4 py-3 mt-2 text-base font-semibold text-white bg-accent rounded-lg text-center"
               onClick={() => setMobileOpen(false)}
             >

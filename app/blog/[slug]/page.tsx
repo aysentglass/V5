@@ -2,6 +2,8 @@ import { blogPosts, type BlogPost } from '@/data/blog-posts';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { Calendar, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 
 function renderMarkdown(content: string): string {
@@ -65,75 +67,79 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
 
   return (
-    <article className="min-h-screen bg-white">
-      {/* Hero */}
-      <section className="bg-primary text-white py-16 lg:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <Image src={post.image} alt="" fill sizes="100vw" className="object-cover" priority />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/60" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Link href="/blog" className="inline-flex items-center text-white/60 hover:text-white text-sm mb-6 transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Blog
-          </Link>
-          <span className="inline-block px-3 py-1 bg-accent/20 text-accent-light rounded-full text-xs font-semibold mb-4">
-            {post.category}
-          </span>
-          <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">{post.title}</h1>
-          <div className="flex items-center gap-6 text-sm text-white/50">
-            <span className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2" />
-              {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-            </span>
-            <span className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
-              {post.readTime}
-            </span>
+    <>
+      <Header />
+      <article className="min-h-screen bg-white">
+        {/* Hero */}
+        <section className="bg-primary text-white py-16 lg:py-24 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20">
+            <Image src={post.image} alt="" fill sizes="100vw" className="object-cover" priority />
           </div>
-        </div>
-      </section>
-
-      {/* Content */}
-      <section className="py-16 lg:py-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="prose prose-lg max-w-none blog-content"
-            dangerouslySetInnerHTML={{ __html: renderMarkdown(post.content) }}
-          />
-
-          {/* CTA */}
-          <div className="mt-16 p-8 lg:p-10 bg-gray-50 rounded-2xl border border-gray-100 text-center">
-            <h3 className="text-2xl font-bold text-primary mb-3">Ready for Your Project?</h3>
-            <p className="text-gray-600 mb-6">
-              Get free samples and a custom quote from AYSENT, your trusted PDLC smart film manufacturer.
-            </p>
-            <Link
-              href="/#contact"
-              className="inline-flex items-center px-8 py-3 bg-accent text-white font-semibold rounded-full hover:bg-accent-light transition-colors"
-            >
-              Request a Free Quote
-              <ArrowRight className="w-5 h-5 ml-2" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/60" />
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-20">
+            <Link href="/blog" className="inline-flex items-center text-white/60 hover:text-white text-sm mb-6 transition-colors">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Blog
             </Link>
+            <span className="inline-block px-3 py-1 bg-accent/20 text-accent-light rounded-full text-xs font-semibold mb-4">
+              {post.category}
+            </span>
+            <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">{post.title}</h1>
+            <div className="flex items-center gap-6 text-sm text-white/50">
+              <span className="flex items-center">
+                <Calendar className="w-4 h-4 mr-2" />
+                {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+              </span>
+              <span className="flex items-center">
+                <Clock className="w-4 h-4 mr-2" />
+                {post.readTime}
+              </span>
+            </div>
           </div>
+        </section>
 
-          {/* Prev/Next */}
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {prevPost && (
-              <Link href={`/blog/${prevPost.slug}`} className="p-5 border border-gray-200 rounded-xl hover:border-accent/30 hover:shadow-md transition-all group">
-                <span className="text-xs text-gray-400">Previous</span>
-                <p className="font-semibold text-primary mt-1 group-hover:text-accent transition-colors line-clamp-2">{prevPost.title}</p>
+        {/* Content */}
+        <section className="py-16 lg:py-20">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+              className="prose prose-lg max-w-none blog-content"
+              dangerouslySetInnerHTML={{ __html: renderMarkdown(post.content) }}
+            />
+
+            {/* CTA */}
+            <div className="mt-16 p-8 lg:p-10 bg-gray-50 rounded-2xl border border-gray-100 text-center">
+              <h3 className="text-2xl font-bold text-primary mb-3">Ready for Your Project?</h3>
+              <p className="text-gray-600 mb-6">
+                Get free samples and a custom quote from AYSENT, your trusted PDLC smart film manufacturer.
+              </p>
+              <Link
+                href="/#contact"
+                className="inline-flex items-center px-8 py-3 bg-accent text-white font-semibold rounded-full hover:bg-accent-light transition-colors"
+              >
+                Request a Free Quote
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-            )}
-            {nextPost && (
-              <Link href={`/blog/${nextPost.slug}`} className="p-5 border border-gray-200 rounded-xl hover:border-accent/30 hover:shadow-md transition-all group text-right">
-                <span className="text-xs text-gray-400">Next</span>
-                <p className="font-semibold text-primary mt-1 group-hover:text-accent transition-colors line-clamp-2">{nextPost.title}</p>
-              </Link>
-            )}
+            </div>
+
+            {/* Prev/Next */}
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {prevPost && (
+                <Link href={`/blog/${prevPost.slug}`} className="p-5 border border-gray-200 rounded-xl hover:border-accent/30 hover:shadow-md transition-all group">
+                  <span className="text-xs text-gray-400">Previous</span>
+                  <p className="font-semibold text-primary mt-1 group-hover:text-accent transition-colors line-clamp-2">{prevPost.title}</p>
+                </Link>
+              )}
+              {nextPost && (
+                <Link href={`/blog/${nextPost.slug}`} className="p-5 border border-gray-200 rounded-xl hover:border-accent/30 hover:shadow-md transition-all group text-right">
+                  <span className="text-xs text-gray-400">Next</span>
+                  <p className="font-semibold text-primary mt-1 group-hover:text-accent transition-colors line-clamp-2">{nextPost.title}</p>
+                </Link>
+              )}
+            </div>
           </div>
-        </div>
-      </section>
-    </article>
+        </section>
+      </article>
+      <Footer />
+    </>
   );
 }
