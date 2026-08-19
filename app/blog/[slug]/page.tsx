@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import QuoteForm from '@/components/QuoteForm';
 import { Calendar, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 
 function renderMarkdown(content: string): string {
@@ -139,6 +140,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
       </article>
+      <QuoteForm />
       <Footer />
     </>
   );

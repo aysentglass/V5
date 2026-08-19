@@ -4,6 +4,7 @@ import { blogPosts } from '@/data/blog-posts';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import QuoteForm from '@/components/QuoteForm';
 
 export const metadata = {
   title: 'Blog | PDLC Smart Film Insights & Guides',
@@ -75,6 +76,7 @@ export default function BlogPage() {
             </div>
           </div>
         </section>
+        <QuoteForm />
       </main>
       <Footer />
     </>
