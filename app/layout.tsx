@@ -61,8 +61,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        {/* Preload LCP image (hero poster) */}
-        <link rel="preload" as="image" href="/images/application-office.jpg" fetchPriority="high" />
+        {/* Preload LCP hero animation */}
+        <link rel="preload" as="image" href="/videos/hero-bg.webp" fetchPriority="high" />
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://api.qrserver.com" />
         <link rel="dns-prefetch" href="https://formspree.io" />

@@ -1,23 +1,8 @@
 'use client';
 
 import { ChevronDown, Play } from 'lucide-react';
-import { useState, useEffect } from 'react';
 
 export default function Hero() {
-  const [videoLoaded, setVideoLoaded] = useState(false);
-
-  // Preload video for faster display
-  useEffect(() => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'video';
-    link.href = '/videos/hero-bg.mp4';
-    document.head.appendChild(link);
-    return () => {
-      document.head.removeChild(link);
-    };
-  }, []);
-
   const blockEvent = (e: React.SyntheticEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -26,31 +11,18 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative h-[100dvh] min-h-[700px] w-full overflow-hidden">
-      {/* Video Background */}
+      {/* WebP Animation Background */}
       <div className="absolute inset-0 bg-primary">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          disablePictureInPicture
-          controlsList="nodownload noremoteplayback noplaybackrate nofullscreen"
-          // X5 kernel (Quark/QQ browser) anti-hijack attributes
-          x5-video-player-type="h5"
-          x5-video-player-fullscreen="false"
-          x5-video-orientation="portrait"
-          x5-playsinline="true"
-          onLoadedData={() => setVideoLoaded(true)}
+        <img
+          src="/videos/hero-bg.webp"
+          alt="AYSENT PDLC smart glass switching from transparent to frosted"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+          draggable={false}
+          loading="eager"
+          decoding="async"
           onContextMenu={blockEvent}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 pointer-events-none ${
-            videoLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          poster="/images/application-office.jpg"
-        >
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
-        </video>
-        {/* Solid overlay to block browser video toolbar (Quark/X5) */}
+        />
+        {/* Overlay to block right-click save and browser toolbar */}
         <div
           className="absolute inset-0 z-10 bg-black/[0.001]"
           onContextMenu={blockEvent}
@@ -58,13 +30,6 @@ export default function Hero() {
           onTouchEnd={blockEvent}
           onTouchMove={blockEvent}
         />
-        {/* Fallback image with Ken Burns */}
-        {!videoLoaded && (
-          <div
-            className="absolute inset-0 bg-cover bg-center ken-burns"
-            style={{ backgroundImage: "url('/images/application-office.jpg')" }}
-          />
-        )}
       </div>
 
       {/* Gradient Overlays */}
