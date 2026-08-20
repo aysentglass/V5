@@ -6,6 +6,7 @@ import ProductGrid from '@/components/ProductGrid';
 import Applications from '@/components/Applications';
 import Services from '@/components/Services';
 import GlobalReach from '@/components/GlobalReach';
+import MarketDistribution from '@/components/MarketDistribution';
 import Factory from '@/components/Factory';
 import BlogSection from '@/components/BlogSection';
 import QuoteForm from '@/components/QuoteForm';
@@ -23,6 +24,7 @@ export default function Home() {
         <Applications />
         <Services />
         <GlobalReach />
+        <MarketDistribution />
         <Factory />
         <BlogSection />
         <QuoteForm />
