@@ -6,12 +6,12 @@ import { MapPin, Globe, Truck, Headphones, Package, Award } from 'lucide-react';
 const regions = [
   { name: 'North America', x: '20%', y: '36%', countries: 'USA, Canada, Mexico' },
   { name: 'Latin America', x: '28%', y: '70%', countries: 'Brazil, Argentina, Chile' },
-  { name: 'Europe', x: '48%', y: '28%', countries: 'UK, Germany, France, Italy' },
-  { name: 'Middle East', x: '57%', y: '42%', countries: 'UAE, Saudi Arabia, Qatar' },
+  { name: 'Europe', x: '48%', y: '30%', countries: 'UK, Germany, France, Italy' },
+  { name: 'Middle East', x: '57%', y: '44%', countries: 'UAE, Saudi Arabia, Qatar' },
   { name: 'Africa', x: '50%', y: '58%', countries: 'South Africa, Egypt, Nigeria' },
-  { name: 'China (HQ)', x: '72%', y: '38%', countries: 'Headquarters & Factory', isHQ: true },
-  { name: 'Southeast Asia', x: '77%', y: '54%', countries: 'Singapore, Malaysia, Thailand' },
-  { name: 'Oceania', x: '84%', y: '72%', countries: 'Australia, New Zealand' },
+  { name: 'China (HQ)', x: '73%', y: '40%', countries: 'Headquarters & Factory', isHQ: true },
+  { name: 'Southeast Asia', x: '78%', y: '56%', countries: 'Singapore, Malaysia, Thailand' },
+  { name: 'Oceania', x: '84%', y: '74%', countries: 'Australia, New Zealand' },
 ];
 
 const benefits = [
@@ -47,9 +47,20 @@ export default function MarketDistribution() {
           {/* Map Area */}
           <Reveal direction="left" className="lg:col-span-2">
             <div className="relative bg-gradient-to-br from-[#060f1f] via-[#0a1a35] to-[#060f1f] rounded-3xl overflow-hidden shadow-2xl aspect-[16/10] border border-white/5">
-              {/* Subtle grid */}
+              {/* Real world map SVG background */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/world-map.svg"
+                  alt="World map"
+                  className="w-full h-full object-contain opacity-[0.18] select-none pointer-events-none"
+                  draggable={false}
+                />
+              </div>
+
+              {/* Subtle grid overlay */}
               <div
-                className="absolute inset-0 opacity-[0.04]"
+                className="absolute inset-0 opacity-[0.03]"
                 style={{
                   backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
                   backgroundSize: '50px 50px',
@@ -57,175 +68,35 @@ export default function MarketDistribution() {
               />
 
               {/* Radial glow */}
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(59,130,246,0.12)_0%,transparent_65%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(59,130,246,0.1)_0%,transparent_65%)]" />
 
-              {/* Accurate World Map SVG */}
+              {/* Connection arcs SVG overlay */}
               <svg
-                viewBox="0 0 1000 500"
-                className="absolute inset-0 w-full h-full"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+                className="absolute inset-0 w-full h-full pointer-events-none"
               >
-                <defs>
-                  <linearGradient id="landFill" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0.1" />
-                    <stop offset="100%" stopColor="#ffffff" stopOpacity="0.04" />
-                  </linearGradient>
-                  <linearGradient id="landStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.4" />
-                    <stop offset="50%" stopColor="#93c5fd" stopOpacity="0.6" />
-                    <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.4" />
-                  </linearGradient>
-                  <filter id="mapGlow">
-                    <feGaussianBlur stdDeviation="1.5" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-
-                {/* North America */}
-                <path
-                  d="M145,65 L160,58 L185,55 L210,58 L235,65 L255,75 L270,90 L280,110 L285,130 L282,150 L275,168 L268,182 L260,195 L252,208 L245,220 L238,232 L230,242 L222,252 L215,260 L208,268 L200,275 L192,280 L185,285 L178,288 L172,290 L168,285 L165,278 L162,270 L158,262 L155,252 L152,242 L150,230 L148,218 L147,205 L146,192 L145,178 L144,165 L143,152 L142,140 L142,128 L142,115 L143,102 L144,88 L145,75 Z M175,255 L182,258 L188,265 L192,272 L195,280 L190,285 L182,288 L175,285 L170,278 L168,270 L170,262 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* Greenland */}
-                <path
-                  d="M310,40 L325,35 L340,35 L352,40 L358,50 L358,65 L352,78 L342,85 L330,85 L320,80 L312,70 L308,58 L308,48 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* South America */}
-                <path
-                  d="M225,275 L238,270 L250,272 L258,280 L263,292 L265,308 L263,325 L258,342 L252,358 L246,372 L240,385 L235,398 L230,410 L225,420 L220,428 L215,435 L210,438 L205,435 L202,425 L200,412 L198,398 L198,382 L200,365 L202,348 L205,332 L208,318 L212,305 L216,292 L220,282 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* Europe */}
-                <path
-                  d="M455,95 L468,88 L482,85 L498,85 L512,88 L525,95 L535,105 L540,118 L538,130 L532,140 L522,148 L510,152 L498,152 L485,148 L475,142 L466,132 L460,120 L456,108 Z M445,105 L452,100 L458,105 L460,115 L458,125 L452,132 L446,135 L441,130 L439,120 L440,112 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* Africa */}
-                <path
-                  d="M462,165 L478,158 L495,158 L512,162 L528,170 L540,182 L548,198 L552,215 L552,235 L548,255 L542,275 L535,292 L528,308 L520,322 L512,335 L505,345 L498,352 L490,358 L482,360 L475,355 L470,345 L466,332 L463,318 L461,302 L460,285 L460,268 L461,250 L461,232 L460,215 L460,198 L461,182 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* Middle East */}
-                <path
-                  d="M545,155 L558,150 L570,152 L578,160 L582,172 L580,185 L575,195 L565,200 L555,198 L548,190 L544,178 L543,165 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* Russia / Northern Asia */}
-                <path
-                  d="M540,55 L580,48 L630,45 L680,45 L730,48 L780,52 L820,58 L850,65 L870,75 L880,88 L882,102 L878,115 L870,125 L858,132 L842,135 L820,132 L795,128 L770,125 L745,125 L720,128 L695,132 L670,135 L648,132 L628,128 L610,122 L595,115 L582,105 L572,92 L565,78 L560,65 L555,58 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* China / East Asia */}
-                <path
-                  d="M670,145 L695,138 L720,138 L742,142 L760,150 L772,162 L780,178 L782,195 L778,212 L770,225 L758,235 L742,240 L725,238 L710,232 L698,222 L688,208 L682,192 L678,175 L676,158 Z M755,230 L765,228 L772,235 L775,245 L772,255 L765,260 L755,258 L748,250 L748,240 Z M775,255 L785,252 L790,260 L792,270 L788,278 L780,280 L772,275 L770,265 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* India / South Asia */}
-                <path
-                  d="M615,168 L632,162 L645,165 L654,175 L658,190 L655,205 L648,218 L638,225 L628,225 L620,218 L615,205 L612,190 L612,178 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* Southeast Asia */}
-                <path
-                  d="M735,248 L748,242 L758,245 L765,255 L768,268 L765,280 L758,288 L748,290 L740,285 L735,275 L732,262 L733,255 Z M762,268 L772,265 L778,272 L780,282 L776,290 L768,292 L760,287 L758,278 Z M778,285 L788,282 L793,290 L795,300 L790,308 L782,310 L775,305 L773,295 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* Australia */}
-                <path
-                  d="M795,335 L820,328 L848,328 L870,335 L885,348 L890,365 L888,382 L880,395 L865,405 L845,408 L825,405 L808,398 L795,385 L788,368 L788,350 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* Japan */}
-                <path
-                  d="M808,155 L815,150 L820,158 L822,168 L818,178 L812,182 L806,178 L803,168 L805,160 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* UK */}
-                <path
-                  d="M442,108 L448,104 L452,110 L453,120 L450,128 L444,130 L440,124 L439,115 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-                {/* Madagascar */}
-                <path
-                  d="M548,290 L553,288 L556,298 L555,310 L552,320 L548,322 L545,315 L544,302 L546,293 Z"
-                  fill="url(#landFill)"
-                  stroke="url(#landStroke)"
-                  strokeWidth="0.8"
-                  filter="url(#mapGlow)"
-                />
-
-                {/* Latitude lines */}
-                <g stroke="white" strokeWidth="0.3" opacity="0.06">
-                  <line x1="0" y1="125" x2="1000" y2="125" />
-                  <line x1="0" y1="250" x2="1000" y2="250" />
-                  <line x1="0" y1="375" x2="1000" y2="375" />
-                </g>
-
-                {/* Connection arcs from China HQ */}
                 {regions.filter(r => !r.isHQ).map((region, i) => {
-                  const hqX = 720;
-                  const hqY = 190;
-                  const targetX = parseInt(region.x) * 10;
-                  const targetY = parseInt(region.y) * 5;
+                  const hqX = 73;
+                  const hqY = 40;
+                  const targetX = parseInt(region.x);
+                  const targetY = parseInt(region.y);
                   const midX = (hqX + targetX) / 2;
-                  const midY = Math.min(hqY, targetY) - 55;
+                  const midY = Math.min(hqY, targetY) - 12;
                   return (
                     <path
                       key={i}
                       d={`M${hqX},${hqY} Q${midX},${midY} ${targetX},${targetY}`}
                       fill="none"
                       stroke="#3b82f6"
-                      strokeWidth="1"
-                      opacity="0.3"
-                      strokeDasharray="6,6"
+                      strokeWidth="0.15"
+                      opacity="0.35"
+                      strokeDasharray="1,1"
+                      vectorEffect="non-scaling-stroke"
                     >
                       <animate
                         attributeName="stroke-dashoffset"
-                        from="12"
+                        from="2"
                         to="0"
                         dur={`${2.5 + i * 0.3}s`}
                         repeatCount="indefinite"
