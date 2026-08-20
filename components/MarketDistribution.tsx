@@ -46,20 +46,20 @@ export default function MarketDistribution() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Map Area */}
           <Reveal direction="left" className="lg:col-span-2">
-            <div className="relative bg-gradient-to-br from-[#0a1628] via-[#0d1f3c] to-[#0a1628] rounded-3xl overflow-hidden shadow-2xl aspect-[16/10] border border-white/5">
-              {/* Subtle grid overlay */}
+            <div className="relative bg-gradient-to-br from-[#060f1f] via-[#0a1a35] to-[#060f1f] rounded-3xl overflow-hidden shadow-2xl aspect-[16/10] border border-white/5">
+              {/* Subtle grid */}
               <div
-                className="absolute inset-0 opacity-[0.03]"
+                className="absolute inset-0 opacity-[0.04]"
                 style={{
-                  backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-                  backgroundSize: '40px 40px',
+                  backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+                  backgroundSize: '50px 50px',
                 }}
               />
 
-              {/* Radial glow from center */}
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.12)_0%,transparent_70%)]" />
+              {/* Radial glow */}
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(59,130,246,0.15)_0%,transparent_65%)]" />
 
-              {/* World Map SVG */}
+              {/* Abstract World Map - dot matrix + outline */}
               <svg
                 viewBox="0 0 1000 625"
                 className="absolute inset-0 w-full h-full"
@@ -67,129 +67,146 @@ export default function MarketDistribution() {
                 preserveAspectRatio="xMidYMid meet"
               >
                 <defs>
-                  <linearGradient id="landGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0.12" />
-                    <stop offset="50%" stopColor="#ffffff" stopOpacity="0.08" />
-                    <stop offset="100%" stopColor="#ffffff" stopOpacity="0.04" />
+                  {/* Dot pattern for continents */}
+                  <pattern id="continentDots" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+                    <circle cx="1.5" cy="1.5" r="0.8" fill="white" opacity="0.25" />
+                  </pattern>
+                  <pattern id="continentDotsLight" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+                    <circle cx="1" cy="1" r="0.6" fill="white" opacity="0.15" />
+                  </pattern>
+                  <linearGradient id="outlineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.5" />
+                    <stop offset="50%" stopColor="#ffffff" stopOpacity="0.3" />
+                    <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.5" />
                   </linearGradient>
-                  <filter id="landGlow">
-                    <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                  <filter id="softGlow">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
                     <feMerge>
-                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="blur" />
                       <feMergeNode in="SourceGraphic" />
                     </feMerge>
                   </filter>
-                  <filter id="markerGlow">
-                    <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                  <filter id="strongGlow">
+                    <feGaussianBlur stdDeviation="6" result="blur" />
                     <feMerge>
-                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="blur" />
                       <feMergeNode in="SourceGraphic" />
                     </feMerge>
                   </filter>
                 </defs>
 
+                {/* Continent fill with dot pattern - creates abstract dot-matrix world map */}
                 {/* North America */}
                 <path
-                  d="M120,100 Q140,85 180,90 Q220,95 250,115 Q275,135 280,165 Q285,195 275,225 Q265,255 250,275 Q235,295 215,300 Q195,305 180,295 Q165,285 155,265 Q145,245 140,220 Q135,195 130,170 Q125,140 120,100Z M200,280 Q210,275 215,285 Q220,295 210,300 Q200,305 195,295 Q190,285 200,280Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  d="M120,100 Q140,85 180,90 Q220,95 250,115 Q275,135 280,165 Q285,195 275,225 Q265,255 250,275 Q235,295 215,300 Q195,305 180,295 Q165,285 155,265 Q145,245 140,220 Q135,195 130,170 Q125,140 120,100Z"
+                  fill="url(#continentDots)"
                 />
                 {/* Greenland */}
                 <path
                   d="M310,70 Q330,60 350,65 Q365,75 360,95 Q355,110 340,110 Q325,110 315,100 Q305,90 310,70Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  fill="url(#continentDotsLight)"
                 />
                 {/* South America */}
                 <path
                   d="M225,310 Q245,305 255,325 Q265,355 260,390 Q255,425 245,455 Q238,475 228,480 Q218,475 215,455 Q212,430 210,405 Q208,380 212,355 Q216,330 225,310Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  fill="url(#continentDots)"
                 />
                 {/* Europe */}
                 <path
-                  d="M455,115 Q475,108 500,110 Q525,112 545,125 Q560,138 555,155 Q550,170 535,175 Q520,180 505,178 Q490,176 478,168 Q466,160 458,145 Q452,130 455,115Z M470,100 Q480,95 485,105 Q490,115 480,118 Q470,120 465,112 Q462,105 470,100Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  d="M455,115 Q475,108 500,110 Q525,112 545,125 Q560,138 555,155 Q550,170 535,175 Q520,180 505,178 Q490,176 478,168 Q466,160 458,145 Q452,130 455,115Z"
+                  fill="url(#continentDots)"
                 />
                 {/* Africa */}
                 <path
-                  d="M465,195 Q490,188 515,195 Q540,205 550,230 Q560,260 555,295 Q550,330 540,360 Q530,385 515,395 Q500,405 488,398 Q476,390 470,370 Q464,345 460,320 Q456,290 458,260 Q460,230 465,195Z M490,185 Q500,180 505,190 Q510,200 500,203 Q490,205 485,197 Q482,190 490,185Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  d="M465,195 Q490,188 515,195 Q540,205 550,230 Q560,260 555,295 Q550,330 540,360 Q530,385 515,395 Q500,405 488,398 Q476,390 470,370 Q464,345 460,320 Q456,290 458,260 Q460,230 465,195Z"
+                  fill="url(#continentDots)"
                 />
-                {/* Middle East / Arabian Peninsula */}
+                {/* Middle East */}
                 <path
                   d="M545,200 Q565,195 580,205 Q590,218 585,235 Q580,250 568,252 Q556,254 548,242 Q542,230 545,200Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  fill="url(#continentDotsLight)"
                 />
                 {/* Russia / Northern Asia */}
                 <path
                   d="M555,85 Q620,75 700,80 Q780,85 840,95 Q870,105 875,125 Q880,145 865,155 Q850,165 830,160 Q800,155 770,150 Q740,145 710,148 Q680,151 655,148 Q630,145 610,138 Q590,130 575,118 Q562,105 555,85Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  fill="url(#continentDots)"
                 />
                 {/* China / East Asia */}
                 <path
-                  d="M680,175 Q710,168 740,175 Q765,185 775,205 Q785,228 775,250 Q765,270 748,275 Q730,280 715,272 Q700,264 690,248 Q682,230 678,210 Q675,190 680,175Z M750,260 Q760,255 765,265 Q770,278 760,282 Q750,286 745,276 Q742,268 750,260Z M770,285 Q780,280 785,290 Q790,302 780,306 Q770,310 765,300 Q762,292 770,285Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  d="M680,175 Q710,168 740,175 Q765,185 775,205 Q785,228 775,250 Q765,270 748,275 Q730,280 715,272 Q700,264 690,248 Q682,230 678,210 Q675,190 680,175Z"
+                  fill="url(#continentDots)"
                 />
-                {/* India / South Asia */}
+                {/* India */}
                 <path
                   d="M620,210 Q640,205 650,220 Q658,238 652,258 Q646,275 635,278 Q624,280 618,265 Q612,250 614,232 Q616,218 620,210Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  fill="url(#continentDotsLight)"
                 />
                 {/* Southeast Asia */}
                 <path
-                  d="M745,290 Q760,285 770,295 Q778,308 772,322 Q766,335 755,335 Q744,335 738,322 Q732,310 738,298 Q742,292 745,290Z M775,310 Q785,305 790,315 Q795,328 785,332 Q775,336 770,326 Q768,318 775,310Z M790,330 Q800,325 805,335 Q810,348 800,352 Q790,356 785,346 Q783,338 790,330Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  d="M745,290 Q760,285 770,295 Q778,308 772,322 Q766,335 755,335 Q744,335 738,322 Q732,310 738,298 Q742,292 745,290Z"
+                  fill="url(#continentDotsLight)"
                 />
                 {/* Australia */}
                 <path
                   d="M800,385 Q830,378 860,385 Q885,395 890,415 Q895,435 880,448 Q865,460 845,458 Q825,456 810,445 Q798,434 795,415 Q793,398 800,385Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  fill="url(#continentDots)"
                 />
                 {/* Japan */}
                 <path
                   d="M810,195 Q818,190 822,200 Q826,212 820,220 Q814,228 808,220 Q804,210 810,195Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  fill="url(#continentDotsLight)"
                 />
                 {/* UK */}
                 <path
                   d="M445,130 Q452,126 455,135 Q458,145 452,150 Q446,155 442,147 Q439,138 445,130Z"
-                  fill="url(#landGradient)"
-                  filter="url(#landGlow)"
+                  fill="url(#continentDotsLight)"
                 />
 
-                {/* Connection arcs from China HQ to all regions */}
+                {/* Continent outlines - thin glowing lines */}
+                <g stroke="url(#outlineGrad)" strokeWidth="1" fill="none" filter="url(#softGlow)" opacity="0.6">
+                  <path d="M120,100 Q140,85 180,90 Q220,95 250,115 Q275,135 280,165 Q285,195 275,225 Q265,255 250,275 Q235,295 215,300 Q195,305 180,295 Q165,285 155,265 Q145,245 140,220 Q135,195 130,170 Q125,140 120,100Z" />
+                  <path d="M225,310 Q245,305 255,325 Q265,355 260,390 Q255,425 245,455 Q238,475 228,480 Q218,475 215,455 Q212,430 210,405 Q208,380 212,355 Q216,330 225,310Z" />
+                  <path d="M455,115 Q475,108 500,110 Q525,112 545,125 Q560,138 555,155 Q550,170 535,175 Q520,180 505,178 Q490,176 478,168 Q466,160 458,145 Q452,130 455,115Z" />
+                  <path d="M465,195 Q490,188 515,195 Q540,205 550,230 Q560,260 555,295 Q550,330 540,360 Q530,385 515,395 Q500,405 488,398 Q476,390 470,370 Q464,345 460,320 Q456,290 458,260 Q460,230 465,195Z" />
+                  <path d="M555,85 Q620,75 700,80 Q780,85 840,95 Q870,105 875,125 Q880,145 865,155 Q850,165 830,160 Q800,155 770,150 Q740,145 710,148 Q680,151 655,148 Q630,145 610,138 Q590,130 575,118 Q562,105 555,85Z" />
+                  <path d="M680,175 Q710,168 740,175 Q765,185 775,205 Q785,228 775,250 Q765,270 748,275 Q730,280 715,272 Q700,264 690,248 Q682,230 678,210 Q675,190 680,175Z" />
+                  <path d="M800,385 Q830,378 860,385 Q885,395 890,415 Q895,435 880,448 Q865,460 845,458 Q825,456 810,445 Q798,434 795,415 Q793,398 800,385Z" />
+                </g>
+
+                {/* Latitude / longitude lines - subtle */}
+                <g stroke="white" strokeWidth="0.3" opacity="0.08">
+                  <line x1="0" y1="156" x2="1000" y2="156" />
+                  <line x1="0" y1="312" x2="1000" y2="312" />
+                  <line x1="0" y1="468" x2="1000" y2="468" />
+                  <line x1="250" y1="0" x2="250" y2="625" />
+                  <line x1="500" y1="0" x2="500" y2="625" />
+                  <line x1="750" y1="0" x2="750" y2="625" />
+                </g>
+
+                {/* Connection arcs from China HQ */}
                 {regions.filter(r => !r.isHQ).map((region, i) => {
                   const hqX = 710;
                   const hqY = 250;
                   const targetX = parseInt(region.x) * 10;
                   const targetY = parseInt(region.y) * 6.25;
                   const midX = (hqX + targetX) / 2;
-                  const midY = Math.min(hqY, targetY) - 60;
+                  const midY = Math.min(hqY, targetY) - 70;
                   return (
                     <path
                       key={i}
                       d={`M${hqX},${hqY} Q${midX},${midY} ${targetX},${targetY}`}
                       fill="none"
                       stroke="#3b82f6"
-                      strokeWidth="1"
-                      opacity="0.3"
-                      strokeDasharray="6,6"
+                      strokeWidth="1.2"
+                      opacity="0.35"
+                      strokeDasharray="8,8"
+                      filter="url(#softGlow)"
                     >
                       <animate
                         attributeName="stroke-dashoffset"
-                        from="12"
+                        from="16"
                         to="0"
-                        dur={`${2 + i * 0.3}s`}
+                        dur={`${2.5 + i * 0.4}s`}
                         repeatCount="indefinite"
                       />
                     </path>
@@ -198,7 +215,7 @@ export default function MarketDistribution() {
               </svg>
 
               {/* Region markers */}
-              {regions.map((region, index) => (
+              {regions.map((region) => (
                 <div
                   key={region.name}
                   className="absolute group z-10"
@@ -207,47 +224,54 @@ export default function MarketDistribution() {
                   {region.isHQ ? (
                     <>
                       <div className="relative">
-                        <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center shadow-xl shadow-blue-500/30">
-                          <div className="w-3.5 h-3.5 bg-accent rounded-full" />
+                        <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/40">
+                          <div className="w-4 h-4 bg-gradient-to-br from-accent to-blue-600 rounded-full" />
                         </div>
-                        <div className="absolute inset-0 w-7 h-7 bg-white rounded-full animate-ping opacity-20" />
+                        <div className="absolute inset-0 w-8 h-8 bg-white rounded-full animate-ping opacity-15" />
+                        <div className="absolute -inset-2 rounded-full bg-blue-500/10 animate-pulse" />
                       </div>
-                      <div className="absolute left-1/2 -translate-x-1/2 top-9 whitespace-nowrap">
-                        <span className="text-white text-sm font-bold drop-shadow-lg">{region.name}</span>
+                      <div className="absolute left-1/2 -translate-x-1/2 top-10 whitespace-nowrap">
+                        <span className="text-white text-sm font-bold drop-shadow-lg bg-primary/50 px-2 py-0.5 rounded">{region.name}</span>
                       </div>
                     </>
                   ) : (
                     <>
                       <div className="relative">
-                        <div className="w-3.5 h-3.5 bg-accent rounded-full shadow-lg shadow-accent/50" />
+                        <div className="w-3.5 h-3.5 bg-gradient-to-br from-blue-400 to-accent rounded-full shadow-lg shadow-accent/40" />
                         <div className="absolute inset-0 w-3.5 h-3.5 bg-accent rounded-full animate-ping opacity-40" />
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 top-5 whitespace-nowrap">
-                        <span className="text-white/90 text-xs font-medium drop-shadow-lg">{region.name}</span>
+                        <span className="text-white/80 text-xs font-medium drop-shadow">{region.name}</span>
                       </div>
                     </>
                   )}
                   {/* Tooltip */}
-                  <div className="absolute left-1/2 -translate-x-1/2 top-10 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-20 whitespace-nowrap translate-y-1 group-hover:translate-y-0">
+                  <div className="absolute left-1/2 -translate-x-1/2 top-12 bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-20 whitespace-nowrap translate-y-1 group-hover:translate-y-0 border border-gray-100">
                     <p className="text-xs font-bold text-primary">{region.name}</p>
                     <p className="text-xs text-gray-500">{region.countries}</p>
-                    <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-white rotate-45" />
+                    <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-white rotate-45 border-l border-t border-gray-100" />
                   </div>
                 </div>
               ))}
 
               {/* Corner decorations */}
-              <div className="absolute top-4 left-4 flex items-center gap-2 text-white/30">
+              <div className="absolute top-5 left-5 flex items-center gap-2 text-white/25">
                 <Globe className="w-4 h-4" />
-                <span className="text-xs font-medium tracking-wider">GLOBAL NETWORK</span>
+                <span className="text-[10px] font-semibold tracking-[0.2em]">GLOBAL NETWORK</span>
               </div>
-              <div className="absolute bottom-4 right-4 text-white/20 text-xs font-mono">
-                50+ COUNTRIES
+              <div className="absolute bottom-5 right-5 flex items-center gap-2 text-white/20">
+                <span className="text-[10px] font-mono tracking-wider">50+ COUNTRIES</span>
+                <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
               </div>
+              {/* Corner brackets */}
+              <div className="absolute top-4 left-4 w-6 h-6 border-l border-t border-white/10 rounded-tl-lg" />
+              <div className="absolute top-4 right-4 w-6 h-6 border-r border-t border-white/10 rounded-tr-lg" />
+              <div className="absolute bottom-4 left-4 w-6 h-6 border-l border-b border-white/10 rounded-bl-lg" />
+              <div className="absolute bottom-4 right-4 w-6 h-6 border-r border-b border-white/10 rounded-br-lg" />
             </div>
           </Reveal>
 
-          {/* Right side - benefits + company card */}
+          {/* Right side */}
           <div className="space-y-5">
             <Reveal direction="right">
               <div className="bg-gradient-to-br from-primary to-[#0a1628] rounded-2xl p-6 text-white shadow-xl border border-white/5">
