@@ -53,7 +53,7 @@ export default function MarketDistribution() {
                 <img
                   src="/images/world-map.svg"
                   alt="World map"
-                  className="w-full h-full object-contain opacity-[0.4] select-none pointer-events-none"
+                  className="w-full h-full object-contain opacity-[0.7] select-none pointer-events-none"
                   draggable={false}
                 />
               </div>
