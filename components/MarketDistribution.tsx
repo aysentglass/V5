@@ -4,14 +4,14 @@ import Reveal from './Reveal';
 import { MapPin, Globe, Truck, Headphones, Package, Award } from 'lucide-react';
 
 const regions = [
-  { name: 'North America', x: '18%', y: '42%', countries: 'USA, Canada, Mexico' },
-  { name: 'Europe', x: '48%', y: '35%', countries: 'UK, Germany, France, Italy' },
-  { name: 'China', x: '72%', y: '45%', countries: 'Headquarters & Factory' },
-  { name: 'Middle East', x: '58%', y: '52%', countries: 'UAE, Saudi Arabia, Qatar' },
-  { name: 'Africa', x: '50%', y: '62%', countries: 'South Africa, Egypt, Nigeria' },
-  { name: 'Latin America', x: '28%', y: '70%', countries: 'Brazil, Argentina, Chile' },
-  { name: 'Southeast Asia', x: '78%', y: '60%', countries: 'Singapore, Malaysia, Thailand' },
-  { name: 'Oceania', x: '85%', y: '75%', countries: 'Australia, New Zealand' },
+  { name: 'North America', x: '17%', y: '38%', countries: 'USA, Canada, Mexico' },
+  { name: 'Latin America', x: '26%', y: '72%', countries: 'Brazil, Argentina, Chile' },
+  { name: 'Europe', x: '47%', y: '30%', countries: 'UK, Germany, France, Italy' },
+  { name: 'Middle East', x: '56%', y: '44%', countries: 'UAE, Saudi Arabia, Qatar' },
+  { name: 'Africa', x: '49%', y: '60%', countries: 'South Africa, Egypt, Nigeria' },
+  { name: 'China (HQ)', x: '71%', y: '40%', countries: 'Headquarters & Factory', isHQ: true },
+  { name: 'Southeast Asia', x: '76%', y: '56%', countries: 'Singapore, Malaysia, Thailand' },
+  { name: 'Oceania', x: '83%', y: '73%', countries: 'Australia, New Zealand' },
 ];
 
 const benefits = [
@@ -46,87 +46,153 @@ export default function MarketDistribution() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Map Area */}
           <Reveal direction="left" className="lg:col-span-2">
-            <div className="relative bg-primary rounded-3xl overflow-hidden shadow-2xl aspect-[16/10]">
-              {/* Abstract world map - dot matrix pattern */}
-              <svg
-                viewBox="0 0 800 500"
-                className="absolute inset-0 w-full h-full opacity-30"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Dot grid background */}
-                <defs>
-                  <pattern id="dots" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-                    <circle cx="2" cy="2" r="1" fill="white" opacity="0.4" />
-                  </pattern>
-                  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
-                    <stop offset="100%" stopColor="#0B1F3A" stopOpacity="0" />
-                  </radialGradient>
-                </defs>
-                <rect width="800" height="500" fill="url(#dots)" />
-                <rect width="800" height="500" fill="url(#glow)" />
+            <div className="relative bg-gradient-to-br from-[#0a1628] via-[#0d1f3c] to-[#0a1628] rounded-3xl overflow-hidden shadow-2xl aspect-[16/10] border border-white/5">
+              {/* Subtle grid overlay */}
+              <div
+                className="absolute inset-0 opacity-[0.03]"
+                style={{
+                  backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                  backgroundSize: '40px 40px',
+                }}
+              />
 
-                {/* Simplified continent shapes - North America */}
+              {/* Radial glow from center */}
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.12)_0%,transparent_70%)]" />
+
+              {/* World Map SVG */}
+              <svg
+                viewBox="0 0 1000 625"
+                className="absolute inset-0 w-full h-full"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <defs>
+                  <linearGradient id="landGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0.12" />
+                    <stop offset="50%" stopColor="#ffffff" stopOpacity="0.08" />
+                    <stop offset="100%" stopColor="#ffffff" stopOpacity="0.04" />
+                  </linearGradient>
+                  <filter id="landGlow">
+                    <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <filter id="markerGlow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                {/* North America */}
                 <path
-                  d="M100,120 Q120,100 160,110 Q200,120 220,150 Q240,180 230,220 Q220,260 200,280 Q180,300 160,290 Q140,280 130,250 Q120,220 110,190 Q100,160 100,120Z"
-                  fill="white"
-                  opacity="0.15"
+                  d="M120,100 Q140,85 180,90 Q220,95 250,115 Q275,135 280,165 Q285,195 275,225 Q265,255 250,275 Q235,295 215,300 Q195,305 180,295 Q165,285 155,265 Q145,245 140,220 Q135,195 130,170 Q125,140 120,100Z M200,280 Q210,275 215,285 Q220,295 210,300 Q200,305 195,295 Q190,285 200,280Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
+                />
+                {/* Greenland */}
+                <path
+                  d="M310,70 Q330,60 350,65 Q365,75 360,95 Q355,110 340,110 Q325,110 315,100 Q305,90 310,70Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
                 />
                 {/* South America */}
                 <path
-                  d="M180,300 Q200,290 210,320 Q220,360 210,400 Q200,440 190,450 Q180,440 175,410 Q170,370 175,340 Q178,315 180,300Z"
-                  fill="white"
-                  opacity="0.15"
+                  d="M225,310 Q245,305 255,325 Q265,355 260,390 Q255,425 245,455 Q238,475 228,480 Q218,475 215,455 Q212,430 210,405 Q208,380 212,355 Q216,330 225,310Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
                 />
                 {/* Europe */}
                 <path
-                  d="M370,130 Q390,120 420,125 Q450,130 460,150 Q470,170 460,185 Q450,200 430,200 Q410,200 390,195 Q375,190 370,170 Q365,150 370,130Z"
-                  fill="white"
-                  opacity="0.15"
+                  d="M455,115 Q475,108 500,110 Q525,112 545,125 Q560,138 555,155 Q550,170 535,175 Q520,180 505,178 Q490,176 478,168 Q466,160 458,145 Q452,130 455,115Z M470,100 Q480,95 485,105 Q490,115 480,118 Q470,120 465,112 Q462,105 470,100Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
                 />
                 {/* Africa */}
                 <path
-                  d="M390,220 Q420,210 440,230 Q460,260 455,300 Q450,340 440,370 Q430,395 415,400 Q400,395 395,370 Q390,340 385,310 Q380,270 385,245 Q388,228 390,220Z"
-                  fill="white"
-                  opacity="0.15"
+                  d="M465,195 Q490,188 515,195 Q540,205 550,230 Q560,260 555,295 Q550,330 540,360 Q530,385 515,395 Q500,405 488,398 Q476,390 470,370 Q464,345 460,320 Q456,290 458,260 Q460,230 465,195Z M490,185 Q500,180 505,190 Q510,200 500,203 Q490,205 485,197 Q482,190 490,185Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
                 />
-                {/* Asia */}
+                {/* Middle East / Arabian Peninsula */}
                 <path
-                  d="M480,120 Q530,110 580,120 Q630,130 660,160 Q680,190 670,220 Q660,250 640,260 Q620,270 600,265 Q570,260 550,250 Q530,240 510,230 Q490,215 480,190 Q475,160 480,120Z"
-                  fill="white"
-                  opacity="0.15"
+                  d="M545,200 Q565,195 580,205 Q590,218 585,235 Q580,250 568,252 Q556,254 548,242 Q542,230 545,200Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
+                />
+                {/* Russia / Northern Asia */}
+                <path
+                  d="M555,85 Q620,75 700,80 Q780,85 840,95 Q870,105 875,125 Q880,145 865,155 Q850,165 830,160 Q800,155 770,150 Q740,145 710,148 Q680,151 655,148 Q630,145 610,138 Q590,130 575,118 Q562,105 555,85Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
+                />
+                {/* China / East Asia */}
+                <path
+                  d="M680,175 Q710,168 740,175 Q765,185 775,205 Q785,228 775,250 Q765,270 748,275 Q730,280 715,272 Q700,264 690,248 Q682,230 678,210 Q675,190 680,175Z M750,260 Q760,255 765,265 Q770,278 760,282 Q750,286 745,276 Q742,268 750,260Z M770,285 Q780,280 785,290 Q790,302 780,306 Q770,310 765,300 Q762,292 770,285Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
+                />
+                {/* India / South Asia */}
+                <path
+                  d="M620,210 Q640,205 650,220 Q658,238 652,258 Q646,275 635,278 Q624,280 618,265 Q612,250 614,232 Q616,218 620,210Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
+                />
+                {/* Southeast Asia */}
+                <path
+                  d="M745,290 Q760,285 770,295 Q778,308 772,322 Q766,335 755,335 Q744,335 738,322 Q732,310 738,298 Q742,292 745,290Z M775,310 Q785,305 790,315 Q795,328 785,332 Q775,336 770,326 Q768,318 775,310Z M790,330 Q800,325 805,335 Q810,348 800,352 Q790,356 785,346 Q783,338 790,330Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
                 />
                 {/* Australia */}
                 <path
-                  d="M640,340 Q670,330 700,340 Q720,355 715,375 Q710,395 690,400 Q670,405 655,395 Q640,385 638,365 Q637,350 640,340Z"
-                  fill="white"
-                  opacity="0.15"
+                  d="M800,385 Q830,378 860,385 Q885,395 890,415 Q895,435 880,448 Q865,460 845,458 Q825,456 810,445 Q798,434 795,415 Q793,398 800,385Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
+                />
+                {/* Japan */}
+                <path
+                  d="M810,195 Q818,190 822,200 Q826,212 820,220 Q814,228 808,220 Q804,210 810,195Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
+                />
+                {/* UK */}
+                <path
+                  d="M445,130 Q452,126 455,135 Q458,145 452,150 Q446,155 442,147 Q439,138 445,130Z"
+                  fill="url(#landGradient)"
+                  filter="url(#landGlow)"
                 />
 
-                {/* Connection lines from China hub */}
-                {regions.map((region, i) => {
-                  const x = parseInt(region.x) * 8;
-                  const y = parseInt(region.y) * 5;
+                {/* Connection arcs from China HQ to all regions */}
+                {regions.filter(r => !r.isHQ).map((region, i) => {
+                  const hqX = 710;
+                  const hqY = 250;
+                  const targetX = parseInt(region.x) * 10;
+                  const targetY = parseInt(region.y) * 6.25;
+                  const midX = (hqX + targetX) / 2;
+                  const midY = Math.min(hqY, targetY) - 60;
                   return (
-                    <line
+                    <path
                       key={i}
-                      x1="576"
-                      y1="225"
-                      x2={x}
-                      y2={y}
+                      d={`M${hqX},${hqY} Q${midX},${midY} ${targetX},${targetY}`}
+                      fill="none"
                       stroke="#3b82f6"
                       strokeWidth="1"
-                      opacity="0.4"
-                      strokeDasharray="4,4"
+                      opacity="0.3"
+                      strokeDasharray="6,6"
                     >
                       <animate
                         attributeName="stroke-dashoffset"
-                        from="8"
+                        from="12"
                         to="0"
-                        dur="2s"
+                        dur={`${2 + i * 0.3}s`}
                         repeatCount="indefinite"
                       />
-                    </line>
+                    </path>
                   );
                 })}
               </svg>
@@ -135,43 +201,56 @@ export default function MarketDistribution() {
               {regions.map((region, index) => (
                 <div
                   key={region.name}
-                  className="absolute group"
+                  className="absolute group z-10"
                   style={{ left: region.x, top: region.y, transform: 'translate(-50%, -50%)' }}
                 >
-                  <div className="relative">
-                    <div className="w-4 h-4 bg-accent rounded-full animate-pulse shadow-lg shadow-accent/50" />
-                    <div className="absolute inset-0 w-4 h-4 bg-accent rounded-full animate-ping opacity-40" />
-                  </div>
-                  <div className="absolute left-1/2 -translate-x-1/2 top-5 whitespace-nowrap">
-                    <span className="text-white text-xs font-semibold drop-shadow-lg">{region.name}</span>
-                  </div>
-                  {/* Tooltip on hover */}
-                  <div className="absolute left-1/2 -translate-x-1/2 top-8 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10 whitespace-nowrap">
-                    <p className="text-xs font-semibold text-primary">{region.name}</p>
+                  {region.isHQ ? (
+                    <>
+                      <div className="relative">
+                        <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center shadow-xl shadow-blue-500/30">
+                          <div className="w-3.5 h-3.5 bg-accent rounded-full" />
+                        </div>
+                        <div className="absolute inset-0 w-7 h-7 bg-white rounded-full animate-ping opacity-20" />
+                      </div>
+                      <div className="absolute left-1/2 -translate-x-1/2 top-9 whitespace-nowrap">
+                        <span className="text-white text-sm font-bold drop-shadow-lg">{region.name}</span>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="relative">
+                        <div className="w-3.5 h-3.5 bg-accent rounded-full shadow-lg shadow-accent/50" />
+                        <div className="absolute inset-0 w-3.5 h-3.5 bg-accent rounded-full animate-ping opacity-40" />
+                      </div>
+                      <div className="absolute left-1/2 -translate-x-1/2 top-5 whitespace-nowrap">
+                        <span className="text-white/90 text-xs font-medium drop-shadow-lg">{region.name}</span>
+                      </div>
+                    </>
+                  )}
+                  {/* Tooltip */}
+                  <div className="absolute left-1/2 -translate-x-1/2 top-10 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-20 whitespace-nowrap translate-y-1 group-hover:translate-y-0">
+                    <p className="text-xs font-bold text-primary">{region.name}</p>
                     <p className="text-xs text-gray-500">{region.countries}</p>
+                    <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-white rotate-45" />
                   </div>
                 </div>
               ))}
 
-              {/* China hub - larger marker */}
-              <div className="absolute" style={{ left: '72%', top: '45%', transform: 'translate(-50%, -50%)' }}>
-                <div className="relative">
-                  <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-xl">
-                    <div className="w-3 h-3 bg-accent rounded-full" />
-                  </div>
-                  <div className="absolute inset-0 w-6 h-6 bg-white rounded-full animate-ping opacity-30" />
-                </div>
-                <div className="absolute left-1/2 -translate-x-1/2 top-7 whitespace-nowrap">
-                  <span className="text-white text-sm font-bold drop-shadow-lg">China (HQ)</span>
-                </div>
+              {/* Corner decorations */}
+              <div className="absolute top-4 left-4 flex items-center gap-2 text-white/30">
+                <Globe className="w-4 h-4" />
+                <span className="text-xs font-medium tracking-wider">GLOBAL NETWORK</span>
+              </div>
+              <div className="absolute bottom-4 right-4 text-white/20 text-xs font-mono">
+                50+ COUNTRIES
               </div>
             </div>
           </Reveal>
 
           {/* Right side - benefits + company card */}
-          <div className="space-y-6">
+          <div className="space-y-5">
             <Reveal direction="right">
-              <div className="bg-primary rounded-2xl p-6 text-white shadow-xl">
+              <div className="bg-gradient-to-br from-primary to-[#0a1628] rounded-2xl p-6 text-white shadow-xl border border-white/5">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-accent-light" />
@@ -185,22 +264,25 @@ export default function MarketDistribution() {
                   Headquarters Building of Huantou Center, No. 1728, Shanguo South Road,
                   Jinghe Sub-district, Tengzhou City, Shandong Province, China
                 </p>
-                <div className="flex items-center gap-2 text-accent-light text-sm">
-                  <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                  <span>50+ Countries Served</span>
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400" />
+                  </span>
+                  <span className="text-accent-light text-sm font-medium">50+ Countries Served</span>
                 </div>
               </div>
             </Reveal>
 
             {benefits.map((benefit, index) => (
-              <Reveal key={benefit.title} direction="right" delay={index * 100}>
-                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Reveal key={benefit.title} direction="right" delay={index * 80}>
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 border border-transparent hover:border-gray-100 transition-all duration-300 group">
+                  <div className="w-11 h-11 bg-gradient-to-br from-accent/10 to-accent/5 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:from-accent/20 group-hover:to-accent/10 transition-colors">
                     <benefit.icon className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-primary text-sm">{benefit.title}</h4>
-                    <p className="text-gray-500 text-xs mt-1">{benefit.desc}</p>
+                    <p className="text-gray-500 text-xs mt-1 leading-relaxed">{benefit.desc}</p>
                   </div>
                 </div>
               </Reveal>
