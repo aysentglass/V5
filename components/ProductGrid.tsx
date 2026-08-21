@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Reveal from './Reveal';
 import { ArrowRight } from 'lucide-react';
 
+// Product catalog for AYSENT PDLC smart film solutions
 const products = [
   {
     slug: 'pdlc-smart-film',
@@ -28,7 +29,7 @@ const products = [
     slug: 'accessories',
     name: 'Control Systems',
     desc: 'Smart controllers, switches, dimmers and automation integration accessories.',
-    image: '/images/factory-production.jpg',
+    image: '/images/product-control-systems.jpg',
     features: ['WiFi & app control', 'Voice assistant', 'Custom automation'],
   },
 ];

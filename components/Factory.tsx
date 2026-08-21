@@ -48,7 +48,7 @@ export default function Factory() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl img-zoom-container relative h-[500px]">
                 <Image
-                  src="/images/factory-production.jpg"
+                  src="/images/factory-building.jpg"
                   alt="AYSENT manufacturing facility"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
