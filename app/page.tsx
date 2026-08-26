@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import BrandStory from '@/components/BrandStory';
 import Trust from '@/components/Trust';
 import ProductGrid from '@/components/ProductGrid';
+import TechSpecs from '@/components/TechSpecs';
 import Applications from '@/components/Applications';
 import Services from '@/components/Services';
 import GlobalReach from '@/components/GlobalReach';
@@ -21,6 +22,7 @@ export default function Home() {
         <BrandStory />
         <Trust />
         <ProductGrid />
+        <TechSpecs />
         <Applications />
         <Services />
         <GlobalReach />

@@ -5,7 +5,7 @@ const services = [
   {
     icon: Ruler,
     title: 'Custom Sizing',
-    desc: 'Any width up to 1.8m, any length. Cut to your exact project dimensions with precision CNC cutting.',
+    desc: 'Standard width up to 1.8m, ultra-wide up to 2.1m. Any length. Precision CNC cutting to your exact project dimensions.',
   },
   {
     icon: Wrench,
@@ -15,7 +15,7 @@ const services = [
   {
     icon: FileCheck,
     title: 'Sample Service',
-    desc: 'Free A4 samples within 3-5 days. Test quality, switching speed, and haze before bulk order.',
+    desc: 'Professional sample kit with 3 transmittance grades, USB controller and test tools. Ships within 1-3 days.',
   },
   {
     icon: Truck,
@@ -29,8 +29,8 @@ const services = [
   },
   {
     icon: Shield,
-    title: 'Quality Warranty',
-    desc: '2-year product warranty. Strict QC before shipment with detailed inspection reports.',
+    title: '5-Year Global Warranty',
+    desc: 'Industry-leading 5-year warranty covering cracking, adhesive failure and yellowing. Full inspection before shipment.',
   },
 ];
 
