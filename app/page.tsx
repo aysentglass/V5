@@ -10,6 +10,7 @@ import GlobalReach from '@/components/GlobalReach';
 import MarketDistribution from '@/components/MarketDistribution';
 import Factory from '@/components/Factory';
 import BlogSection from '@/components/BlogSection';
+import FAQ from '@/components/FAQ';
 import QuoteForm from '@/components/QuoteForm';
 import Footer from '@/components/Footer';
 
@@ -29,6 +30,7 @@ export default function Home() {
         <MarketDistribution />
         <Factory />
         <BlogSection />
+        <FAQ />
         <QuoteForm />
       </main>
       <Footer />
