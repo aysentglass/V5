@@ -19,6 +19,7 @@ export default function Hero() {
           className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
           draggable={false}
           loading="eager"
+          fetchPriority="high"
           decoding="async"
           onContextMenu={blockEvent}
         />

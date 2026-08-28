@@ -225,10 +225,11 @@ export default function QuoteForm() {
                 </div>
 
                 <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="product-interest" className="block text-sm font-medium text-gray-700 mb-2">
                     Product Interest
                   </label>
                   <select
+                    id="product-interest"
                     name="product"
                     value={formData.product}
                     onChange={handleChange}
