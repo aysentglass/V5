@@ -70,6 +70,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         {children}
         <FloatingContact />
+        {/* Okki Analytics - Xiaoman CRM */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.okkiConfigs = window.okkiConfigs || [];
+function okkiAdd() { okkiConfigs.push(arguments); };
+okkiAdd("analytics", { siteId: "365757-33332", gId: "" });`,
+          }}
+        />
+        <script async src="//tfile.xiaoman.cn/okki/analyze.js?id=365757-33332-" />
       </body>
     </html>
   );
