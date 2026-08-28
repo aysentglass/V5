@@ -11,12 +11,24 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative h-[100dvh] min-h-[700px] w-full overflow-hidden">
-      {/* WebP Animation Background */}
+      {/* WebP Animation Background - responsive: mobile loads smaller file */}
       <div className="absolute inset-0 bg-primary">
+        {/* Mobile version: 384KB, loads on small screens */}
+        <img
+          src="/videos/hero-bg-mobile.webp"
+          alt="AYSENT PDLC smart glass switching from transparent to frosted"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none lg:hidden"
+          draggable={false}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          onContextMenu={blockEvent}
+        />
+        {/* Desktop version: 908KB, loads on lg+ screens */}
         <img
           src="/videos/hero-bg.webp"
           alt="AYSENT PDLC smart glass switching from transparent to frosted"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none hidden lg:block"
           draggable={false}
           loading="eager"
           fetchPriority="high"
