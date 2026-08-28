@@ -56,7 +56,7 @@ export default function Hero() {
             {/* Badge */}
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fade-in-up"
-              style={{ animationDelay: '0.2s', opacity: 0 }}
+              style={{ animationDelay: '0.1s' }}
             >
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
               <span className="text-white/90 text-sm font-medium">
@@ -67,7 +67,7 @@ export default function Hero() {
             {/* Main Title */}
             <h1
               className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 animate-fade-in-up break-words"
-              style={{ animationDelay: '0.4s', opacity: 0 }}
+              style={{ animationDelay: '0.2s' }}
             >
               Transform Glass Into
               <br />
@@ -77,7 +77,7 @@ export default function Hero() {
             {/* Subtitle */}
             <p
               className="text-lg sm:text-xl text-white/70 max-w-2xl mb-10 leading-relaxed animate-fade-in-up"
-              style={{ animationDelay: '0.6s', opacity: 0 }}
+              style={{ animationDelay: '0.3s' }}
             >
               Premium PDLC smart film manufacturer. Switch from transparent to frosted
               in milliseconds. Engineered for architects, designers and global enterprises.
@@ -86,7 +86,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in-up"
-              style={{ animationDelay: '0.8s', opacity: 0 }}
+              style={{ animationDelay: '0.4s' }}
             >
               <a
                 href="#products"
@@ -107,7 +107,7 @@ export default function Hero() {
             {/* Stats */}
             <div
               className="grid grid-cols-3 gap-8 max-w-lg animate-fade-in-up"
-              style={{ animationDelay: '1s', opacity: 0 }}
+              style={{ animationDelay: '0.5s' }}
             >
               {[
                 { value: '10+', label: 'Years Experience' },
