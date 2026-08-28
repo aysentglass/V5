@@ -11,7 +11,7 @@ import MarketDistribution from '@/components/MarketDistribution';
 import Factory from '@/components/Factory';
 import BlogSection from '@/components/BlogSection';
 import FAQ from '@/components/FAQ';
-import OkkiForm from '@/components/OkkiForm';
+import QuoteForm from '@/components/QuoteForm';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
         <Factory />
         <BlogSection />
         <FAQ />
-        <OkkiForm />
+        <QuoteForm />
       </main>
       <Footer />
     </>
