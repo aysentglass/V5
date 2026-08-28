@@ -163,23 +163,6 @@ a {
   animation: float 6s ease-in-out infinite;
 }
 
-/* Shimmer effect */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.shimmer {
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
-  background-size: 200% 100%;
-  animation: shimmer 3s infinite;
-}
-
 /* Glass morphism */
 .glass {
   background: rgba(255, 255, 255, 0.08);

@@ -50,7 +50,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://formspree.io https://tfile.xiaoman.cn https://*.xiaoman.cn; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; media-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://analytics.google.com https://*.xiaoman.cn wss://*.xiaoman.cn; frame-src https://formspree.io https://*.xiaoman.cn; child-src https://*.xiaoman.cn; object-src 'none'; base-uri 'self';",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://formspree.io https://tfile.xiaoman.cn https://*.xiaoman.cn; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; media-src 'self' data: https:; connect-src 'self' https://formspree.io https://*.xiaoman.cn wss://*.xiaoman.cn; frame-src https://formspree.io https://*.xiaoman.cn; child-src https://*.xiaoman.cn; object-src 'none'; base-uri 'self';",
           },
         ],
       },
