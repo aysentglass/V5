@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Reveal from './Reveal';
 import { Factory as FactoryIcon, FlaskConical, Ruler, Truck } from 'lucide-react';
 
@@ -73,7 +73,7 @@ export default function Factory() {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6 leading-tight">
                 Advanced Manufacturing
                 <br />
-                <span className="text-white/50">Facility</span>
+                <span className="text-white/75">Facility</span>
               </h2>
               <p className="text-lg text-white/70 mb-8 leading-relaxed">
                 Our state-of-the-art production facility combines precision engineering
@@ -89,7 +89,7 @@ export default function Factory() {
                   >
                     <cap.icon className="w-8 h-8 text-accent-light mb-3" />
                     <div className="text-xl font-bold mb-1">{cap.value}</div>
-                    <div className="text-sm text-white/50">{cap.label}</div>
+                    <div className="text-sm text-white/75">{cap.label}</div>
                   </div>
                 ))}
               </div>

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Reveal from './Reveal';
 import { MapPin, Globe, Truck, Headphones, Package, Award } from 'lucide-react';
@@ -171,7 +171,7 @@ export default function MarketDistribution() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">AYSENT Smart Film</h3>
-                    <p className="text-white/60 text-sm">Headquarters</p>
+                    <p className="text-white/85 text-sm">Headquarters</p>
                   </div>
                 </div>
                 <p className="text-white/70 text-sm leading-relaxed mb-4">

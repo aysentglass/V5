@@ -106,7 +106,7 @@ export default function Hero() {
                   <div className="text-3xl sm:text-4xl font-bold text-white mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-white/50">{stat.label}</div>
+                  <div className="text-sm text-white/70">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -116,7 +116,7 @@ export default function Hero() {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-float">
-        <a href="#about" className="flex flex-col items-center text-white/50 hover:text-white/80 transition-colors">
+        <a href="#about" className="flex flex-col items-center text-white/70 hover:text-white transition-colors">
           <span className="text-xs mb-2 tracking-widest uppercase">Scroll</span>
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
             <div className="w-1 h-2 bg-white/50 rounded-full animate-bounce" />

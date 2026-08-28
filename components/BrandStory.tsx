@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Reveal from './Reveal';
 import { Award, Target, Users } from 'lucide-react';
 
@@ -18,7 +18,7 @@ export default function BrandStory() {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-8 leading-tight">
                 Engineering the Future
                 <br />
-                <span className="text-white/40">of Smart Glass</span>
+                <span className="text-white/70">of Smart Glass</span>
               </h2>
               <p className="text-lg text-white/70 mb-6 leading-relaxed">
                 Founded with a vision to transform ordinary glass into intelligent surfaces,
@@ -41,7 +41,7 @@ export default function BrandStory() {
                   <div key={item.label} className="text-center">
                     <item.icon className="w-8 h-8 text-accent-light mx-auto mb-2" />
                     <div className="text-2xl font-bold">{item.value}</div>
-                    <div className="text-xs text-white/50 mt-1">{item.label}</div>
+                    <div className="text-xs text-white/75 mt-1">{item.label}</div>
                   </div>
                 ))}
               </div>

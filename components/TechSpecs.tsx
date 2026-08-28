@@ -1,4 +1,4 @@
-import Reveal from './Reveal';
+﻿import Reveal from './Reveal';
 import { Eye, Droplets, Maximize2, Zap, Battery, Clock, Thermometer, Shield, Sun, Layers, Volume2, Gauge } from 'lucide-react';
 
 const specs = [
@@ -103,9 +103,9 @@ export default function TechSpecs() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 mb-6 leading-tight">
               Engineered for Performance
               <br />
-              <span className="text-white/40">Backed by Lab Data</span>
+              <span className="text-white/70">Backed by Lab Data</span>
             </h2>
-            <p className="text-lg text-white/60">
+            <p className="text-lg text-white/85">
               Every parameter is verified through rigorous testing. Our PDLC smart film delivers
               consistent quality that outperforms industry standards.
             </p>
@@ -125,7 +125,7 @@ export default function TechSpecs() {
                 <div className="text-sm font-semibold text-white/80 mb-1.5">
                   {spec.label}
                 </div>
-                <div className="text-xs text-white/40 leading-relaxed">
+                <div className="text-xs text-white/70 leading-relaxed">
                   {spec.detail}
                 </div>
               </div>
@@ -139,11 +139,11 @@ export default function TechSpecs() {
             <div className="min-w-[640px] bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden">
               <div className="px-6 py-4 border-b border-white/10">
                 <h3 className="text-lg font-semibold text-white">Product Series Comparison</h3>
-                <p className="text-sm text-white/50 mt-1">Choose the right grade for your project</p>
+                <p className="text-sm text-white/75 mt-1">Choose the right grade for your project</p>
               </div>
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-white/10 text-white/60">
+                  <tr className="border-b border-white/10 text-white/85">
                     <th className="text-left px-6 py-3 font-medium">Series</th>
                     <th className="text-left px-6 py-3 font-medium">Positioning</th>
                     <th className="text-left px-6 py-3 font-medium">Transmittance (ON)</th>
@@ -153,25 +153,25 @@ export default function TechSpecs() {
                 <tbody className="text-white/80">
                   <tr className="border-b border-white/5">
                     <td className="px-6 py-3 font-semibold text-accent-light">T6 HD</td>
-                    <td className="px-6 py-3 text-white/60">Entry-level, cost-effective</td>
+                    <td className="px-6 py-3 text-white/85">Entry-level, cost-effective</td>
                     <td className="px-6 py-3">84.5% – 88%</td>
                     <td className="px-6 py-3">145°</td>
                   </tr>
                   <tr className="border-b border-white/5 bg-accent/5">
                     <td className="px-6 py-3 font-semibold text-accent-light">T7 HD Pro <span className="text-xs bg-accent/20 text-accent-light px-2 py-0.5 rounded-full ml-1">Best Seller</span></td>
-                    <td className="px-6 py-3 text-white/60">Mainstream, top-selling</td>
+                    <td className="px-6 py-3 text-white/85">Mainstream, top-selling</td>
                     <td className="px-6 py-3">89.5% – 92%</td>
                     <td className="px-6 py-3">165°</td>
                   </tr>
                   <tr className="border-b border-white/5">
                     <td className="px-6 py-3 font-semibold text-accent-light">T8 Premium HD</td>
-                    <td className="px-6 py-3 text-white/60">High-end projects</td>
+                    <td className="px-6 py-3 text-white/85">High-end projects</td>
                     <td className="px-6 py-3">92.5% – 94%</td>
                     <td className="px-6 py-3">150°</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-3 font-semibold text-accent-light">T9 Ultra HD</td>
-                    <td className="px-6 py-3 text-white/60">Flagship, limited supply</td>
+                    <td className="px-6 py-3 text-white/85">Flagship, limited supply</td>
                     <td className="px-6 py-3">92.7% – 95%</td>
                     <td className="px-6 py-3">165°</td>
                   </tr>

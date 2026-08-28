@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Reveal from './Reveal';
@@ -172,7 +172,7 @@ export default function FAQ() {
               <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">
                 Still have questions?
               </h3>
-              <p className="text-white/60 mb-6 max-w-lg mx-auto">
+              <p className="text-white/85 mb-6 max-w-lg mx-auto">
                 Our PDLC specialists are ready to help you choose the right solution for your project.
                 Get a free quote within 24 hours.
               </p>

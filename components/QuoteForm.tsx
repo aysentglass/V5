@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { Send, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
@@ -93,7 +93,7 @@ export default function QuoteForm() {
                       <Mail className="w-5 h-5 text-accent-light" />
                     </div>
                     <div>
-                      <div className="text-sm text-white/50 mb-1">Email</div>
+                      <div className="text-sm text-white/75 mb-1">Email</div>
                       <div className="font-medium">aaronliu@aysentglass.com</div>
                     </div>
                   </div>
@@ -103,7 +103,7 @@ export default function QuoteForm() {
                       <Phone className="w-5 h-5 text-accent-light" />
                     </div>
                     <div>
-                      <div className="text-sm text-white/50 mb-1">Phone / WhatsApp</div>
+                      <div className="text-sm text-white/75 mb-1">Phone / WhatsApp</div>
                       <div className="font-medium">+86-15163206207</div>
                     </div>
                   </div>
@@ -113,7 +113,7 @@ export default function QuoteForm() {
                       <MapPin className="w-5 h-5 text-accent-light" />
                     </div>
                     <div>
-                      <div className="text-sm text-white/50 mb-1">Factory Location</div>
+                      <div className="text-sm text-white/75 mb-1">Factory Location</div>
                       <div className="font-medium">Tengzhou, Shandong, China</div>
                     </div>
                   </div>

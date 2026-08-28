@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -45,7 +45,7 @@ export default function Header() {
             </span>
             <span
               className={`text-xl font-light ml-1 transition-colors duration-300 ${
-                scrolled ? 'text-gray-400' : 'text-white/60'
+                scrolled ? 'text-gray-400' : 'text-white/80'
               }`}
             >
               SMART FILM
