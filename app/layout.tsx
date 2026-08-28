@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import FloatingContact from '@/components/FloatingContact';
+import OkkiScript from '@/components/OkkiScript';
 import './globals.css';
 
 const inter = Inter({
@@ -70,15 +71,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         {children}
         <FloatingContact />
-        {/* Okki Analytics & Chat - Xiaoman CRM */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.okkiConfigs = window.okkiConfigs || [];
-function okkiAdd() { okkiConfigs.push(arguments); };
-okkiAdd("analytics", { siteId: "365757-33489", gId: "" });`,
-          }}
-        />
-        <script async src="//tfile.xiaoman.cn/okki/analyze.js?id=365757-33489-" />
+        {/* Okki Analytics & Chat - Xiaoman CRM (client-side injection) */}
+        <OkkiScript />
       </body>
     </html>
   );
