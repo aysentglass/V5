@@ -75,10 +75,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{
             __html: `window.okkiConfigs = window.okkiConfigs || [];
 function okkiAdd() { okkiConfigs.push(arguments); };
-okkiAdd("analytics", { siteId: "365757-33332", gId: "" });`,
+okkiAdd("analytics", { siteId: "365757-33489", gId: "" });`,
           }}
         />
-        <script async src="//tfile.xiaoman.cn/okki/analyze.js?id=365757-33332-" />
+        <script async src="//tfile.xiaoman.cn/okki/analyze.js?id=365757-33489-" />
       </body>
     </html>
   );
