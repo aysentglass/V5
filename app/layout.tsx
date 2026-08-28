@@ -67,6 +67,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://api.qrserver.com" />
         <link rel="dns-prefetch" href="https://formspree.io" />
+        {/* Preconnect to Xiaoman (Okki) for faster analytics/chat */}
+        <link rel="preconnect" href="https://tfile.xiaoman.cn" />
+        <link rel="dns-prefetch" href="https://tfile.xiaoman.cn" />
       </head>
       <body>
         {children}
