@@ -11,30 +11,23 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative h-[100dvh] min-h-[700px] w-full overflow-hidden">
-      {/* WebP Animation Background - responsive: mobile loads smaller file */}
+      {/* WebP Animation Background - picture element prevents double-download on mobile */}
       <div className="absolute inset-0 bg-primary">
-        {/* Mobile version: 384KB, loads on small screens */}
-        <img
-          src="/videos/hero-bg-mobile.webp"
-          alt="AYSENT PDLC smart glass switching from transparent to frosted"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none lg:hidden"
-          draggable={false}
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-          onContextMenu={blockEvent}
-        />
-        {/* Desktop version: 908KB, loads on lg+ screens */}
-        <img
-          src="/videos/hero-bg.webp"
-          alt="AYSENT PDLC smart glass switching from transparent to frosted"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none hidden lg:block"
-          draggable={false}
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-          onContextMenu={blockEvent}
-        />
+        <picture>
+          {/* Desktop version: 908KB, loads on lg+ screens only */}
+          <source media="(min-width: 1024px)" srcSet="/videos/hero-bg.webp" />
+          {/* Mobile version: 384KB, default for all smaller screens */}
+          <img
+            src="/videos/hero-bg-mobile.webp"
+            alt="AYSENT PDLC smart glass switching from transparent to frosted"
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+            draggable={false}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            onContextMenu={blockEvent}
+          />
+        </picture>
         {/* Overlay to block right-click save and browser toolbar */}
         <div
           className="absolute inset-0 z-10 bg-black/[0.001]"
@@ -90,14 +83,14 @@ export default function Hero() {
             >
               <a
                 href="#products"
-                className="group inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transition-transform duration-300 hover:shadow-2xl hover:-translate-y-0.5"
               >
                 Explore Products
                 <ChevronDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
               </a>
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+                className="group inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 hover:border-white/50 transition-colors duration-300"
               >
                 <Play className="mr-2 w-5 h-5" />
                 Request Factory Quote

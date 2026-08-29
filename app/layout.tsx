@@ -64,15 +64,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         {/* Preload LCP hero animation (mobile version for faster FCP/LCP on phones) */}
         <link rel="preload" as="image" href="/videos/hero-bg-mobile.webp" fetchPriority="high" />
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://api.qrserver.com" />
+        {/* DNS prefetch for third-party services (lighter than preconnect) */}
         <link rel="dns-prefetch" href="https://formspree.io" />
-        {/* Preconnect to Xiaoman (Okki) for faster analytics/chat */}
-        <link rel="preconnect" href="https://tfile.xiaoman.cn" />
         <link rel="dns-prefetch" href="https://tfile.xiaoman.cn" />
-        {/* Preconnect to Google Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
       <body>
         {children}
