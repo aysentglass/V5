@@ -3,6 +3,14 @@ import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import FloatingContact from '@/components/FloatingContact';
 import OkkiScript from '@/components/OkkiScript';
+import {
+  OrganizationSchema,
+  LocalBusinessSchema,
+  ProductSchema,
+  FAQSchema,
+  BreadcrumbSchema,
+  BlogPostingSchema,
+} from '@/components/StructuredData';
 import './globals.css';
 
 const inter = Inter({
@@ -56,6 +64,14 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  // Bing Webmaster Tools verification - replace with your code from https://www.bing.com/webmasters
+  // verification: {
+  //   msvalidate: { id: 'YOUR_BING_VERIFICATION_CODE' },
+  // },
+  // Yandex Webmaster verification - replace with your code from https://webmaster.yandex.com
+  // verification: {
+  //   yandex: 'YOUR_YANDEX_VERIFICATION_CODE',
+  // },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -67,8 +83,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* DNS prefetch for third-party services (lighter than preconnect) */}
         <link rel="dns-prefetch" href="https://formspree.io" />
         <link rel="dns-prefetch" href="https://tfile.xiaoman.cn" />
+        {/* Bing Webmaster Tools verification placeholder
+            Get your code at https://www.bing.com/webmasters and replace below */}
+        <meta name="msvalidate.01" content="REPLACE_WITH_BING_VERIFICATION_CODE" />
+        {/* Yandex Webmaster verification placeholder
+            Get your code at https://webmaster.yandex.com and replace below */}
+        <meta name="yandex-verification" content="REPLACE_WITH_YANDEX_VERIFICATION_CODE" />
       </head>
       <body>
+        {/* JSON-LD Structured Data for SEO + GEO (Google, Bing, Yandex, AI engines) */}
+        <OrganizationSchema />
+        <LocalBusinessSchema />
+        <ProductSchema />
+        <FAQSchema />
+        <BreadcrumbSchema />
+        <BlogPostingSchema />
         {children}
         <FloatingContact />
         {/* Okki Analytics & Chat - Xiaoman CRM (client-side injection) */}

@@ -1,4 +1,50 @@
+# Allow all standard search engines
 User-agent: *
 Allow: /
 
+# AI Search Engine Crawlers (GEO - Generative Engine Optimization)
+# Allow AI engines to index content for chatbot answers and citations
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Bytespider-render
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexAccessibilityBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location for all crawlers
 Sitemap: https://www.aysentsmartfilm.com/sitemap.xml
