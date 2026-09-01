@@ -106,6 +106,31 @@ export function ProductSchema() {
       lowPrice: '25',
       highPrice: '80',
       offerCount: '500',
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: '0',
+          priceCurrency: 'USD',
+        },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: { '@type': 'QuantitativeValue', minValue: 3, maxValue: 7, unitCode: 'DAY' },
+          transitTime: { '@type': 'QuantitativeValue', minValue: 5, maxValue: 15, unitCode: 'DAY' },
+        },
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'Worldwide',
+        },
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'Worldwide',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/ReturnFeesCustomerResponsibility',
+      },
     },
     aggregateRating: {
       '@type': 'AggregateRating',
