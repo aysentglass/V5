@@ -83,12 +83,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* DNS prefetch for third-party services (lighter than preconnect) */}
         <link rel="dns-prefetch" href="https://formspree.io" />
         <link rel="dns-prefetch" href="https://tfile.xiaoman.cn" />
-        {/* Bing Webmaster Tools verification placeholder
-            Get your code at https://www.bing.com/webmasters and replace below */}
-        <meta name="msvalidate.01" content="REPLACE_WITH_BING_VERIFICATION_CODE" />
-        {/* Yandex Webmaster verification placeholder
-            Get your code at https://webmaster.yandex.com and replace below */}
-        <meta name="yandex-verification" content="REPLACE_WITH_YANDEX_VERIFICATION_CODE" />
+        {/* Bing Webmaster Tools verification */}
+        <meta name="msvalidate.01" content="7AC5C9C3D1213DE0706EE11F08535690" />
+        {/* Yandex Webmaster verification */}
+        <meta name="yandex-verification" content="cff41fd903227f39" />
       </head>
       <body>
         {/* JSON-LD Structured Data for SEO + GEO (Google, Bing, Yandex, AI engines) */}
