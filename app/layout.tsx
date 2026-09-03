@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: '%s | AYSENT Smart Film',
   },
   description:
-    'AYSENT is a leading PDLC smart film manufacturer and switchable glass supplier in China. Factory-direct pricing, custom sizing, FCC certified. Serving 50+ countries with smart glass solutions for offices, hotels, retail and residential projects.',
+    'AYSENT: PDLC smart film manufacturer and switchable glass supplier in China. Factory-direct pricing, custom sizes, FCC certified, 50+ countries.',
   keywords: [
     'PDLC smart film manufacturer',
     'switchable glass supplier',
