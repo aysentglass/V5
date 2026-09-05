@@ -139,6 +139,30 @@ export function ProductSchema() {
       bestRating: '5',
       worstRating: '1',
     },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Organization', name: 'Verified Buyer — UAE' },
+        datePublished: '2026-06-15',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+        },
+        reviewBody: 'Excellent quality PDLC film. The 2.1m wide roll saved us significant installation time on a large office project. Switching is instant and reliable.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Organization', name: 'Verified Buyer — Germany' },
+        datePublished: '2026-05-20',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+        },
+        reviewBody: 'Professional manufacturer with responsive support. Self-adhesive film applied perfectly to existing glass. FCC and CE documentation was complete for customs.',
+      },
+    ],
     additionalProperty: [
       { '@type': 'PropertyValue', name: 'Switching Time', value: '<0.5 seconds' },
       { '@type': 'PropertyValue', name: 'Operating Voltage', value: '48V-65V AC' },
