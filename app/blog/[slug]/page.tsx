@@ -6,7 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import QuoteForm from '@/components/QuoteForm';
 import { SingleBlogPostSchema } from '@/components/StructuredData';
-import { Calendar, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, ArrowRight, ChevronDown } from 'lucide-react';
 
 function renderMarkdown(content: string): string {
   let html = content;
@@ -72,6 +72,27 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
+function BlogFAQSchema({ faq }: { faq: NonNullable<BlogPost['faq']> }) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = blogPosts.find((p) => p.slug === params.slug);
   if (!post) notFound();
@@ -83,6 +104,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <>
       <SingleBlogPostSchema slug={post.slug} />
+      {post.faq && <BlogFAQSchema faq={post.faq} />}
       <Header />
       <article className="min-h-screen bg-white">
         {/* Hero */}
@@ -120,6 +142,29 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               className="prose prose-lg max-w-none blog-content"
               dangerouslySetInnerHTML={{ __html: renderMarkdown(post.content) }}
             />
+
+            {/* FAQ Section */}
+            {post.faq && post.faq.length > 0 && (
+              <div className="mt-16">
+                <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-8">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {post.faq.map((item, index) => (
+                    <details
+                      key={index}
+                      className="group bg-gray-50 border border-gray-200 rounded-xl overflow-hidden"
+                    >
+                      <summary className="flex items-center justify-between p-5 cursor-pointer list-none hover:bg-gray-100 transition-colors">
+                        <span className="font-semibold text-primary pr-4">{item.question}</span>
+                        <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 group-open:rotate-180 transition-transform" />
+                      </summary>
+                      <div className="px-5 pb-5 text-gray-600 leading-relaxed">
+                        {item.answer}
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* CTA */}
             <div className="mt-16 p-8 lg:p-10 bg-gray-50 rounded-2xl border border-gray-100 text-center">
