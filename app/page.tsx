@@ -13,10 +13,15 @@ import BlogSection from '@/components/BlogSection';
 import FAQ from '@/components/FAQ';
 import QuoteForm from '@/components/QuoteForm';
 import Footer from '@/components/Footer';
+import { ProductSchema, FAQSchema, BreadcrumbSchema } from '@/components/StructuredData';
 
 export default function Home() {
   return (
     <>
+      {/* Page-specific JSON-LD */}
+      <ProductSchema />
+      <FAQSchema />
+      <BreadcrumbSchema />
       <Header />
       <main>
         <Hero />

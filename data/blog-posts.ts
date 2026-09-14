@@ -12,7 +12,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'what-is-pdlc-smart-film',
-    title: 'What is PDLC Smart Film? A Complete Guide for 2026',
+    title: 'What is PDLC Smart Film? Complete Guide 2026',
     excerpt: 'Learn how PDLC smart film transforms ordinary glass into switchable privacy glass with the flick of a switch.',
     date: '2026-08-01',
     category: 'Technology',
@@ -53,7 +53,7 @@ PDLC smart film represents the future of architectural glass. Whether you are a 
   },
   {
     slug: 'pdlc-film-vs-smart-glass',
-    title: 'PDLC Smart Film vs Smart Glass: Which is Right for Your Project?',
+    title: 'PDLC Film vs Smart Glass: Which to Choose?',
     excerpt: 'Compare PDLC film and pre-laminated smart glass to determine the best solution for your project requirements and budget.',
     date: '2026-07-28',
     category: 'Buying Guide',
@@ -117,7 +117,7 @@ Both options deliver the same intelligent privacy experience. Contact our team f
   },
   {
     slug: 'how-to-install-self-adhesive-smart-film',
-    title: 'How to Install Self-Adhesive Smart Film on Existing Glass',
+    title: 'How to Install Self-Adhesive Smart Film',
     excerpt: 'Step-by-step guide to professionally installing self-adhesive PDLC smart film for instant glass privacy upgrades.',
     date: '2026-07-20',
     category: 'Installation',
@@ -185,7 +185,7 @@ AYSENT provides detailed installation videos and remote technical support for al
   },
   {
     slug: 'top-applications-switchable-glass',
-    title: 'Top 10 Applications of Switchable Glass in Commercial Architecture',
+    title: 'Top 10 Switchable Glass Applications',
     excerpt: 'Discover the most innovative and practical uses of switchable PDLC glass in modern commercial building design.',
     date: '2026-07-15',
     category: 'Applications',
@@ -243,7 +243,7 @@ Contact us to discuss how switchable glass can enhance your next commercial proj
   },
   {
     slug: 'choosing-pdlc-film-manufacturer',
-    title: 'How to Choose the Right PDLC Film Manufacturer: 7 Key Factors',
+    title: 'Choose PDLC Film Manufacturer: 7 Key Factors',
     excerpt: 'A buyer guide for distributors and contractors evaluating PDLC smart film manufacturers for quality, pricing, and reliability.',
     date: '2026-07-10',
     category: 'Buying Guide',
@@ -303,7 +303,7 @@ AYSENT is a genuine PDLC smart film manufacturer based in Shandong, China. We we
   },
   {
     slug: 'smart-film-office-privacy-cost-benefits',
-    title: 'Smart Film for Office Privacy: Cost, Benefits & ROI Analysis',
+    title: 'Smart Film Office Privacy: Cost & ROI',
     excerpt: 'Analyze the costs and return on investment of installing PDLC smart film in modern office environments.',
     date: '2026-07-05',
     category: 'Applications',
@@ -368,7 +368,7 @@ Smart film is a sound investment for modern offices, delivering both immediate a
   },
   {
     slug: 'custom-smart-film-solutions',
-    title: 'Custom Smart Film Solutions: Sizes, Colors & Control Options',
+    title: 'Custom Smart Film: Sizes, Colors & Controls',
     excerpt: 'Explore the full range of customization available for PDLC smart film, from custom dimensions to advanced control integration.',
     date: '2026-06-28',
     category: 'Products',
@@ -449,7 +449,7 @@ AYSENT's custom smart film solutions ensure your project gets exactly the right 
   },
   {
     slug: 'aysent-factory-quality-certification',
-    title: 'Inside AYSENT: Quality, FCC Certification & Global Shipping',
+    title: 'AYSENT: Quality, FCC & Global Shipping',
     excerpt: 'Take a closer look at the AYSENT smart film factory, our quality control processes, certifications, and worldwide delivery network.',
     date: '2026-06-20',
     category: 'Company',
@@ -533,8 +533,8 @@ AYSENT glass - your trusted partner for quality PDLC smart film solutions worldw
   },
   {
     slug: 'pdlc-smart-film-technology-principles-advantages',
-    title: 'Inside PDLC Smart Film: Core Technology, Working Principles, and Application Advantages',
-    excerpt: 'A deep dive into the science behind polymer-dispersed liquid crystal film — how it works, what makes it tick, and why architects and designers are switching to it.',
+    title: 'PDLC Smart Film: Technology & Advantages',
+    excerpt: 'Deep dive into PDLC film science — how it works, key advantages, and why architects choose switchable smart glass.',
     date: '2026-08-19',
     category: 'Technology',
     readTime: '10 min read',
@@ -605,7 +605,7 @@ For anyone working in architecture, interior design, or glass fabrication, PDLC 
   },
   {
     slug: 'how-to-choose-pdlc-film-manufacturer-china',
-    title: 'How to Choose a Reliable PDLC Smart Film Manufacturer in China: A Practical Buyer\'s Guide',
+    title: 'Choose PDLC Film Manufacturer in China: Guide',
     excerpt: 'A no-nonsense guide to sourcing PDLC smart film from China — how to verify real factories, test quality, avoid trading companies, and build a supply relationship that lasts.',
     date: '2026-09-10',
     category: 'Buying Guide',

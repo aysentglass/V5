@@ -32,9 +32,6 @@ export function OrganizationSchema() {
       email: 'aaronliu@aysentglass.com',
       availableLanguage: ['English', 'Chinese'],
     },
-    sameAs: [
-      'https://www.aysentsmartfilm.com',
-    ],
   };
   return (
     <script
@@ -96,15 +93,17 @@ export function ProductSchema() {
     manufacturer: { '@type': 'Organization', name: 'AYSENT' },
     category: 'Smart Glass / PDLC Film',
     model: 'AYSENT-PDLC-Series',
+    priceRange: '$25-$80 per m²',
     offers: {
       '@type': 'AggregateOffer',
       url: 'https://www.aysentsmartfilm.com/#contact',
       priceCurrency: 'USD',
+      price: '25',
+      lowPrice: '25',
+      highPrice: '80',
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
       description: 'Factory-direct pricing, custom sizing, global shipping. Price per square meter varies by film type and quantity. Contact for exact quote.',
-      lowPrice: '25',
-      highPrice: '80',
       offerCount: '500',
       shippingDetails: {
         '@type': 'OfferShippingDetails',
@@ -135,7 +134,7 @@ export function ProductSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
-      reviewCount: '120',
+      reviewCount: '2',
       bestRating: '5',
       worstRating: '1',
     },
@@ -277,8 +276,38 @@ export function BreadcrumbSchema() {
   );
 }
 
-export function BlogPostingSchema() {
-  const articles = blogPosts.map((post) => ({
+/**
+ * Blog list schema (ItemList) — used only on /blog index page
+ * Avoids duplicating all BlogPosting entries on every page
+ */
+export function BlogListSchema() {
+  const itemList = blogPosts.map((post, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    url: `https://www.aysentsmartfilm.com/blog/${post.slug}`,
+    name: post.title,
+  }));
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: itemList,
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/**
+ * Single blog post schema — used only on individual blog post pages
+ */
+export function SingleBlogPostSchema({ slug }: { slug: string }) {
+  const post = blogPosts.find((p) => p.slug === slug);
+  if (!post) return null;
+  const data = {
+    '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
@@ -294,11 +323,11 @@ export function BlogPostingSchema() {
     mainEntityOfPage: `https://www.aysentsmartfilm.com/blog/${post.slug}`,
     image: `https://www.aysentsmartfilm.com${post.image}`,
     articleSection: post.category,
-  }));
+  };
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': articles }) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );
 }

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import QuoteForm from '@/components/QuoteForm';
+import { SingleBlogPostSchema } from '@/components/StructuredData';
 import { Calendar, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 
 function renderMarkdown(content: string): string {
@@ -51,10 +52,22 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      images: [post.image],
+      url: `https://www.aysentsmartfilm.com/blog/${post.slug}`,
+      type: 'article',
+      images: [
+        {
+          url: post.image,
+          width: 2048,
+          height: 1152,
+          alt: post.title,
+        },
+      ],
     },
   };
 }
@@ -69,12 +82,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      <SingleBlogPostSchema slug={post.slug} />
       <Header />
       <article className="min-h-screen bg-white">
         {/* Hero */}
         <section className="bg-primary text-white py-16 lg:py-24 relative overflow-hidden">
           <div className="absolute inset-0 opacity-20">
-            <Image src={post.image} alt="" fill sizes="100vw" className="object-cover" priority />
+            <Image src={post.image} alt={post.title} fill sizes="100vw" className="object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/60" />
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-20">

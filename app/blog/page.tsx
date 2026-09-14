@@ -5,15 +5,34 @@ import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import QuoteForm from '@/components/QuoteForm';
+import { BlogListSchema } from '@/components/StructuredData';
 
 export const metadata = {
   title: 'Blog | PDLC Smart Film Insights & Guides',
   description: 'Expert articles on PDLC smart film technology, installation guides, buying tips, and application ideas from AYSENT, a leading smart film manufacturer.',
+  alternates: {
+    canonical: '/blog',
+  },
+  openGraph: {
+    title: 'Blog | PDLC Smart Film Insights & Guides',
+    description: 'Expert articles on PDLC smart film technology, installation guides, buying tips, and application ideas from AYSENT.',
+    url: 'https://www.aysentsmartfilm.com/blog',
+    type: 'website',
+    images: [
+      {
+        url: '/images/product-film.jpg',
+        width: 2048,
+        height: 1152,
+        alt: 'AYSENT PDLC Smart Film Blog',
+      },
+    ],
+  },
 };
 
 export default function BlogPage() {
   return (
     <>
+      <BlogListSchema />
       <Header />
       <main className="min-h-screen bg-white">
         <section className="bg-primary text-white py-20 lg:py-28 relative overflow-hidden">

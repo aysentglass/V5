@@ -6,10 +6,6 @@ import OkkiScript from '@/components/OkkiScript';
 import {
   OrganizationSchema,
   LocalBusinessSchema,
-  ProductSchema,
-  FAQSchema,
-  BreadcrumbSchema,
-  BlogPostingSchema,
 } from '@/components/StructuredData';
 import './globals.css';
 
@@ -29,30 +25,41 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'AYSENT | PDLC Smart Film Manufacturer & Switchable Glass Supplier',
-    template: '%s | AYSENT Smart Film',
+    default: 'AYSENT | PDLC Smart Film & Switchable Glass Factory',
+    template: '%s | AYSENT',
   },
   description:
     'AYSENT: PDLC smart film manufacturer and switchable glass supplier in China. Factory-direct pricing, custom sizes, FCC certified, 50+ countries.',
-  keywords: [
-    'PDLC smart film manufacturer',
-    'switchable glass supplier',
-    'smart film factory',
-    'PDLC film wholesale',
-    'smart glass',
-    'custom smart film',
-    'AYSENT glass',
-    'self adhesive smart film',
-    'switchable privacy glass',
-    'PDLC smart glass China',
-  ],
   metadataBase: new URL('https://www.aysentsmartfilm.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en': '/',
+      'x-default': '/',
+    },
+  },
   openGraph: {
-    title: 'AYSENT | PDLC Smart Film Manufacturer & Switchable Glass Supplier',
+    title: 'AYSENT | PDLC Smart Film & Switchable Glass Factory',
     description:
       'Premium PDLC smart film factory in China. Custom sizes, FCC certified, global shipping. Get free samples within 3-5 days.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://www.aysentsmartfilm.com',
+    siteName: 'AYSENT Smart Film',
+    images: [
+      {
+        url: '/images/product-film.jpg',
+        width: 2048,
+        height: 1152,
+        alt: 'AYSENT PDLC Smart Film',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AYSENT | PDLC Smart Film & Switchable Glass Factory',
+    description: 'Premium PDLC smart film factory in China. FCC certified, global shipping.',
+    images: ['/images/product-film.jpg'],
   },
   robots: {
     index: true,
@@ -64,14 +71,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  // Bing Webmaster Tools verification - replace with your code from https://www.bing.com/webmasters
-  // verification: {
-  //   msvalidate: { id: 'YOUR_BING_VERIFICATION_CODE' },
-  // },
-  // Yandex Webmaster verification - replace with your code from https://webmaster.yandex.com
-  // verification: {
-  //   yandex: 'YOUR_YANDEX_VERIFICATION_CODE',
-  // },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -89,13 +88,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="yandex-verification" content="cff41fd903227f39" />
       </head>
       <body>
-        {/* JSON-LD Structured Data for SEO + GEO (Google, Bing, Yandex, AI engines) */}
+        {/* JSON-LD Structured Data - site-wide only (Organization + LocalBusiness) */}
         <OrganizationSchema />
         <LocalBusinessSchema />
-        <ProductSchema />
-        <FAQSchema />
-        <BreadcrumbSchema />
-        <BlogPostingSchema />
         {children}
         <FloatingContact />
         {/* Okki Analytics & Chat - Xiaoman CRM (client-side injection) */}
