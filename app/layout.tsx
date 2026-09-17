@@ -7,6 +7,7 @@ import {
   OrganizationSchema,
   LocalBusinessSchema,
 } from '@/components/StructuredData';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 const inter = Inter({
@@ -93,6 +94,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <LocalBusinessSchema />
         {children}
         <FloatingContact />
+        {/* Vercel Analytics */}
+        <Analytics />
         {/* Okki Analytics & Chat - Xiaoman CRM (client-side injection) */}
         <OkkiScript />
       </body>
