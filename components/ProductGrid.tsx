@@ -25,7 +25,7 @@ const products = [
   },
   {
     slug: 'laminated-smart-glass',
-    name: 'Laminated Smart Glass',
+    name: 'Finished Smart Glass Panels',
     form: 'Finished Glass',
     formIcon: Layers,
     desc: 'Fully laminated switchable glass panels for new construction and premium projects. PDLC film sandwiched between two glass layers — safety rated, sound insulating and ready to install.',
@@ -55,13 +55,12 @@ export default function ProductGrid() {
               Our Products
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6 leading-tight">
-              Smart Film Solutions
-              <br />
-              <span className="text-gray-400">Cut Sheet & Roll Film</span>
+              Product Formats Overview
             </h2>
             <p className="text-lg text-gray-600">
-              Two product forms to match your business model — pre-cut sheets for instant installation,
-              or bulk rolls for high-volume fabrication. Both available in standard 1.8m and ultra-wide 2.1m widths.
+              Four product formats to match your project requirements — pre-cut sheets for instant installation,
+              bulk rolls for high-volume fabrication, finished glass panels for new construction, and control systems for automation.
+              Not sure which format fits? Read our <a href="/blog/pdlc-film-vs-smart-glass" className="text-accent hover:underline">technical comparison guide</a> or <a href="#contact" className="text-accent hover:underline">contact our engineering team</a>.
             </p>
           </div>
         </Reveal>

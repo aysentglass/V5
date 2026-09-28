@@ -175,8 +175,8 @@ export default function MarketDistribution() {
                   </div>
                 </div>
                 <p className="text-white/70 text-sm leading-relaxed mb-4">
-                  Headquarters Building of Huantou Center, No. 1728, Shanguo South Road,
-                  Jinghe Sub-district, Tengzhou City, Shandong Province, China
+                  Headquarters Building of Huantou Center, No.1728, Shanguo South Road,
+                  Jinghe Sub-district, Tengzhou City, Shandong Province, China 277500
                 </p>
                 <div className="flex items-center gap-2">
                   <span className="relative flex h-2.5 w-2.5">

@@ -20,7 +20,7 @@ export function OrganizationSchema() {
     numberOfEmployees: { '@type': 'QuantitativeValue', value: '50-200' },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Headquarters Building of Huantou Center, No. 1728, Shanguo South Road, Jinghe Sub-district',
+      streetAddress: 'Headquarters Building of Huantou Center, No.1728, Shanguo South Road, Jinghe Sub-district',
       addressLocality: 'Tengzhou City',
       addressRegion: 'Shandong Province',
       addressCountry: 'CN',
@@ -53,10 +53,11 @@ export function LocalBusinessSchema() {
     email: 'aaronliu@aysentglass.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Headquarters Building of Huantou Center, No. 1728, Shanguo South Road, Jinghe Sub-district',
-      addressLocality: 'Tengzhou City, Zaozhuang City',
+      streetAddress: 'Headquarters Building of Huantou Center, No.1728, Shanguo South Road, Jinghe Sub-district',
+      addressLocality: 'Tengzhou City',
       addressRegion: 'Shandong Province',
       addressCountry: 'CN',
+      postalCode: '277500',
     },
     geo: {
       '@type': 'GeoCoordinates',
@@ -169,7 +170,7 @@ export function ProductSchema() {
       { '@type': 'PropertyValue', name: 'Power Consumption', value: '~5W/m²' },
       { '@type': 'PropertyValue', name: 'Lifespan', value: '>50,000 hours' },
       { '@type': 'PropertyValue', name: 'Max Width', value: '2.1m' },
-      { '@type': 'PropertyValue', name: 'Certification', value: 'FCC, CE' },
+      { '@type': 'PropertyValue', name: 'Certification', value: 'CE, FCC, RoHS' },
       { '@type': 'PropertyValue', name: 'Warranty', value: '5 years' },
     ],
   };

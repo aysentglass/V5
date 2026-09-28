@@ -95,7 +95,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-accent-light mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-white/75 text-sm">Huantou Center HQ, No.1728 Shanguo South Rd, Jinghe Sub-district, Tengzhou, Zaozhuang, Shandong, China</span>
+                <span className="text-white/75 text-sm">Headquarters Building of Huantou Center, No.1728, Shanguo South Road, Jinghe Sub-district, Tengzhou City, Shandong Province, China 277500</span>
               </li>
             </ul>
           </div>

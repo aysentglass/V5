@@ -71,8 +71,8 @@ export default function OkkiForm() {
                   <div>
                     <div className="text-sm text-white/50 mb-1">Factory Location</div>
                     <p className="text-white/75 text-sm leading-relaxed">
-                      Huantou Center HQ, No.1728 Shanguo South Rd, Jinghe Sub-district, Tengzhou,
-                      Zaozhuang, Shandong, China
+                      Headquarters Building of Huantou Center, No.1728, Shanguo South Road,
+                      Jinghe Sub-district, Tengzhou City, Shandong Province, China 277500
                     </p>
                   </div>
                 </div>

@@ -114,7 +114,7 @@ export default function QuoteForm() {
                     </div>
                     <div>
                       <div className="text-sm text-white/75 mb-1">Factory Location</div>
-                      <div className="font-medium">Tengzhou, Shandong, China</div>
+                      <div className="font-medium text-sm">Headquarters Building of Huantou Center, No.1728, Shanguo South Road, Jinghe Sub-district, Tengzhou City, Shandong Province, China 277500</div>
                     </div>
                   </div>
                 </div>
