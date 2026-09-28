@@ -5,7 +5,7 @@ import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import QuoteForm from '@/components/QuoteForm';
-import { BlogListSchema } from '@/components/StructuredData';
+import { BlogListSchema, BlogListBreadcrumbSchema } from '@/components/StructuredData';
 
 export const metadata = {
   title: 'Blog | PDLC Smart Film Insights & Guides',
@@ -33,6 +33,7 @@ export default function BlogPage() {
   return (
     <>
       <BlogListSchema />
+      <BlogListBreadcrumbSchema />
       <Header />
       <main className="min-h-screen bg-white">
         <section className="bg-primary text-white py-20 lg:py-28 relative overflow-hidden">

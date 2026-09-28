@@ -9,6 +9,7 @@ export function OrganizationSchema() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': 'https://www.aysentsmartfilm.com/#organization',
     name: 'AYSENT',
     alternateName: 'AYSENT Smart Film',
     url: 'https://www.aysentsmartfilm.com',
@@ -90,7 +91,7 @@ export function ProductSchema() {
     description:
       'PDLC (Polymer Dispersed Liquid Crystal) smart film that switches glass from transparent to frosted in milliseconds. Available in self-adhesive film and laminated smart glass. Max width 2.1m, custom sizes, FCC certified.',
     brand: { '@type': 'Brand', name: 'AYSENT' },
-    manufacturer: { '@type': 'Organization', name: 'AYSENT' },
+    manufacturer: { '@type': 'Organization', '@id': 'https://www.aysentsmartfilm.com/#organization', name: 'AYSENT' },
     category: 'Smart Glass / PDLC Film',
     model: 'AYSENT-PDLC-Series',
     priceRange: '$25-$80 per m²',
@@ -141,7 +142,7 @@ export function ProductSchema() {
     review: [
       {
         '@type': 'Review',
-        author: { '@type': 'Organization', name: 'Verified Buyer — UAE' },
+        author: { '@type': 'Person', name: 'Verified Buyer — UAE' },
         datePublished: '2026-06-15',
         reviewRating: {
           '@type': 'Rating',
@@ -152,7 +153,7 @@ export function ProductSchema() {
       },
       {
         '@type': 'Review',
-        author: { '@type': 'Organization', name: 'Verified Buyer — Germany' },
+        author: { '@type': 'Person', name: 'Verified Buyer — Germany' },
         datePublished: '2026-05-20',
         reviewRating: {
           '@type': 'Rating',
@@ -265,6 +266,72 @@ export function BreadcrumbSchema() {
         position: 3,
         name: 'Blog',
         item: 'https://www.aysentsmartfilm.com/blog',
+      },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/**
+ * Breadcrumb for /blog index page: Home > Blog
+ */
+export function BlogListBreadcrumbSchema() {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.aysentsmartfilm.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://www.aysentsmartfilm.com/blog',
+      },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/**
+ * Breadcrumb for individual blog post: Home > Blog > Article Title
+ */
+export function BlogPostBreadcrumbSchema({ title, slug }: { title: string; slug: string }) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.aysentsmartfilm.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://www.aysentsmartfilm.com/blog',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: title,
+        item: `https://www.aysentsmartfilm.com/blog/${slug}`,
       },
     ],
   };

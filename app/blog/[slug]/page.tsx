@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import QuoteForm from '@/components/QuoteForm';
-import { SingleBlogPostSchema } from '@/components/StructuredData';
+import { SingleBlogPostSchema, BlogPostBreadcrumbSchema } from '@/components/StructuredData';
 import { Calendar, Clock, ArrowLeft, ArrowRight, ChevronDown } from 'lucide-react';
 
 function renderMarkdown(content: string): string {
@@ -104,6 +104,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <>
       <SingleBlogPostSchema slug={post.slug} />
+      <BlogPostBreadcrumbSchema title={post.title} slug={post.slug} />
       {post.faq && <BlogFAQSchema faq={post.faq} />}
       <Header />
       <article className="min-h-screen bg-white">
