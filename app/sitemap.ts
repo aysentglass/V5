@@ -2,9 +2,10 @@ import { blogPosts } from '@/data/blog-posts';
 
 export default function sitemap() {
   const baseUrl = 'https://www.aysentsmartfilm.com';
+  const lastUpdated = new Date('2026-09-28');
   const staticUrls = [
-    { url: `${baseUrl}/`, lastModified: new Date() },
-    { url: `${baseUrl}/blog`, lastModified: new Date() },
+    { url: `${baseUrl}/`, lastModified: lastUpdated },
+    { url: `${baseUrl}/blog`, lastModified: lastUpdated },
   ];
   const blogUrls = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,

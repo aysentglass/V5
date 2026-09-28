@@ -111,7 +111,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         {/* Hero */}
         <section className="bg-primary text-white py-16 lg:py-24 relative overflow-hidden">
           <div className="absolute inset-0 opacity-20">
-            <Image src={post.image} alt={post.title} fill sizes="100vw" className="object-cover" />
+            <Image src={post.image} alt={post.title} fill sizes="100vw" className="object-cover" loading="eager" fetchPriority="high" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/60" />
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-20">

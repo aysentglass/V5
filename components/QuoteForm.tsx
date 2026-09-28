@@ -7,7 +7,7 @@ import Reveal from './Reveal';
 const productOptions = [
   'PDLC Smart Film',
   'Self Adhesive Smart Film',
-  'Laminated Smart Glass',
+  'Smart Glass',
   'Control Systems',
   'Custom Solution',
 ];

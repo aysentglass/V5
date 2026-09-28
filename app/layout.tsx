@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: '%s | AYSENT',
   },
   description:
-    'AYSENT: PDLC smart film manufacturer and switchable glass supplier in China. Factory-direct pricing, custom sizes, FCC certified, 50+ countries.',
+    'AYSENT: PDLC smart film manufacturer and switchable glass supplier in China. Factory-direct pricing, custom sizes, CE/FCC/RoHS certified, 50+ countries.',
   metadataBase: new URL('https://www.aysentsmartfilm.com'),
   alternates: {
     canonical: '/',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AYSENT | PDLC Smart Film & Switchable Glass Factory',
     description:
-      'Premium PDLC smart film factory in China. Custom sizes, FCC certified, global shipping. Get free samples within 3-5 days.',
+      'Premium PDLC smart film factory in China. Custom sizes, CE/FCC/RoHS certified, global shipping. Get free samples within 3-5 days.',
     type: 'website',
     locale: 'en_US',
     url: 'https://www.aysentsmartfilm.com',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AYSENT | PDLC Smart Film & Switchable Glass Factory',
-    description: 'Premium PDLC smart film factory in China. FCC certified, global shipping.',
+    description: 'Premium PDLC smart film factory in China. CE/FCC/RoHS certified, global shipping.',
     images: ['/images/product-film.jpg'],
   },
   robots: {

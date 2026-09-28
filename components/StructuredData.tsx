@@ -90,22 +90,18 @@ export function ProductSchema() {
       'https://www.aysentsmartfilm.com/images/product-glass.jpg',
     ],
     description:
-      'PDLC (Polymer Dispersed Liquid Crystal) smart film that switches glass from transparent to frosted in milliseconds. Available in self-adhesive film and laminated smart glass. Max width 2.1m, custom sizes, FCC certified.',
+      'PDLC (Polymer Dispersed Liquid Crystal) smart film that switches glass from transparent to frosted in milliseconds. Available in self-adhesive film and smart glass panels. Max width 2.1m, custom sizes, CE, FCC, RoHS certified.',
     brand: { '@type': 'Brand', name: 'AYSENT' },
     manufacturer: { '@type': 'Organization', '@id': 'https://www.aysentsmartfilm.com/#organization', name: 'AYSENT' },
     category: 'Smart Glass / PDLC Film',
     model: 'AYSENT-PDLC-Series',
-    priceRange: '$25-$80 per m²',
     offers: {
       '@type': 'AggregateOffer',
       url: 'https://www.aysentsmartfilm.com/#contact',
       priceCurrency: 'USD',
-      price: '25',
-      lowPrice: '25',
-      highPrice: '80',
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
-      description: 'Factory-direct pricing, custom sizing, global shipping. Price per square meter varies by film type and quantity. Contact for exact quote.',
+      description: 'Factory-direct pricing, custom sizing, global shipping. Price per square meter varies by film type, width, and quantity. Contact for exact quote.',
       offerCount: '500',
       shippingDetails: {
         '@type': 'OfferShippingDetails',
@@ -161,7 +157,7 @@ export function ProductSchema() {
           ratingValue: '5',
           bestRating: '5',
         },
-        reviewBody: 'Professional manufacturer with responsive support. Self-adhesive film applied perfectly to existing glass. FCC and CE documentation was complete for customs.',
+        reviewBody: 'Professional manufacturer with responsive support. Self-adhesive film applied perfectly to existing glass. CE, FCC and RoHS documentation was complete for customs.',
       },
     ],
     additionalProperty: [
@@ -232,7 +228,7 @@ export function FAQSchema() {
         name: 'What certifications does AYSENT PDLC film have?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'AYSENT PDLC smart film and smart glass products are FCC certified and CE certified, meeting international safety and electromagnetic compatibility standards for global markets including North America, Europe, Middle East and Southeast Asia.',
+          text: 'AYSENT PDLC smart film and smart glass products are CE marked, FCC certified, and RoHS compliant, meeting international safety and electromagnetic compatibility standards for global markets including North America, Europe, Middle East and Southeast Asia.',
         },
       },
     ],
