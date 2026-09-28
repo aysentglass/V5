@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import Reveal from './Reveal';
@@ -65,7 +65,7 @@ const faqCategories = [
       },
       {
         q: 'Can I get samples before ordering?',
-        a: 'Absolutely. Our professional sample kit (~USD 30, fully refundable on your first formal order) includes A4-size samples of all 3 grades (T6/T7/T8), a mini controller/power adapter, installation tool sample, and product catalog. Shipped within 3 days. Contact our sales team, pay the sample fee, test and confirm, then place your bulk order.',
+        a: 'Absolutely. Our professional sample kit (fully refundable on your first formal order) includes A4-size samples of all 3 grades (T6/T7/T8), a mini controller/power adapter, installation tool sample, and product catalog. Shipped within 3 days. Contact our sales team, request the sample kit, test and confirm, then place your bulk order.',
       },
       {
         q: "What is the warranty and how long does the film last?",
@@ -172,7 +172,7 @@ export default function FAQ() {
               <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">
                 Still have questions?
               </h3>
-              <p className="text-white/85 mb-6 max-w-lg mx-auto">
+              <p className="text-white/60 mb-6 max-w-lg mx-auto">
                 Our PDLC specialists are ready to help you choose the right solution for your project.
                 Get a free quote within 24 hours.
               </p>
