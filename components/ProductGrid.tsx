@@ -25,7 +25,7 @@ const products = [
   },
   {
     slug: 'laminated-smart-glass',
-    name: 'Finished Smart Glass Panels',
+    name: 'Smart Glass',
     form: 'Finished Glass',
     formIcon: Layers,
     desc: 'Fully laminated switchable glass panels for new construction and premium projects. PDLC film sandwiched between two glass layers — safety rated, sound insulating and ready to install.',
