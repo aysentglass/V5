@@ -1096,7 +1096,7 @@ If you are evaluating suppliers and want a second opinion on a quote or a sample
     date: '2026-09-29',
     category: 'Technical Guide',
     readTime: '12 min read',
-    image: '/images/blog-pdlc-technology.jpg',
+    image: '/images/blog-pdlc-film-selection-guide.jpg',
     content: `## Why Selection Starts From Project Conditions, Not From a Catalogue
 
 The most common source of rework in PDLC film projects is not installation error. It is specification error. Someone picks a product from a catalogue because the numbers look good on paper, then discovers on site that the film does not perform as expected under the actual conditions of the project.
