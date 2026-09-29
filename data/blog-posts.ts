@@ -1089,4 +1089,211 @@ If you are evaluating suppliers and want a second opinion on a quote or a sample
       }
     ],
   },
+  {
+    slug: 'pdlc-film-selection-guide',
+    title: 'How to Select PDLC Film: Technical Spec Guide',
+    excerpt: 'How to select PDLC film: match transmittance, haze, switching speed, panel size and exposure conditions to your project before you specify.',
+    date: '2026-09-29',
+    category: 'Technical Guide',
+    readTime: '12 min read',
+    image: '/images/blog-pdlc-technology.jpg',
+    content: `## Why Selection Starts From Project Conditions, Not From a Catalogue
+
+The most common source of rework in PDLC film projects is not installation error. It is specification error. Someone picks a product from a catalogue because the numbers look good on paper, then discovers on site that the film does not perform as expected under the actual conditions of the project.
+
+PDLC film is not a commodity where higher numbers always mean better performance. It is a system whose behavior depends on the interaction between the film, the glass substrate, the electrical supply, and the environment. A film that performs perfectly in a climate-controlled showroom may behave differently on a west-facing facade in a hot climate, or on a curved panel in a hotel lobby.
+
+This pdlc film selection guide walks through how to select PDLC film by starting from the project conditions and working backward to the specification. It is written for architects, facade consultants, and engineering contractors who need to make informed specification decisions rather than rely on supplier marketing.
+
+If you are new to the technology and want to understand how PDLC film works at the material level, our <a href="/blog/what-is-pdlc-smart-film" style="color:inherit;text-decoration:underline">introduction to PDLC smart film</a> covers the fundamentals. This guide assumes you already understand the basic on/off switching principle and focuses on how to translate project requirements into a technical specification.
+
+## The Five Conditions That Determine the Spec
+
+Before opening any product datasheet, define the five project conditions that will constrain your specification. Each one eliminates certain options and points toward others.
+
+### Privacy Level and Optical Requirements
+
+Start by defining what "private" means for this project. The ON state (powered, transparent) and OFF state (unpowered, frosted) have different optical characteristics, and the required performance in each state drives the formulation.
+
+For the ON state, define the minimum acceptable light transmittance and the maximum acceptable haze. A partition in a creative office may tolerate slightly higher haze in exchange for better OFF-state opacity. A museum display case may require near-clear ON-state optics with minimal color shift.
+
+For the OFF state, define the required level of visual obstruction. Some projects need only silhouette-level privacy — occupants can see that someone is present but cannot identify features. Other projects require a denser frosted appearance that blocks more detail. These two requirements point to different liquid crystal loadings in the emulsion.
+
+### Glass Substrate and Geometry
+
+The glass substrate affects both the optical result and the feasibility of application. Single-pane tempered glass, insulated glass units, and laminated glass each present different surface conditions and thermal profiles.
+
+Curved glass deserves special attention. PDLC film is flexible, but it has a minimum bend radius below which the conductive coating can be damaged. The curvature of the substrate, the direction of the curve relative to the bus bar orientation, and whether the film is applied before or after bending all affect feasibility. For projects involving curved or shaped panels, our <a href="/blog/custom-smart-film-solutions" style="color:inherit;text-decoration:underline">custom smart film feasibility guide</a> details the dimensional and geometric boundaries.
+
+### Panel Size and Seaming
+
+The maximum coating width of a production line determines the largest single panel that can be produced without a seam. For PDLC film, the current industry maximum is 2.1 meters in a single pass. Panels wider than this require seaming two rolls together.
+
+A seam is a narrow vertical line where two film sections meet. It is visible up close but tends to disappear at normal viewing distances when properly aligned. When specifying large glass walls, decide in advance where seams are acceptable and where they are not. Seams should land on mullion lines, frame edges, or other visual breaks whenever possible.
+
+The number of seams also affects the bus bar layout and the transformer channel count. Each seamed panel may require independent electrical zoning if the seams create separate film sections.
+
+### Environmental Exposure
+
+Define the environmental conditions the film will encounter:
+
+- **Solar exposure:** West-facing and south-facing facades receive significantly more UV and thermal load than north-facing interior partitions. UV-stabilized substrates are important for exterior applications.
+- **Temperature range:** PDLC film has an operating temperature window. Projects in cold climates or hot climates need to verify that the specified film remains within its operating range throughout the year.
+- **Humidity:** High-humidity environments require careful edge sealing to prevent moisture ingress behind the film.
+- **Exterior vs. interior:** Exterior applications expose the film to UV, thermal cycling, and weather. Interior applications are generally less demanding but may have their own constraints, such as cleaning chemicals in healthcare settings.
+
+### Usage Frequency and Expected Service Life
+
+Define how often the film will be switched and over what service life the performance must be maintained. A meeting room that switches several times per day has different cycling demands than a storefront that switches twice per day. Higher-frequency cycling can accelerate wear at the bus bar connections and should be factored into the specification.
+
+## How to Read a PDLC Film Spec Sheet
+
+A smart film spec sheet contains a set of numbers that, read correctly, tell you whether the film is appropriate for your project. The mistake most specifiers make is treating each number in isolation. The numbers are interdependent, and understanding what each one means in context is the key to good specification.
+
+### Light Transmittance (ON State)
+
+Light transmittance in the powered (ON) state tells you how much visible light passes through the film when it is transparent. Higher numbers mean more light passes through.
+
+What the number does not tell you is the color neutrality. Two films with the same transmittance can have different color casts — one may have a slight yellow tint, another a slight blue tint. Always evaluate transmittance alongside a color rendering measurement or a visual sample under the project's actual lighting conditions.
+
+### Haze (ON State)
+
+Haze in the ON state measures how much light is scattered rather than transmitted directly. Lower haze means clearer, sharper visibility through the film. High-haze film in the ON state will look cloudy or milky even when powered.
+
+For applications where seeing clearly through the glass is important, low ON-state haze is critical. For partitions where some diffusion is acceptable, slightly higher haze may be tolerable and can even improve the OFF-state privacy performance.
+
+### Switching Response Time
+
+Switching response time measures how long the film takes to transition between states. PDLC film switches in the millisecond range — fast enough that the transition feels near-instantaneous to the observer.
+
+Response time can vary with panel size and temperature. Larger panels may show a slight propagation wave from the bus bar edge as the electric field establishes across the full width. Lower temperatures can slow the liquid crystal response. Specify response time at the project's expected operating temperature, not at the laboratory standard.
+
+### Operating Voltage Window
+
+PDLC film operates within a voltage window, typically 48V to 65V AC. This is a range rather than a single value because the optimal voltage varies with film formulation, panel size, and temperature.
+
+The lower end of the window is the minimum voltage needed to fully align the liquid crystals for a clear ON state. The upper end is the maximum voltage before power consumption increases without optical benefit and before there is risk of accelerated aging. The transformer must be able to supply voltage within this window for all panels in the system.
+
+### Power Consumption
+
+Power consumption for PDLC film is approximately 5 watts per square meter in the ON state. In the OFF state, the film consumes no power.
+
+This low power draw means that even large installations have modest electrical requirements. However, the transformer sizing must account for the total connected area, the inrush current at switch-on, and the voltage drop across long bus bar runs. A 100-square-meter installation draws roughly 500 watts in the ON state — less than a typical office space heater.
+
+## The Trade-offs You Cannot Avoid
+
+There is no PDLC film that is optimal on every parameter simultaneously. The formulation involves inherent trade-offs, and understanding these trade-offs is what separates a good specification from a mediocre one.
+
+### Transmittance vs. Haze
+
+Higher ON-state transmittance and lower ON-state haze generally go together, but both come at the expense of OFF-state opacity. A film formulated for maximum clarity will have a lighter, more translucent frosted state. A film formulated for denser OFF-state diffusion will have a more opaque frosted state but may show slightly more haze in the ON state.
+
+The specification decision is: which state matters more for this project? For a meeting room where the OFF state is used for confidential discussions, prioritize OFF-state opacity. For a display case where the ON state is the primary viewing condition, prioritize ON-state clarity.
+
+### Haze vs. Privacy Perception
+
+This is related to the first trade-off but deserves separate attention. The perception of privacy in the OFF state is not solely a function of light blockage. It is also a function of how uniformly the light is scattered. A film with high OFF-state haze but uneven scattering may show shadows or silhouettes that feel less private than a film with slightly lower total blockage but perfectly uniform diffusion.
+
+When evaluating OFF-state performance, look at uniformity under backlighting, not just the total light transmittance number.
+
+### Switching Speed vs. Power Consumption
+
+Faster switching requires higher electric field strength, which means higher voltage and slightly higher power consumption. For most applications, the difference is negligible because PDLC film switches in the millisecond range regardless. But for projects where the absolute fastest transition is required, the voltage may need to be at the upper end of the operating window, increasing steady-state power draw.
+
+### Panel Width vs. Seam Count
+
+Wider panels mean fewer seams, which is visually cleaner. But the maximum single-pass width is 2.1 meters. Beyond that, seaming is required. The trade-off is between visual cleanliness (fewer seams, wider panels) and manufacturing feasibility (seams are inevitable above 2.1m and must be planned).
+
+There is also a secondary trade-off: very wide panels are more difficult to handle and install without damage, and they require more careful bus bar placement to ensure uniform voltage across the full width.
+
+## Turning the Spec Into Testable Acceptance Criteria
+
+A specification is only useful if it can be verified. Vague requirements like "good clarity" or "sufficient privacy" cannot be tested and cannot be enforced. Translate every specification parameter into a measurable acceptance criterion.
+
+### Optical Acceptance Criteria
+
+For each optical parameter, define the measurement method, the measurement condition, and the pass/fail threshold. For example, instead of writing "the film shall be clear in the ON state," write that in the ON state at a defined temperature, the film shall have a luminous transmittance of not less than a specified percentage and a haze of not more than a specified percentage when measured per a defined standard method.
+
+Define whether measurements are taken in the ON state or OFF state, at what temperature, and with what instrument. This removes ambiguity from the acceptance process.
+
+### Electrical Acceptance Criteria
+
+Define the electrical parameters that must be verified: the operating voltage range and the transformer's ability to maintain it under load, the power consumption per square meter in the ON state, the bus bar continuity and resistance across the full panel width, and the switching response time from power application to full ON-state alignment.
+
+### Environmental Acceptance Criteria
+
+For projects with demanding environmental conditions, define accelerated aging tests that simulate the expected service conditions: thermal cycling between the project's minimum and maximum expected temperatures, UV exposure duration and intensity for exterior applications, humidity exposure for edge seal integrity verification, and cycling tests for high-frequency applications.
+
+### Visual Acceptance Criteria
+
+Some parameters are inherently visual and require evaluation under defined conditions. Define the viewing distance, the lighting condition (daylight, artificial light, backlit), and the acceptance standard, such as no visible seams at a specified distance, no visible bus bars at a specified distance, and uniform frosted appearance.
+
+## Six Common Specification Mistakes
+
+After reviewing hundreds of project specifications, certain errors appear repeatedly. Avoiding these six mistakes prevents most on-site performance problems.
+
+### Mistake 1: Specifying Only ON-State Clarity Without OFF-State Haze
+
+Writing "high transmittance" in the specification without defining the OFF-state optical performance leaves the supplier free to choose a formulation optimized for clarity at the expense of privacy. The result is a film that looks great when powered but offers inadequate visual obstruction when frosted. Always specify both states with measurable thresholds.
+
+### Mistake 2: Ignoring the Visual Impact of Seams
+
+Specifying a wide glass wall without addressing seaming guarantees that the installer will have to seam the film somewhere, and the seam location may not be where you would have chosen. Plan seam locations during the design phase and indicate them on the shop drawings.
+
+### Mistake 3: Assuming Curved Glass Works Like Flat Glass
+
+Curved substrates change the stress profile of the film, the bus bar contact geometry, and the optical appearance. A film specified for flat glass may not perform identically on a curved panel. Always verify the minimum bend radius and the bus bar orientation for curved applications.
+
+### Mistake 4: Treating Project Conditions as Product Parameters
+
+The operating temperature of a hot-climate facade is not a property of the film — it is a condition the film must survive. Writing a temperature number in the product spec without defining whether that is the air temperature, the glass surface temperature, or the film temperature creates ambiguity. Define the environmental condition separately from the film's rated performance within that condition.
+
+### Mistake 5: Ignoring Site Electrical Conditions
+
+The film requires 48V-65V AC, supplied through a transformer from the local mains voltage. If the site has unstable mains voltage, frequent power quality events, or limited capacity for additional transformers, this affects the specification. Always verify the site's electrical supply before finalizing the control system specification.
+
+### Mistake 6: Copying a Supplier's Generic Datasheet as the Project Specification
+
+Supplier datasheets are written to show the product in its best light, under laboratory conditions. They are not project specifications. A project specification must define what the film must do under the specific conditions of this project, with testable acceptance criteria. Copying a generic datasheet means you are accepting the supplier's test conditions rather than defining your own.
+
+For a deeper understanding of how the film's material properties affect these specification decisions, our <a href="/blog/pdlc-smart-film-technology-principles-advantages" style="color:inherit;text-decoration:underline">PDLC technology principles article</a> explains the material science behind each parameter.
+
+## Frequently Asked Questions
+
+### Which matters more for perceived quality: ON-state transmittance or OFF-state haze?
+
+It depends on the primary use case. For applications where the transparent state is the default viewing condition, ON-state clarity and low haze dominate the perception of quality. For applications where the frosted state is used frequently, OFF-state uniformity and opacity matter more. The specification should weight each parameter according to how much time the film spends in each state.
+
+### Can PDLC film be used on curved glass?
+
+Yes, within a minimum bend radius. PDLC film is flexible and can conform to gently curved surfaces. However, the conductive layer has a limit to how much it can bend without cracking or losing continuity. Tighter curves may require the film to be applied in segments, or may require pre-lamination to the curved glass before bending. Always verify the bend radius against the film's specification before committing to a curved design.
+
+### What determines the maximum panel width?
+
+The maximum panel width is determined by the coating line width of the manufacturer. The current industry maximum for single-pass PDLC film coating is 2.1 meters. Panels wider than this require seaming two film sections together. The coating width is a hardware constraint of the production equipment, not a formulation choice, so it does not vary between product grades from the same manufacturer.
+
+### Why is the operating voltage a range rather than a single value?
+
+The operating voltage window, typically 48V-65V AC, exists because the optimal voltage varies with several factors: the liquid crystal loading in the emulsion, the panel size (larger panels need slightly higher voltage to establish a uniform field), and the ambient temperature (lower temperatures slow crystal response and may need higher voltage). A range gives the control system flexibility to maintain optimal performance across varying conditions. A single fixed voltage would be suboptimal under some conditions.
+
+If you are working on a project and need help translating your project conditions into PDLC film specifications, <a href="/#contact" style="color:inherit;text-decoration:underline">send us your project details</a> and our technical team will review the conditions and recommend a specification approach. We work with architects and facade consultants on specification development, including review of glass substrate details, panel layout, and electrical requirements.`,
+    faq: [
+      {
+        question: 'Which matters more for perceived quality: ON-state transmittance or OFF-state haze?',
+        answer: 'It depends on the primary use case. For applications where the transparent state is the default viewing condition, ON-state clarity and low haze dominate the perception of quality. For applications where the frosted state is used frequently, OFF-state uniformity and opacity matter more. The specification should weight each parameter according to how much time the film spends in each state.',
+      },
+      {
+        question: 'Can PDLC film be used on curved glass?',
+        answer: 'Yes, within a minimum bend radius. PDLC film is flexible and can conform to gently curved surfaces. However, the conductive layer has a limit to how much it can bend without cracking or losing continuity. Tighter curves may require the film to be applied in segments, or may require pre-lamination to the curved glass before bending. Always verify the bend radius against the film specification before committing to a curved design.',
+      },
+      {
+        question: 'What determines the maximum panel width?',
+        answer: 'The maximum panel width is determined by the coating line width of the manufacturer. The current industry maximum for single-pass PDLC film coating is 2.1 meters. Panels wider than this require seaming two film sections together. The coating width is a hardware constraint of the production equipment, not a formulation choice, so it does not vary between product grades from the same manufacturer.',
+      },
+      {
+        question: 'Why is the operating voltage a range rather than a single value?',
+        answer: 'The operating voltage window, typically 48V-65V AC, exists because the optimal voltage varies with several factors: the liquid crystal loading in the emulsion, the panel size (larger panels need slightly higher voltage to establish a uniform field), and the ambient temperature (lower temperatures slow crystal response and may need higher voltage). A range gives the control system flexibility to maintain optimal performance across varying conditions.',
+      },
+    ],
+  },
 ];
