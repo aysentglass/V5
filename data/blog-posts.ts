@@ -1303,7 +1303,7 @@ If you are working on a project and need help translating your project condition
     date: '2026-10-07',
     category: 'Technical Comparison',
     readTime: '11 min read',
-    image: '/images/blog-pdlc-technology.jpg',
+    image: '/images/blog-pdlc-vs-spd-electrochromic.jpg',
     content: `## Three Ways to Change the State of Glass
 
 Switchable glass solves a single problem: on demand, change a transparent panel into an opaque or darkened one. But there are three fundamentally different technologies for doing this, and they do not behave the same way. Knowing which mechanism you are specifying is essential, because the optical result, the control behavior, and the physical constraints all follow from the mechanism.
