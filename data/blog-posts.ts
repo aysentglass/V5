@@ -1296,4 +1296,183 @@ If you are working on a project and need help translating your project condition
       },
     ],
   },
+  {
+    slug: 'pdlc-vs-spd-vs-electrochromic-technical-comparison',
+    title: 'PDLC vs SPD vs Electrochromic: How They Differ',
+    excerpt: 'A technical comparison of PDLC, SPD and electrochromic switchable glass: how each switches, how each behaves optically, and where each fits.',
+    date: '2026-10-07',
+    category: 'Technical Comparison',
+    readTime: '11 min read',
+    image: '/images/blog-pdlc-technology.jpg',
+    content: `## Three Ways to Change the State of Glass
+
+Switchable glass solves a single problem: on demand, change a transparent panel into an opaque or darkened one. But there are three fundamentally different technologies for doing this, and they do not behave the same way. Knowing which mechanism you are specifying is essential, because the optical result, the control behavior, and the physical constraints all follow from the mechanism.
+
+PDLC — Polymer Dispersed Liquid Crystal — is a scattering technology. SPD — Suspended Particle Device — is an absorption technology. Electrochromic is an ion-migration technology. Each changes the state of glass through a different physical process, and each produces a different visual result.
+
+This article compares the three at the mechanism level. It does not compare product specifications, prices, or brand options. The goal is to help you understand what each technology actually does, so you can ask the right questions and avoid specifying the wrong one for a given project condition.
+
+If you are new to the technology and need the basic principles first, our <a href="/blog/what-is-pdlc-smart-film" style="color:inherit;text-decoration:underline">introduction to PDLC smart film</a> covers how liquid crystal film works at the material level.
+
+## How Each Technology Switches
+
+### PDLC: Liquid Crystal Orientation and Light Scattering
+
+PDLC film contains liquid crystal droplets dispersed in a polymer matrix. When no voltage is applied, the liquid crystal molecules are randomly oriented, and light passing through the film is scattered in multiple directions — the film appears frosted or milky. When voltage is applied, the molecules align with the electric field, light passes through without scattering, and the film becomes transparent.
+
+The switching in PDLC is a binary state transition. The film is either scattering or transmitting; there is no meaningful intermediate state in standard formulations. The transition happens in the millisecond range. PDLC operates on a low-voltage AC window, typically 48V to 65V, and consumes approximately 5 watts per square meter in the transparent state. Power is consumed only when the film is transparent; in the frosted state, it draws nothing.
+
+### SPD: Suspended Particle Alignment and Absorption
+
+SPD film contains rod-shaped particles suspended in a liquid layer between two conductive films. With no voltage applied, the particles are randomly distributed and absorb light — the film appears dark or tinted. When voltage is applied, the particles align perpendicular to the conductive surfaces, and light passes through with much less absorption — the film becomes clear or lightly tinted.
+
+SPD is also a voltage-driven device, but the direction is reversed from PDLC: unpowered is dark, powered is clear. The absorption mechanism means the film does not scatter light the way PDLC does. In the unpowered state, it does not become a milky white screen; it becomes a darkened, tinted pane.
+
+### Electrochromic: Ion Migration and Redox Reaction
+
+Electrochromic glass uses a thin coating of electrochromic material, typically tungsten oxide, sandwiched between conductive layers. When a low voltage is applied, ions migrate into the electrochromic layer and trigger a redox reaction that changes the material's light absorption — the glass darkens. Reversing the voltage moves the ions back, and the glass clears.
+
+Electrochromic switching is slow compared to PDLC and SPD. The transition takes seconds rather than milliseconds, because it depends on physical ion movement through a solid layer. This slow response is inherent to the mechanism and cannot be accelerated without changing the material chemistry. Electrochromic consumes power only during the transition, not while holding a state — once darkened or cleared, it remains in that state with no continuous power draw.
+
+## Optical Behaviour: Scattering vs Absorption
+
+This is the most important distinction between the three technologies, and it is where the visual result diverges most sharply.
+
+### What PDLC Looks Like: Milky and Opaque
+
+In the frosted state, PDLC scatters light uniformly. The result is a milky, white, opaque pane that blocks the view through it. Light still passes through — the pane is not dark — but the light is diffused so thoroughly that you cannot see shapes or details on the other side.
+
+In the transparent state, PDLC is optically clear. It does not tint the view. What you see through it is essentially the same as what you see through ordinary glass, with minor haze depending on the grade.
+
+### What SPD Looks Like: Dark and Tinted
+
+In the unpowered state, SPD absorbs light across the visible spectrum. The pane becomes dark and tinted, typically a neutral gray or a deep blue depending on the formulation. Unlike PDLC's milky white, SPD's dark state does not scatter light — it absorbs it. You can still see silhouettes and movement through the darkened glass, but fine detail is obscured.
+
+In the powered state, SPD is clear or lightly tinted. The view through it is not as neutral as PDLC's fully clear state; some formulations retain a residual tint even when fully activated.
+
+### What Electrochromic Looks Like: Gradual Dimming
+
+Electrochromic darkens progressively. You can hold it at any intermediate level between fully clear and fully darkened. This continuous dimming is the defining optical feature of electrochromic technology — it functions like a dimmer switch rather than an on/off toggle.
+
+In its darkest state, electrochromic glass is comparable to a dark tint. In its clear state, it is neutral. The transition between levels takes several seconds, and you can stop it at any point.
+
+### Practical Implications for Daylight and View
+
+- **Privacy vs. glare control:** PDLC provides visual privacy (you cannot see through it). SPD and electrochromic reduce light and glare but do not fully block the view — you can see shapes through a dark pane. If the primary need is privacy, PDLC is the mechanism that delivers it.
+- **Daylight transmission:** PDLC in the frosted state still transmits light — it diffuses it. SPD and electrochromic in the dark state reduce the total light entering the space. If the goal is to reduce solar heat gain and daylight, an absorption technology is more relevant.
+- **Appearance at a glance:** A frosted PDLC pane looks like a milk glass partition. A dark SPD or electrochromic pane looks like a tinted window. The architectural language is different.
+
+For a deeper explanation of how the liquid crystal formulation affects these optical parameters, see our <a href="/blog/pdlc-smart-film-technology-principles-advantages" style="color:inherit;text-decoration:underline">PDLC technology principles article</a>.
+
+## Switching Speed, Power and Control
+
+### Response Time
+
+- **PDLC:** Millisecond-range transition. The switch from frosted to clear feels instantaneous.
+- **SPD:** Sub-second to low-second range depending on panel size and formulation. Faster than electrochromic, slower than PDLC.
+- **Electrochromic:** Seconds to tens of seconds for a full transition. Intermediate states are achievable.
+
+The response time difference matters if the application requires near-instant switching — for example, a meeting room that needs privacy on demand. For daylight harvesting or solar control, a multi-second transition is acceptable because the glass is not being toggled frequently.
+
+### Power Consumption
+
+- **PDLC:** Draws power in the clear state (approximately 5W per square meter), consumes nothing when frosted. This means the default unpowered state is private.
+- **SPD:** Draws power to stay clear; unpowered is dark. The power consumption is lower than PDLC per unit area but the duty cycle depends on how often the glass needs to be clear.
+- **Electrochromic:** Consumes power only during switching. It holds its state with zero power draw. This makes it well suited to large facades where continuous powering would be impractical.
+
+### Control Modes
+
+PDLC and SPD are fundamentally two-state devices. You can add control systems that pulse or sequence multiple zones, but each pane is either on or off. Electrochromic is intrinsically dimmable — you can set any light transmission level between clear and dark and hold it there. This makes electrochromic more analogous to an adjustable shading system, while PDLC and SPD are analogous to an on/off partition.
+
+## Size Limits, Tinting and Installation Constraints
+
+### Panel Width and Seaming
+
+For PDLC film, the maximum single-pass coating width is 2.1 meters. Panels wider than this require seaming. SPD and electrochromic have their own manufacturing width limits determined by their respective coating processes, but the specific constraints vary by manufacturer and process.
+
+When specifying large glass walls, ask the supplier for the maximum panel width of the specific product you are considering, and plan seam locations accordingly. For a general framework on how to approach these sizing decisions, our <a href="/blog/pdlc-film-selection-guide" style="color:inherit;text-decoration:underline">PDLC film selection guide</a> covers how panel width and seaming interact with project layout.
+
+### Zoning and Gradient
+
+PDLC can be zoned electrically — separate transformers and switches control separate areas — but each zone is binary. There is no gradient within a single pane.
+
+Electrochromic supports continuous dimming within a zone. SPD can also be driven to intermediate absorption levels in some formulations, though the visual effect of partial darkening is not as controllable as electrochromic.
+
+### Retrofitting Existing Glass
+
+PDLC self-adhesive film is applied directly to the interior surface of existing glass. This makes it suitable for retrofit projects where the glass is already in place.
+
+SPD film is typically produced as an interlayer in laminated glass units rather than as a surface-applied film. This means SPD is generally specified at the glass fabrication stage, not applied to existing glazing afterward.
+
+Electrochromic is also produced as a laminated glass unit or as a coated glass product. Retrofit applications generally require replacing the glass units rather than adding a film to existing glass.
+
+If you are evaluating which format is suitable for a retrofit versus new construction, our <a href="/blog/pdlc-film-vs-smart-glass" style="color:inherit;text-decoration:underline">PDLC film vs smart glass comparison</a> covers the format-level differences.
+
+## Failure Modes and Long-Term Behaviour
+
+### PDLC Failure Modes
+
+The most common long-term issues with PDLC film are: uneven frosted appearance as the liquid crystal formulation ages, slight yellowing from UV exposure if the substrate is not UV-stabilized, and delamination at the edges if moisture penetrates behind the film. The bus bar connections can degrade over time, particularly in high-frequency switching applications.
+
+### SPD Failure Modes
+
+SPD film can develop uneven darkening across the panel as the suspended particles settle or degrade. The absorption coating can experience UV-induced degradation in exterior applications. Because SPD relies on particle suspension in a liquid layer, thermal cycling can affect the uniformity of the dark state over time.
+
+### Electrochromic Failure Modes
+
+Electrochromic glass can exhibit persistent tinting — a condition where the glass does not fully clear after repeated switching cycles. The electrochromic layer can degrade through repeated redox reactions, gradually reducing the contrast between clear and dark states. The ion storage layer can also fatigue over many cycles.
+
+These are mechanism-level failure patterns. The actual lifespan depends on formulation quality, environmental conditions, and usage frequency. Always ask the manufacturer for long-term performance data specific to the product you are specifying.
+
+## Choosing Between Them: A Technical Decision Framework
+
+There is no universally best technology. The right choice depends on the primary functional requirement of the project. Use the following framework:
+
+- **If visual privacy is the primary need:** PDLC is the mechanism that delivers a fully opaque, frosted state on demand. SPD and electrochromic darken the glass but do not block the view the way a frosted surface does.
+- **If glare and solar control are the primary need:** Electrochromic, with its continuous dimming capability, is the natural fit. SPD also reduces light and glare but without the same continuous control.
+- **If the project requires instant switching:** PDLC's millisecond response is the fastest of the three. SPD is sub-second to low-second. Electrochromic takes seconds.
+- **If the project is a retrofit of existing glass:** PDLC self-adhesive film is the technology that can be applied to existing glazing. SPD and electrochromic generally require new laminated glass units.
+- **If the application is a large facade with infrequent switching:** Electrochromic's zero-power holding state and continuous dimming make it well suited to building facades. PDLC would require continuous power to stay clear across a large area.
+- **If the unpowered state must be private:** PDLC is inherently private when off. SPD is dark when off but not fully private. Electrochromic holds its last state when off, which may not be private depending on what state it was left in.
+
+These criteria are starting points, not rules. Every project has multiple overlapping requirements, and the correct specification is the one that weighs all of them.
+
+## Frequently Asked Questions
+
+### Can all three technologies be zoned?
+
+All three can be zoned electrically — separate control channels operate separate areas. The difference is what each zone does. PDLC zones are on/off binary. SPD zones are dark/clear with possible intermediate absorption in some formulations. Electrochromic zones are continuously dimmable. The zoning capability is electrical, not inherent to the optical mechanism.
+
+### Why does PDLC frosted look different from SPD dark?
+
+PDLC scatters light, which means it diffuses it in all directions — the result is a milky, opaque surface. SPD absorbs light, which means it reduces how much light passes through — the result is a darkened, tinted pane. One scatters, one absorbs. The visual difference between a milky white partition and a dark gray window is the difference between a privacy screen and a sunglasses lens.
+
+### How does switching frequency affect long-term performance?
+
+Each switching cycle moves liquid crystals, particles, or ions. More cycles mean more mechanical or electrochemical activity. High-frequency switching applications should specify products with documented cycling endurance, regardless of technology. For most building applications — a meeting room that switches a few times a day — cycling frequency is not a limiting factor.
+
+### Which technology can be retrofitted onto existing glass?
+
+PDLC self-adhesive film is designed for application to existing glass surfaces. SPD and electrochromic are typically manufactured as laminated glass units, which means they require replacing the existing glazing rather than adding a surface film. If your project involves existing glass that cannot be replaced, PDLC is the technology to evaluate first.
+
+If you are evaluating which switchable glass technology fits your project conditions, <a href="/#contact" style="color:inherit;text-decoration:underline">send us your project details</a> and our technical team will review the requirements and help you determine whether PDLC is the right mechanism, or whether another technology might be more appropriate for your specific application.`,
+    faq: [
+      {
+        question: 'Can all three technologies be zoned?',
+        answer: 'All three can be zoned electrically — separate control channels operate separate areas. The difference is what each zone does. PDLC zones are on/off binary. SPD zones are dark/clear with possible intermediate absorption in some formulations. Electrochromic zones are continuously dimmable. The zoning capability is electrical, not inherent to the optical mechanism.',
+      },
+      {
+        question: 'Why does PDLC frosted look different from SPD dark?',
+        answer: 'PDLC scatters light, which means it diffuses it in all directions — the result is a milky, opaque surface. SPD absorbs light, which means it reduces how much light passes through — the result is a darkened, tinted pane. One scatters, one absorbs. The visual difference between a milky white partition and a dark gray window is the difference between a privacy screen and a sunglasses lens.',
+      },
+      {
+        question: 'How does switching frequency affect long-term performance?',
+        answer: 'Each switching cycle moves liquid crystals, particles, or ions. More cycles mean more mechanical or electrochemical activity. High-frequency switching applications should specify products with documented cycling endurance, regardless of technology. For most building applications, cycling frequency is not a limiting factor.',
+      },
+      {
+        question: 'Which technology can be retrofitted onto existing glass?',
+        answer: 'PDLC self-adhesive film is designed for application to existing glass surfaces. SPD and electrochromic are typically manufactured as laminated glass units, which means they require replacing the existing glazing rather than adding a surface film. If your project involves existing glass that cannot be replaced, PDLC is the technology to evaluate first.',
+      },
+    ],
+  },
 ];
