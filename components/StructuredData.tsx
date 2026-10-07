@@ -377,7 +377,7 @@ export function SingleBlogPostSchema({ slug }: { slug: string }) {
     description: post.excerpt,
     datePublished: `${post.date}T00:00:00+08:00`,
     dateModified: `${post.date}T00:00:00+08:00`,
-    author: { '@type': 'Organization', name: 'AYSENT', url: 'https://www.aysentsmartfilm.com' },
+    author: { '@type': 'Person', name: 'AYSENT Technical Team' },
     publisher: {
       '@type': 'Organization',
       name: 'AYSENT',

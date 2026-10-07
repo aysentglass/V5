@@ -100,7 +100,7 @@ The technology is also showing up in elevator cabs, museum display cases, yacht 
 
 ### Why the Technology Matters
 
-PDLC film is not a novelty product for showrooms anymore. It is a practical building material that solves a specific problem: how to let architects keep glass as a design surface while giving occupants on-demand privacy. As a PDLC film producer with over a decade of coating experience, AYSENT supplies both self-adhesive film and laminated smart glass to projects in 50-plus countries. Whether you are retrofitting an existing office or specifying new construction, understanding what PDLC is and how it performs is the first step to getting the right product. If you are planning a retrofit, our <a href="/blog/how-to-install-self-adhesive-smart-film" style="color:inherit;text-decoration:underline">step-by-step installation guide</a> walks through the full process.`,
+PDLC film is not a novelty product for showrooms anymore. It is a practical building material that solves a specific problem: how to let architects keep glass as a design surface while giving occupants on-demand privacy. As a PDLC film producer with over a decade of coating experience, AYSENT supplies both self-adhesive film and laminated smart glass to projects in 50-plus countries. Whether you are retrofitting an existing office or specifying new construction, understanding what PDLC is and how it performs is the first step to getting the right product. Once you understand the basics, our <a href="/blog/pdlc-film-selection-guide" style="color:inherit;text-decoration:underline">PDLC film selection guide</a> walks through how to match specifications to your project conditions. If you are planning a retrofit, our <a href="/blog/how-to-install-self-adhesive-smart-film" style="color:inherit;text-decoration:underline">step-by-step installation guide</a> walks through the full process.`,
     faq: [
       {
         question: 'What is PDLC smart film?',
@@ -211,7 +211,7 @@ After years of producing both formats, the rule of thumb is straightforward:
 - **New construction or exterior glazing?** Choose pre-laminated smart glass. It is a structural product and will outperform a field-applied film for decades.
 - **Large project over 100m²?** Talk to the coating facility directly. Both formats improve in per-square-meter consistency at volume, and a factory can help you optimize the mix.
 
-As a PDLC film and smart glass producer with our own lamination line, AYSENT produces both formats in-house. For projects requiring non-standard sizes or shapes, our <a href="/blog/custom-smart-film-solutions" style="color:inherit;text-decoration:underline">custom smart film guide</a> covers the feasible limits.`,
+As a PDLC film and smart glass producer with our own lamination line, AYSENT produces both formats in-house. For projects requiring non-standard sizes or shapes, our <a href="/blog/custom-smart-film-solutions" style="color:inherit;text-decoration:underline">custom smart film guide</a> covers the feasible limits. Once you have selected a format, our <a href="/blog/pdlc-film-selection-guide" style="color:inherit;text-decoration:underline">PDLC film selection guide</a> helps translate project conditions into testable specifications.`,
     faq: [
       {
         question: 'What is the difference between PDLC film and smart glass?',
@@ -639,7 +639,7 @@ For companies planning to stay in their space for more than five years, outright
     image: '/images/blog-custom.jpg',
     content: `## Custom Smart Film: Feasible Sizes, Shapes and Limits
 
-Not every glass wall is the same size. Not every office wants the same control interface. And not every application fits a standard product. If you are still deciding between self-adhesive film and pre-laminated glass, our <a href="/blog/pdlc-film-vs-smart-glass" style="color:inherit;text-decoration:underline">format comparison</a> helps narrow the choice. That is why customization matters in the PDLC film business, and why understanding the technical boundaries of what can and cannot be customized is important.
+Not every glass wall is the same size. Not every office wants the same control interface. And not every application fits a standard product. If you are still deciding between self-adhesive film and pre-laminated glass, our <a href="/blog/pdlc-film-vs-smart-glass" style="color:inherit;text-decoration:underline">format comparison</a> helps narrow the choice. For a broader overview of how to approach PDLC film specifications from project conditions, see our <a href="/blog/pdlc-film-selection-guide" style="color:inherit;text-decoration:underline">technical spec selection guide</a>. That is why customization matters in the PDLC film business, and why understanding the technical boundaries of what can and cannot be customized is important.
 
 Here is what customization looks like in practice, the options that are technically feasible, and the hard limits of the technology.
 
