@@ -113,8 +113,7 @@ export default function Footer() {
               Cookie Policy
             </a>
             <a
-              href="#"
-              onclick="if(window.cc){window.cc.showPreferences();}return false;"
+              href="/cookie-policy"
               className="text-white/70 hover:text-white text-sm transition-colors"
             >
               Cookie Settings
