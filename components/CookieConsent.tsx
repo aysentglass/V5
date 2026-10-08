@@ -37,9 +37,9 @@ export default function CookieConsent() {
       const EU_COUNTRIES = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','GB','CH','NO','IS','LI'];
 
       try {
-        const res = await fetch('https://ipapi.co/json/');
+        const res = await fetch('/api/geo');
         const data = await res.json();
-        const country = (data.country_code || '').toUpperCase();
+        const country = (data.country || '').toUpperCase();
         const requiresConsent = EU_COUNTRIES.includes(country);
 
         if (!requiresConsent) {
