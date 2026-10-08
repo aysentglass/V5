@@ -112,12 +112,13 @@ export default function Footer() {
             <a href="/cookie-policy" className="text-white/70 hover:text-white text-sm transition-colors">
               Cookie Policy
             </a>
-            <button
-              onClick={() => (window as any).cc?.showPreferences?.()}
+            <a
+              href="#"
+              onclick="if(window.cc){window.cc.showPreferences();}return false;"
               className="text-white/70 hover:text-white text-sm transition-colors"
             >
               Cookie Settings
-            </button>
+            </a>
           </div>
         </div>
       </div>

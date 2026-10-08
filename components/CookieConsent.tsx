@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import VanillaCookieConsent from 'vanilla-cookieconsent';
+import { CookieConsent as VanillaCookieConsent } from 'vanilla-cookieconsent';
 import 'vanilla-cookieconsent/dist/cookieconsent.css';
 
 declare global {
