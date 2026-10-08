@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 declare global {
   interface Window {
     cc?: any;
+    CookieConsent?: any;
     cookieconsent?: any;
     loadOkkiAnalytics?: () => void;
     loadVercelAnalytics?: () => void;
@@ -35,17 +36,19 @@ export default function CookieConsent() {
       // Load CSS
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = 'https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.0.3/dist/cookieconsent.min.css';
+      link.href = 'https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.min.css';
       document.head.appendChild(link);
 
       // Load JS dynamically
       const script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.0.3/dist/cookieconsent.umd.js';
+      script.src = 'https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js';
       script.async = true;
       script.onload = () => {
-        if (cancelled || !window.cookieconsent) return;
+        if (cancelled) return;
+        const CC = window.CookieConsent || window.cookieconsent;
+        if (!CC) return;
 
-        window.cookieconsent.run({
+        CC.run({
           root: 'body',
           autoShow: true,
           hideFromBots: true,
