@@ -3,11 +3,12 @@ import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import FloatingContact from '@/components/FloatingContact';
 import OkkiScript from '@/components/OkkiScript';
+import CookieConsent from '@/components/CookieConsent';
+import ConditionalAnalytics from '@/components/ConditionalAnalytics';
 import {
   OrganizationSchema,
   LocalBusinessSchema,
 } from '@/components/StructuredData';
-import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 const inter = Inter({
@@ -94,10 +95,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <LocalBusinessSchema />
         {children}
         <FloatingContact />
-        {/* Vercel Analytics */}
-        <Analytics />
-        {/* Okki Analytics & Chat - Xiaoman CRM (client-side injection) */}
+        {/* Okki Script loader (exposes loadOkkiAnalytics, called by CookieConsent) */}
         <OkkiScript />
+        {/* Vercel Analytics (conditional - loads after consent for EU visitors) */}
+        <ConditionalAnalytics />
+        {/* Cookie Consent Banner (only shows for EU/EEA/UK visitors) */}
+        <CookieConsent />
       </body>
     </html>
   );

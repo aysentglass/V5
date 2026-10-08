@@ -106,12 +106,18 @@ export default function Footer() {
             © {new Date().getFullYear()} AYSENT SMART FILM. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="text-white/70 hover:text-white text-sm transition-colors">
+            <a href="/privacy-policy" className="text-white/70 hover:text-white text-sm transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-white/70 hover:text-white text-sm transition-colors">
-              Terms of Service
+            <a href="/cookie-policy" className="text-white/70 hover:text-white text-sm transition-colors">
+              Cookie Policy
             </a>
+            <button
+              onClick={() => (window as any).cc?.showPreferences?.()}
+              className="text-white/70 hover:text-white text-sm transition-colors"
+            >
+              Cookie Settings
+            </button>
           </div>
         </div>
       </div>
