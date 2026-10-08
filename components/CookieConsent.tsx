@@ -33,6 +33,25 @@ export default function CookieConsent() {
     let cancelled = false;
 
     async function init() {
+      // Geo detection: only show banner for EU/EEA/UK visitors
+      const EU_COUNTRIES = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','GB','CH','NO','IS','LI'];
+
+      try {
+        const res = await fetch('https://ipapi.co/json/');
+        const data = await res.json();
+        const country = (data.country_code || '').toUpperCase();
+        const requiresConsent = EU_COUNTRIES.includes(country);
+
+        if (!requiresConsent) {
+          // Non-EU visitor: load analytics immediately, no banner
+          window.loadOkkiAnalytics?.();
+          window.loadVercelAnalytics?.();
+          return;
+        }
+      } catch {
+        // If geo check fails, default to showing banner (safe side)
+      }
+
       // Load CSS from local (CSP blocks CDN)
       const link = document.createElement('link');
       link.rel = 'stylesheet';
