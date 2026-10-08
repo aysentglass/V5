@@ -21,10 +21,6 @@ async function logConsent(action: string, category: string) {
         action,
         category,
         timestamp: new Date().toISOString(),
-        country: document.cookie
-          .split('; ')
-          .find(row => row.startsWith('visitor_country='))
-          ?.split('=')[1] || '',
       }),
     });
   } catch {
@@ -34,18 +30,6 @@ async function logConsent(action: string, category: string) {
 
 export default function CookieConsent() {
   useEffect(() => {
-    const requiresConsent = document.cookie
-      .split('; ')
-      .find(row => row.startsWith('requires_consent='))
-      ?.split('=')[1] === 'true';
-
-    if (!requiresConsent) {
-      // Non-EU visitors: load analytics directly
-      window.loadOkkiAnalytics?.();
-      window.loadVercelAnalytics?.();
-      return;
-    }
-
     VanillaCookieConsent.run({
       root: 'body',
       autoShow: true,
