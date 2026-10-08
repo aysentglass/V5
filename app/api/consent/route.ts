@@ -31,8 +31,9 @@ export async function POST(request: NextRequest) {
     });
 
     if (!response.ok) {
-      console.error('Supabase insert error:', response.status, await response.text());
-      return NextResponse.json({ error: 'Failed to log consent' }, { status: 500 });
+      const errText = await response.text();
+      console.error('Supabase insert error:', response.status, errText);
+      return NextResponse.json({ error: 'Failed to log consent', detail: errText, url: SUPABASE_URL }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
