@@ -1,18 +1,15 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
-import dynamic from 'next/dynamic';
 import FloatingContact from '@/components/FloatingContact';
 import OkkiScript from '@/components/OkkiScript';
+import CookieConsent from '@/components/CookieConsent';
+import ConditionalAnalytics from '@/components/ConditionalAnalytics';
 import {
   OrganizationSchema,
   LocalBusinessSchema,
 } from '@/components/StructuredData';
 import './globals.css';
-
-// Dynamically load cookie consent - must be client-side only (uses window/document)
-const CookieConsent = dynamic(() => import('@/components/CookieConsent'), { ssr: false });
-const ConditionalAnalytics = dynamic(() => import('@/components/ConditionalAnalytics'), { ssr: false });
 
 const inter = Inter({
   subsets: ['latin'],
