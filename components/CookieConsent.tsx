@@ -33,15 +33,15 @@ export default function CookieConsent() {
     let cancelled = false;
 
     async function init() {
-      // Load CSS
+      // Load CSS from local (CSP blocks CDN)
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = 'https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.min.css';
+      link.href = '/cookieconsent.min.css';
       document.head.appendChild(link);
 
-      // Load JS dynamically
+      // Load JS from local
       const script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js';
+      script.src = '/cookieconsent.umd.js';
       script.async = true;
       script.onload = () => {
         if (cancelled) return;
