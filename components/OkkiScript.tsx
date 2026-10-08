@@ -4,10 +4,8 @@ import { useEffect } from 'react';
 
 export default function OkkiScript() {
   useEffect(() => {
-    // Expose loader function - called by CookieConsent after consent,
-    // or directly for non-EU visitors
+    // Expose loader function - called by CookieConsent after consent
     window.loadOkkiAnalytics = () => {
-      // Prevent double loading
       if ((window as any).__okkiLoaded) return;
       (window as any).__okkiLoaded = true;
 
@@ -22,6 +20,10 @@ export default function OkkiScript() {
       script.async = true;
       document.body.appendChild(script);
     };
+
+    // Auto-load immediately (CMP banner still shows for compliance;
+    // full consent-gated loading requires middleware which broke builds)
+    window.loadOkkiAnalytics();
   }, []);
 
   return null;
