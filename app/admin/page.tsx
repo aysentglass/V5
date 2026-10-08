@@ -1,7 +1,6 @@
 'use client';
 
 export const dynamic = 'force-dynamic';
-export const revalidate = 0;
 
 import { useState, useEffect } from 'react';
 import { Lock, Download, Mail, Building, Globe, Phone, Package, MessageSquare, Calendar, LogOut, Search } from 'lucide-react';
