@@ -102,7 +102,17 @@ export default function CookieConsent() {
             },
           },
 
+          // Fires on every page load when a valid consent exists (including restored).
+          // Use only to apply the saved choice; do NOT log here.
           onConsent: ({ cookie }: any) => {
+            if (cookie?.categories?.includes('analytics')) {
+              window.loadOkkiAnalytics?.();
+              window.loadVercelAnalytics?.();
+            }
+          },
+
+          // Fires ONLY the first time the user makes a choice
+          onFirstConsent: ({ cookie }: any) => {
             const accepted = cookie?.categories?.includes('analytics');
             if (accepted) {
               window.loadOkkiAnalytics?.();
@@ -111,6 +121,7 @@ export default function CookieConsent() {
             logConsent(accepted ? 'accepted' : 'rejected', 'analytics', visitorCountry);
           },
 
+          // Fires when the user updates preferences later
           onChange: ({ cookie }: any) => {
             const accepted = cookie?.categories?.includes('analytics');
             if (accepted) {
