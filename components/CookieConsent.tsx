@@ -33,21 +33,19 @@ export default function CookieConsent() {
     let cancelled = false;
 
     async function init() {
-      // Geo detection: only show banner for EU/EEA/UK visitors
-      const EU_COUNTRIES = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','GB','CH','NO','IS','LI'];
-
+      // Geo detection: show banner for ALL countries except China (CN)
       try {
         const res = await fetch('/api/geo');
         const data = await res.json();
         const country = (data.country || '').toUpperCase();
-        const requiresConsent = EU_COUNTRIES.includes(country);
 
-        if (!requiresConsent) {
-          // Non-EU visitor: load analytics immediately, no banner
+        if (country === 'CN') {
+          // China visitor: no banner, load analytics directly
           window.loadOkkiAnalytics?.();
           window.loadVercelAnalytics?.();
           return;
         }
+        // All other countries: show cookie consent banner
       } catch {
         // If geo check fails, default to showing banner (safe side)
       }
