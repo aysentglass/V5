@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-async function logConsent(action: string, category: string) {
+async function logConsent(action: string, category: string, country: string) {
   try {
     await fetch('/api/consent', {
       method: 'POST',
@@ -20,6 +20,7 @@ async function logConsent(action: string, category: string) {
       body: JSON.stringify({
         action,
         category,
+        country,
         timestamp: new Date().toISOString(),
       }),
     });
@@ -31,15 +32,16 @@ async function logConsent(action: string, category: string) {
 export default function CookieConsent() {
   useEffect(() => {
     let cancelled = false;
+    let visitorCountry = '';
 
     async function init() {
       // Geo detection: show banner for ALL countries except China (CN)
       try {
         const res = await fetch('/api/geo');
         const data = await res.json();
-        const country = (data.country || '').toUpperCase();
+        visitorCountry = (data.country || '').toUpperCase();
 
-        if (country === 'CN') {
+        if (visitorCountry === 'CN') {
           // China visitor: no banner, load analytics directly
           window.loadOkkiAnalytics?.();
           window.loadVercelAnalytics?.();
@@ -100,15 +102,22 @@ export default function CookieConsent() {
             },
           },
 
-          onConsent: () => {
-            const consent = window.cc?.validConsent?.();
-            if (consent?.categories?.includes('analytics')) {
+          onConsent: ({ cookie }: any) => {
+            const accepted = cookie?.categories?.includes('analytics');
+            if (accepted) {
               window.loadOkkiAnalytics?.();
               window.loadVercelAnalytics?.();
-              logConsent('accepted', 'analytics');
-            } else {
-              logConsent('rejected', 'analytics');
             }
+            logConsent(accepted ? 'accepted' : 'rejected', 'analytics', visitorCountry);
+          },
+
+          onChange: ({ cookie }: any) => {
+            const accepted = cookie?.categories?.includes('analytics');
+            if (accepted) {
+              window.loadOkkiAnalytics?.();
+              window.loadVercelAnalytics?.();
+            }
+            logConsent(accepted ? 'accepted' : 'rejected', 'analytics', visitorCountry);
           },
 
           language: {
