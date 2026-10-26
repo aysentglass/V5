@@ -10,6 +10,9 @@ import { Calendar, Clock, ArrowLeft, ArrowRight, ChevronDown } from 'lucide-reac
 
 function renderMarkdown(content: string): string {
   let html = content;
+  // The FAQ block is rendered separately from the `faq` array below.
+  // Strip any FAQ section embedded in the markdown so the H2 only appears once.
+  html = html.split(/\n## Frequently Asked Questions/)[0];
   // Tables
   html = html.replace(/\|.*\n\|.*\n((?:\|.*\n)+)/g, (match) => {
     const lines = match.trim().split('\n').filter((l) => l.includes('|'));

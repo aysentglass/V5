@@ -1475,4 +1475,123 @@ If you are evaluating which switchable glass technology fits your project condit
       },
     ],
   },
+  {
+    slug: 'pdlc-film-thermal-performance',
+    title: 'PDLC Film Thermal Performance: Limits and Myths',
+    excerpt: 'What PDLC film does — and does not do — to solar heat, visible light and glare, with the metrics that actually matter.',
+    date: '2026-10-26',
+    category: 'Technology',
+    readTime: '11 min read',
+    image: '/images/blog-thermal-performance.jpg',
+    content: `## Why Thermal Questions Come Up at All
+
+Almost every question about glass and heat begins with a simple observation: a room with a sun-facing facade gets warm. The instinct is to treat the window as a single surface that either "lets heat in" or "keeps it out," and to assume that any product applied to the glass controls that heat. Thermal questions come up because the people who own, operate, and design buildings are held accountable for comfort and energy — and PDLC film is increasingly specified on the same facades where those problems exist.
+
+Before judging what a switchable film does, it helps to separate two distinct mechanisms by which heat moves across a window.
+
+- **Solar heat gain** is energy carried in by sunlight. The solar spectrum is not only the light you can see. It includes a small ultraviolet portion, a visible portion, and a substantial near-infrared portion that carries much of the energy you feel standing in direct sun but cannot see. When this radiation strikes a window, some is reflected, some is absorbed and warms the glass itself, and some passes through into the room.
+- **Heat transfer by temperature difference** is the steady flow of heat through the envelope driven by a gap between indoor and outdoor temperatures. On a cold day, warmth leaks out; on a hot day, exterior heat conducts in. This happens whether or not the sun is shining.
+
+These two mechanisms are measured by different numbers and controlled by different parts of the glazing. Most of the confusion around pdlc film thermal performance comes from treating them as one. The useful question is not "does this film block heat?" but "which of these two mechanisms, if either, does the film actually affect?"
+
+Which mechanism dominates depends on the building. A sun-facing facade in a warm climate is usually driven by solar gain, while a poorly insulated window in a cold climate is driven by conduction. Orientation, local climate, and the glass build-up together determine where the real problem lies, which is why a product that addresses only one of the two mechanisms cannot be assumed to solve both.
+
+## What PDLC Changes About Light
+
+To answer that, you have to look at what the switch does. PDLC stands for polymer-dispersed liquid crystal. A thin layer of liquid-crystal droplets is held in a polymer matrix between two transparent conductive films. For a fuller description of the layer structure and how it behaves, see our <a href="/blog/pdlc-smart-film-technology-principles-advantages" style="color:inherit;text-decoration:underline">technology principles</a>.
+
+- When the film is **powered**, an electric field aligns the liquid-crystal molecules and light passes through in an orderly way, so the film appears clear.
+- When the film is **unpowered**, the molecules return to random orientations. Incoming light is scattered in every direction rather than passing through in a straight line, so the film appears milky and opaque.
+
+The key word is **scattered**. Switching the film changes the direction of the light that reaches it. In the frosted state, the view is destroyed and the incoming light is diffused, but scattering is not the same as reflecting or absorbing. A mirror sends energy away; a dark solar film soaks it up. A frosted PDLC pane mostly redistributes the light, spreading it out rather than sending it back outside.
+
+This is the single most important fact for anyone asking "does smart film block heat": the switch acts on the visible portion of the light and changes how that light is distributed, rather than selecting which parts of the solar spectrum are rejected. PDLC is fundamentally a light-scattering and privacy device, not a spectrally selective solar coating.
+
+## Three Metrics People Confuse: VLT, SHGC and U-Value
+
+Three separate numbers describe how a window behaves with light and heat. They are not interchangeable, and a good result in one does not imply a good result in the others.
+
+| Metric | What it measures | Mainly determined by |
+|---|---|---|
+| VLT (visible light transmittance) | The proportion of visible light that passes through | Coatings, tinting, and the on/off state of switchable film |
+| SHGC (solar heat gain coefficient) | The proportion of total solar energy across the whole spectrum that ends up indoors | Glass build-up, Low-E and solar-control coatings, and shading |
+| U-value (thermal transmittance) | The rate of heat flow driven by an indoor/outdoor temperature difference | Number of panes, gas fills, spacers, and Low-E coatings |
+
+### VLT: where PDLC has its main effect
+
+PDLC acts most directly on visible light. The switch between a clear, see-through view and a frosted, diffuse surface changes the character and can change the measured amount of visible transmission. This is the metric the product is genuinely designed to influence.
+
+### SHGC: a whole-spectrum property
+
+The smart film shgc relationship is limited because heat gain is carried by the entire solar spectrum, including the near-infrared portion that PDLC does not specifically address. Because a frosted film largely redistributes rather than rejects energy, its effect on the total solar energy entering the space is modest compared with a dedicated solar-control coating or external shading.
+
+### U-value: essentially unaffected
+
+The u-value switchable glass question is the clearest of the three. U-value is a property of the complete insulated assembly — the panes, the gas between them, the spacers, and the low-emissivity coatings. A thin switchable film on the surface does not create an insulating air gap and does not meaningfully slow the conductive flow of heat. Specifying PDLC should not be expected to change the U-value of a window.
+
+## Glare and Visual Comfort: The Real Benefit
+
+If the film does not meaningfully reject heat, why does a frosted room so often feel more comfortable? Because the comfort problem is often glare rather than temperature, and this is where PDLC genuinely earns its place.
+
+Direct sunlight and bright sky views create high-contrast conditions that tire the eyes and make screens hard to read. A frosted film takes the direct beam and spreads it into a soft, even wash of daylight. The result is smart film glare control: the room still receives daylight, but it arrives as diffuse illumination rather than a bright patch and a sharp shadow. The same scattering that provides privacy also removes the direct line of sight toward the sun and bright clouds.
+
+This benefit is real and meaningful in terms of visual comfort, but it is easy to misinterpret. When a meeting room stops feeling "hot and bright" after the film frosts, the change people notice is the removal of the glaring beam, not necessarily a reduction in the total energy entering the room. The diffuse light is still carrying energy. Glare control and heat rejection are different effects, and only the first is a native strength of PDLC.
+
+## What PDLC Does Not Do
+
+Setting expectations clearly is one of the most useful things a manufacturer can do. PDLC film is a capable product for privacy and light diffusion, but it is not a substitute for the building's thermal strategy.
+
+- **It is not a solar-shading product.** It does not stop the sun's energy before it reaches the facade the way an overhang or external louver does.
+- **It is not a Low-E replacement.** Low-emissivity coatings reflect infrared energy and are central to both U-value and SHGC performance. PDLC performs a different function and cannot take their place.
+- **It should not be relied on to meet energy targets.** Building energy codes evaluate the thermal performance of the complete envelope. A switchable film alone does not provide the heat rejection or insulation those targets require.
+- **Frosting does not equal cooling.** The frosted state hides the view and diffuses light, but the solar energy is not automatically sent back outside.
+
+Understanding these boundaries is not a criticism of the product. It is what allows the product to be specified correctly for the jobs it does well, rather than being expected to solve a thermal problem it was never designed to address.
+
+## Combining It With Solar Control Measures
+
+PDLC is rarely the only layer in a high-performance facade. The right approach is to combine it with measures that address the thermal mechanisms it does not, because each element does a different job.
+
+- **Low-emissivity coatings** reflect infrared energy and are the primary tool for reducing radiant transfer and improving U-value.
+- **Insulated glass units**, with multiple panes, gas fills, and warm spacers, are the main determinant of conduction and therefore of the U-value.
+- **External shading** such as overhangs, fins, and brise-soleil is the most effective way to stop solar heat before it reaches the glass at all.
+- **Solar-control window films** use reflective or absorbing layers to reduce SHGC on existing glazing.
+
+PDLC sits alongside these as the privacy and glare layer. In a well-designed facade, the insulated unit and Low-E coating manage conduction and infrared, the external shading limits direct solar gain, and the switchable film manages privacy and the diffusion of whatever daylight remains. When a project needs both thermal control and on-demand privacy, the two requirements are solved by separate, complementary components rather than a single product.
+
+There is also a useful principle in the ordering. Solar energy stopped outside the facade never enters the building and never has to be removed, which is why external shading is generally the most efficient first line of defense. Energy that reaches the glass can be reflected or absorbed by coatings, and energy that reaches the interior has to be managed by the space itself. A switchable film sits at the glass and manages light quality and privacy, but it does not move the thermal line of defense further outward.
+
+How to size and specify those components depends on the facade and the project; our <a href="/blog/pdlc-film-selection-guide" style="color:inherit;text-decoration:underline">selection guide</a> walks through the relevant decisions.
+
+## Verifying Thermal Claims From Any Supplier
+
+When a supplier makes a thermal claim about any glazing product, the claim should be testable and the test conditions should be clear. A few questions separate credible data from marketing language.
+
+1. **Ask which metric the number describes.** A visible-light figure is not a heat-gain figure, and a single percentage cannot describe both. If a claim does not distinguish VLT, SHGC, and U-value, it is incomplete.
+2. **Ask for the state and the assembly.** Switchable film has more than one state, so any value should say whether it was measured clear or frosted. SHGC and U-value are properties of the complete glazed assembly, not of a film in isolation, so the configuration of panes, gas, and coatings must be specified.
+3. **Ask for the test basis.** Credible thermal figures are produced under recognized industry test methods rather than estimated. The value should be traceable to a defined procedure and stated boundary conditions.
+4. **Treat unverifiable language with caution.** Phrases that equate privacy or glare reduction with heat rejection, or that present a single dramatic number without conditions, are the patterns to question.
+
+The same discipline applies to comparing technologies. If you are weighing PDLC against other switchable glazing, our <a href="/blog/pdlc-vs-spd-vs-electrochromic-technical-comparison" style="color:inherit;text-decoration:underline">technical comparison</a> explains how each mechanism works, which makes their thermal claims easier to interpret.
+
+If you are planning a facade and need to understand what PDLC will and will not do for your specific orientation and glazing build-up, <a href="/#contact" style="color:inherit;text-decoration:underline">send us your glass configuration and project details</a>. Our technical team can review the design and help you place the switchable film within a complete thermal strategy, rather than expecting it to carry one on its own.`,
+    faq: [
+    {
+      question: "Can PDLC film reduce my air-conditioning load?",
+      answer: "PDLC is primarily a privacy and glare-control product. It diffuses visible light rather than rejecting the full solar spectrum, so it should not be counted on to reduce cooling loads the way external shading, Low-E glass, or solar-control films do. Any meaningful reduction in air-conditioning load would come from those separate measures rather than from the switchable film alone.",
+    },
+    {
+      question: "Does switching the film to frosted affect daylighting?",
+      answer: "It changes the character of the daylight more than the total amount. Frosting converts direct, directional daylight into a soft, diffuse illumination. The room still receives daylight, but the direct view and the bright sun patch are removed, which improves glare and visual comfort while preserving a sense of openness.",
+    },
+    {
+      question: "Does the room get hotter when the film is switched off?",
+      answer: "The frosted state scatters and redistributes incoming light; it does not reflect the solar energy away as a dedicated solar-control product would. The energy is largely redistributed rather than eliminated, so the off state should not be treated as a heat-blocking state. The reliable thermal controls remain the glass build-up, coatings, and external shading.",
+    },
+    {
+      question: "How do I calculate the thermal performance after adding film to existing glass?",
+      answer: "U-value and SHGC are properties of the complete glazed assembly, not of a film in isolation. Adding a surface film does not change the insulating structure, so the thermal figures should be assessed for the finished assembly using recognized industry test methods rather than inferred from the film alone.",
+    },
+    ],
+  },
 ];
