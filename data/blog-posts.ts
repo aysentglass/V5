@@ -1594,4 +1594,111 @@ If you are planning a facade and need to understand what PDLC will and will not 
     },
     ],
   },
+  {
+    slug: 'pdlc-smart-film-maintenance-guide',
+    title: 'PDLC Film Maintenance: Cleaning and Long-Term Care',
+    excerpt: 'How to clean and care for PDLC smart film: safe agents, correct procedure, edge protection and what actually degrades performance.',
+    date: '2026-11-06',
+    category: 'Technology',
+    readTime: '9 min read',
+    image: '/images/blog-maintenance.jpg',
+    content: `## Why Maintenance Matters More Than Most Buyers Expect
+
+Most of the attention in a switchable-glass project goes into specification, procurement and handover. Once the panels are switched on and the room looks right, the film is often treated as a finished surface that needs no further thought. That assumption is where avoidable problems begin.
+
+PDLC film is a layered electrical and optical product, not a passive sheet of glass. The way it is cleaned from the first week onward has a direct effect on how it looks, how clearly it switches, and how the edges and connections hold up. A panel handled with the right routine can keep its intended appearance for a long period; the same panel treated with aggressive products or hard pressure can develop surface damage and edge problems that are difficult to reverse.
+
+The first two years after handover are the most important window. This is when cleaning staff settle into a routine, and when good habits are easiest to establish before any damage accumulates. For facility and property teams, getting the routine right early is the single most effective form of pdlc film maintenance. It is also the part that costs the least, because it is mostly about procedure and restraint rather than additional products. The specification decisions made before installation influence how a panel behaves in service; our <a href="/blog/pdlc-film-selection-guide" style="color:inherit;text-decoration:underline">selection guide</a> covers the choices that matter.
+
+## What You Are Actually Cleaning
+
+A sensible cleaning routine starts with an understanding of the layers. Working from the outside surface inward, a typical PDLC film consists of a protective hard coat, a transparent conductive layer, the liquid-crystal layer held in a polymer matrix, and an adhesive layer that bonds the film to the glass. Each layer has a different job and a different sensitivity.
+
+- **The hard coat** is the surface you actually touch and wipe. It is built to resist everyday handling, but it remains a thin coating and can be scratched or dulled by abrasive materials and strong chemicals.
+- **The conductive layer** carries the electrical field that drives the switch. It is not exposed during normal cleaning, but it becomes vulnerable if the film is cut or punctured, or if liquid penetrates through a damaged edge.
+- **The liquid-crystal layer** is the optical core. It is sealed inside and should never be reached by cleaning products. Solvents that work their way past the edge can affect the polymer and the switching behaviour.
+- **The adhesive layer** bonds the film to the glass and is protected within the assembly. Its main exposure is at the perimeter, where moisture and solvents can weaken the bond over time.
+
+The practical takeaway is that the two risks to manage are chemical attack through the surface and edges, and mechanical damage from pressure and abrasion. Almost every "do not" in switchable film care comes back to one of these two mechanisms.
+
+## Cleaning Agents: What Is Safe and What Is Not
+
+The choice of cleaning agent matters more than the choice of cloth. The safe list is short and deliberately simple.
+
+### Safe to use
+
+- **Clean water** handles most routine dust and light marks.
+- **A neutral, mild cleaning solution** is appropriate for grease and fingerprints that water alone will not lift. "Neutral" means a product that is neither strongly acidic nor strongly alkaline.
+- **A microfiber cloth** is the recommended applicator because it lifts particles without scratching and holds liquid evenly.
+
+### Products to avoid
+
+- **Solvent-based cleaners**, including products built around alcohol, acetone or similar volatile solvents, can attack the surface and, if they reach the edge, the polymer and adhesive layers.
+- **Strong alkaline cleaners** can dull and soften the hard coat, leaving a permanent haze.
+- **Abrasive and scouring products**, including powders and creams that contain grit, create fine scratches that accumulate into a cloudy finish.
+- **Wax- or polish-based products** leave a film on the surface that changes the optical appearance and is difficult to remove.
+- **Ammonia-containing products**, common in some conventional glass cleaners, can damage the coating and are not suitable for smart film.
+
+When evaluating smart film cleaning products, the default rule is to choose the mildest option that does the job. A product designed for ordinary glass is not automatically suitable, because plain glass has no sensitive coating or sealed edge to protect.
+
+## The Correct Cleaning Procedure
+
+Learning how to clean smart film correctly is mostly about keeping liquid away from the edges and avoiding mechanical stress. The right products used the wrong way can still cause damage, and the procedure below is designed to prevent that.
+
+1. **Switch the power off first.** Cleaning the film in its unpowered, frosted state is the normal practice and removes any electrical risk around the wet area. Confirm the relevant circuit is off before applying liquid.
+2. **Remove loose dust with a dry method.** A dry microfiber cloth or a soft duster lifts surface particles so they are not rubbed across the coating during wet cleaning.
+3. **Wipe with a damp, not dripping, cloth.** Apply the neutral cleaning solution to the cloth rather than spraying liquid directly onto the film. The cloth should be damp enough to clean but not so wet that liquid runs.
+4. **Rinse with clean water.** A second pass with a clean, water-damp cloth removes any residue from the cleaning solution.
+5. **Dry with a soft cloth using single-direction strokes.** Wipe in one direction rather than in circles, which can drive particles into the surface and leave swirl marks.
+
+Three habits deserve emphasis. Do not use circular or heavy scrubbing motions. Do not apply high-pressure washing or steam directly to the panel, which can force liquid past the edge seal. And do not let liquid pool or run toward the perimeter and the cable zones, where the conductive layer and connections are exposed.
+
+## Edge Sealing, Busbars and Cable Zones
+
+The edges are where most long-term problems first appear, and they are the area that cleaning routines most often overlook. The perimeter includes the edge seal, the busbars that distribute current across the film, and the cables and connections that supply power.
+
+The guiding principle is to keep these zones dry and avoid pressure on them. When cleaning the main surface, stop short of the edge rather than wiping into it, and never push a wet cloth into the corner where the cable exits. Treat the connection points as no-liquid areas.
+
+Facility teams should also know what to look for during routine cleaning. If you notice the film beginning to lift at an edge, a visible gap in the seal, or any change around the busbar or cable entry, record the location and report it to the project's technical contact rather than pressing on it or attempting to re-seal it yourself. Early observation and escalation are the correct response; the film is an electrical assembly, and edge work should be handled by the responsible technical team.
+
+## What Degrades Over Time — and What Is Normal
+
+Part of realistic pdlc film lifespan care is distinguishing changes that can be reversed from changes that cannot. How the film interacts with heat and light is a separate question, covered in our <a href="/blog/pdlc-film-thermal-performance" style="color:inherit;text-decoration:underline">thermal performance article</a>.
+
+Reversible changes are surface-level. Dust, fingerprints, water marks and light grease all sit on the hard coat and can be removed with the correct procedure. A panel that looks dull because it is dirty is not degraded; it simply needs cleaning.
+
+Irreversible changes happen at the material level and develop slowly. A gradual rise in haze that remains even after careful cleaning, and slow yellowing at the edges, reflect changes within the materials rather than surface dirt. These are normal long-term material effects rather than faults caused by a single cleaning event.
+
+It is important not to confuse the two. Treating a material-level change as dirt and applying stronger products or harder pressure will not reverse it and can add surface damage on top. The mechanism here is gradual, and the honest position is that the rate depends on the environment and the care the film receives rather than on a fixed schedule.
+
+## A Practical Care Schedule for Projects
+
+There is no single correct cleaning frequency, because the right schedule depends on the conditions the film is exposed to. Rather than a fixed calendar, teams should base frequency on three factors.
+
+- **Foot traffic and contact.** Panels in busy corridors and meeting rooms that are touched frequently collect fingerprints faster and need more frequent attention than partitions in low-use areas.
+- **Cleaning method.** A routine built around dry dusting and occasional damp cleaning can be run more often with low risk; aggressive wet cleaning should be reserved for genuine marks.
+- **Environmental conditions.** Spaces with high dust, cooking grease, or coastal salt exposure place more demand on the surface and the edges, and call for more frequent inspection even if wet cleaning stays limited.
+
+The practical approach is to start with a baseline routine and adjust it from observation. If a panel is consistently clean at its scheduled clean, the frequency can be reduced; if marks are building up between cleans, increase it. The same logic applies across the <a href="/blog/top-applications-switchable-glass" style="color:inherit;text-decoration:underline">common applications</a> where switchable film is used, from office partitions to retail and hospitality settings.
+
+Every project is built around a specific glazing configuration and set of environmental conditions. If you are responsible for a completed installation and would like maintenance guidance tailored to your panels, our technical support team can review the project details and advise on a routine. <a href="/#contact" style="color:inherit;text-decoration:underline">Get in touch with your project information</a> and we will help you set a care plan that fits the actual conditions on site.`,
+    faq: [
+    {
+      question: "Can I use ordinary glass cleaner on PDLC film?",
+      answer: "Not as a default. Many conventional glass cleaners contain ammonia, solvents or waxes that can damage the hard coat or leave a film on the surface. Use clean water or a neutral, mild solution applied with a microfiber cloth, and confirm that a product contains none of the restricted ingredients before using it.",
+    },
+    {
+      question: "Can I use a robotic window cleaner?",
+      answer: "Only if the device is confirmed suitable for coated film surfaces and does not rely on abrasive pads or strong cleaning solutions. Robotic cleaners can also apply pressure and carry liquid close to the edges and cable zones. Manual cleaning with controlled dampness and single-direction strokes is the safer default; check with the project technical team before introducing a robot.",
+    },
+    {
+      question: "Is it safe to clean the film while it is switched off?",
+      answer: "Yes, the unpowered, frosted state is the normal state for cleaning. Switching off first removes any electrical risk around the wet area. The film should be allowed to dry fully before power is restored, and liquid should never be allowed to reach the cable or busbar areas.",
+    },
+    {
+      question: "What should I do if water gets into the edge?",
+      answer: "Stop cleaning and do not switch the panel on while the area is wet. Allow it to dry, and do not attempt to open or re-seal the edge yourself. Report the location and the circumstances to the project technical contact so it can be inspected, especially if the film later shows any change in switching or appearance.",
+    },
+    ],
+  },
 ];
