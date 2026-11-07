@@ -95,6 +95,17 @@ const nextConfig = {
       },
     ];
   },
+  // Retired product path (F-09): permanent redirect to the technical selection guide.
+  // Next.js permanent redirects use HTTP 308, which Google treats like a 301.
+  async redirects() {
+    return [
+      {
+        source: '/products/self-adhesive-smart-film',
+        destination: '/blog/pdlc-film-selection-guide',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

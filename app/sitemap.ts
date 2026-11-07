@@ -1,8 +1,5 @@
 import { blogPosts } from '@/data/blog-posts';
 
-// Extend this list as more product/application pages are added.
-const productPaths = ['self-adhesive-smart-film'];
-
 export default function sitemap() {
   const baseUrl = 'https://www.aysentsmartfilm.com';
   const lastUpdated = new Date('2026-09-28');
@@ -14,9 +11,5 @@ export default function sitemap() {
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.date),
   }));
-  const productUrls = productPaths.map((slug) => ({
-    url: `${baseUrl}/products/${slug}`,
-    lastModified: new Date(),
-  }));
-  return [...staticUrls, ...productUrls, ...blogUrls];
+  return [...staticUrls, ...blogUrls];
 }
